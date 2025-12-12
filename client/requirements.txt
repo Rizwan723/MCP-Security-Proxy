@@ -1,0 +1,6 @@
+openai     # We use the standard client to talk to our local LLM
+httpx
+numpy
+pandas       # For saving test results to CSV/JSON
+tqdm       # Progress bar for long generation runs
+requests

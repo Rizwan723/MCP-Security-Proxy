@@ -1,0 +1,10 @@
+tool,samples,coverage,accuracy,f1_score,adapted
+s3_operation,32,1.0,0.4375,0.47058823529411764,True
+deserialize_data,32,1.0,0.28125,0.41025641025641024,True
+graphql_query,40,1.0,0.25,0.4,True
+ldap_query,36,1.0,0.25,0.4,True
+parse_xml,32,1.0,0.25,0.4,True
+verify_jwt,28,1.0,0.25,0.4,True
+redis_command,40,1.0,0.25,0.4,True
+render_template,32,1.0,0.25,0.4,True
+send_webhook,32,1.0,0.21875,0.358974358974359,True

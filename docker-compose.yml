@@ -1,0 +1,179 @@
+services:
+  # -------------------------------------------------------
+  # 1. Custom LLM Service (Self-Hosted Llama-2 / Mistral)
+  #    Can run locally or on a Cloud GPU VM.
+  # -------------------------------------------------------
+  custom-llm:
+    build: ./llm_service
+    container_name: custom-llm
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    volumes:
+      # For Cloud Deployment: Consider downloading models from S3 on startup
+      # instead of mounting a local host directory.
+      - ./models:/app/models
+    ports:
+      - "${CUSTOM_LLM_PORT:-8080}:8080" # Exposed for direct access
+    networks:
+      - mcp-public
+    environment:
+      - LLM_MODEL_PATH=${LLM_MODEL_PATH:-/app/models/llama-2-7b-chat.Q4_K_M.gguf}
+      - LLM_N_GPU_LAYERS=${LLM_N_GPU_LAYERS:--1}
+      - LLM_N_CTX=${LLM_N_CTX:-4096}
+      - LLM_N_BATCH=${LLM_N_BATCH:-512}
+      - LLM_FLASH_ATTN=${LLM_FLASH_ATTN:-false}
+      - LLM_VERBOSE=${LLM_VERBOSE:-true}
+      - LLM_CHAT_FORMAT=${LLM_CHAT_FORMAT:-llama-2}
+      - LLM_TEMPERATURE=${LLM_TEMPERATURE:-0.7}
+      - LLM_MAX_TOKENS=${LLM_MAX_TOKENS:-512}
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 -O - http://localhost:8080/health > /dev/null || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
+  # -------------------------------------------------------
+  # 2. Cloud Provider Service (OpenAI / Gemini Wrapper)
+  # -------------------------------------------------------
+  cloud-llm:
+    build: ./llm_cloud_service
+    container_name: cloud-llm
+    ports:
+      - "${LLM_CLOUD_PORT:-8081}:8080" # Mapped to 8081
+    networks:
+      - mcp-public
+    environment:
+      - CLOUD_LLM_PROVIDER=${CLOUD_LLM_PROVIDER:-openai} 
+      - CLOUD_GOOGLE_API_KEY=${CLOUD_GOOGLE_API_KEY}
+      - CLOUD_OPENAI_API_KEY=${CLOUD_OPENAI_API_KEY}
+      - CLOUD_MODEL_NAME=${CLOUD_MODEL_NAME:-gpt-3.5-turbo}
+      - CLOUD_TEMPERATURE=${CLOUD_TEMPERATURE:-0.7}
+      - CLOUD_MAX_TOKENS=${CLOUD_MAX_TOKENS:-512}
+    restart: unless-stopped
+
+  # -------------------------------------------------------
+  # 3. MCP Bridge (Security Proxy)
+  # -------------------------------------------------------
+  mcp-bridge:
+    build: ./mcp_bridge
+    container_name: mcp-bridge
+    ports:
+      - "${BRIDGE_PORT:-8000}:8000"
+    depends_on:
+      tool-filesystem:
+        condition: service_started
+      tool-sqlite:
+        condition: service_started
+      tool-time:
+        condition: service_started
+      tool-fetch:
+        condition: service_started
+      tool-memory:
+        condition: service_started
+    environment:
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - DEBUG=${DEBUG:-false}
+      - MODEL_NAME=${MODEL_NAME:-distilbert-base-uncased}
+      - DETECTOR_SIGMA=${DETECTOR_SIGMA:-3.0}
+      # Dynamic MCP Server Discovery (comma-separated list of server URLs)
+      - MCP_SERVERS=${MCP_SERVERS:-http://tool-filesystem:8080,http://tool-sqlite:8080,http://tool-time:8080,http://tool-fetch:8080,http://tool-memory:8080}
+      - RESEARCH_DATA_PATH=${RESEARCH_DATA_PATH:-/app/research_data}
+      - TRAINING_DATA_FILE=${TRAINING_DATA_FILE:-training_dataset.json}
+      - SEMANTIC_MODEL_PATH=${SEMANTIC_MODEL_PATH:-/app/trained_models/semantic_model.pt}
+      - STATISTICAL_MODEL_PATH=${STATISTICAL_MODEL_PATH:-/app/trained_models/statistical_model.pt}
+      - AUDIT_LOG_FILE=${AUDIT_LOG_FILE:-runtime_audit.jsonl}
+      - AUDIT_LOG_PATH=${AUDIT_LOG_PATH:-/app/research_data/runtime_audit.jsonl}
+    networks:
+      - mcp-public
+      - mcp-secure
+    volumes:
+      - ./research/data:/app/research_data
+      - ./research/trained_models:/app/trained_models
+      - ./research/logs:/app/logs
+
+  # -------------------------------------------------------
+  # 4. MCP Tools
+  # -------------------------------------------------------
+  tool-filesystem:
+    build: ./mcp_tools/filesystem
+    container_name: tool-fs
+    networks:
+      - mcp-secure
+    volumes:
+      - ./sandbox_files:/data
+    environment:
+      - FS_SAFE_MODE=${SAFE_MODE:-false}
+      - FS_ROOT_DIR=${FS_ROOT_DIR:-/data}
+      - FS_LOG_LEVEL=${LOG_LEVEL:-INFO}
+
+  tool-sqlite:
+    build: ./mcp_tools/sqlite
+    container_name: tool-db
+    networks:
+      - mcp-secure
+    environment:
+      - SQL_DB_PATH=${SQL_DB_PATH:-thesis.db}
+      - SQL_LOG_LEVEL=${LOG_LEVEL:-INFO}
+
+  tool-time:
+    build: ./mcp_tools/time
+    container_name: tool-time
+    networks:
+      - mcp-secure
+    environment:
+      - TIME_LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - TIME_DEFAULT_TIMEZONE=${TIME_DEFAULT_TIMEZONE:-UTC}
+
+  tool-fetch:
+    build: ./mcp_tools/fetch
+    container_name: tool-fetch
+    networks:
+      - mcp-secure
+    environment:
+      - FETCH_LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - FETCH_SAFE_MODE=${SAFE_MODE:-false}
+      - FETCH_TIMEOUT=${FETCH_TIMEOUT:-10}
+
+  tool-memory:
+    build: ./mcp_tools/memory
+    container_name: tool-memory
+    networks:
+      - mcp-secure
+    volumes:
+      - ./sandbox_files/memory:/data
+    environment:
+      - MEMORY_LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - MEMORY_SAFE_MODE=${SAFE_MODE:-false}
+      - MEMORY_STORAGE_PATH=/data/memory.json
+
+  # -------------------------------------------------------
+  # 5. Client (Simulator)
+  # -------------------------------------------------------
+  client:
+    build: ./client
+    container_name: mcp-client
+    depends_on:
+      - mcp-bridge
+    networks:
+      - mcp-public
+    environment:
+      - BRIDGE_RPC_URL=${BRIDGE_RPC_URL:-http://mcp-bridge:8000/jsonrpc}
+      - CUSTOM_LLM_URL=${CUSTOM_LLM_URL:-http://custom-llm:8080/v1}
+      - LLM_CLOUD_URL=${LLM_CLOUD_URL:-http://cloud-llm:8080/v1}
+      - TRAFFIC_SAMPLES=${TRAFFIC_SAMPLES:-50}
+      - TRAFFIC_ATTACK_RATIO=${TRAFFIC_ATTACK_RATIO:-0.3}
+      - TRAFFIC_CONCURRENCY=${TRAFFIC_CONCURRENCY:-5}
+    command: tail -f /dev/null
+
+networks:
+  mcp-public:
+    driver: bridge
+  mcp-secure:
+    internal: true

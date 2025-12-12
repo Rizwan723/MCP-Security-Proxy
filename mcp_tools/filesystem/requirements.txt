@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+pydantic
+aiofiles
+python-multipart
+pydantic-settings>=2.12.0

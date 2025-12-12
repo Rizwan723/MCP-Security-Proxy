@@ -1,0 +1,28 @@
+{
+  "transactions": [
+    {
+      "id": "tx-001",
+      "user_id": 1,
+      "amount": 150.50,
+      "currency": "USD",
+      "timestamp": "2023-11-15T10:30:00Z",
+      "status": "completed"
+    },
+    {
+      "id": "tx-002",
+      "user_id": 2,
+      "amount": 89.99,
+      "currency": "USD",
+      "timestamp": "2023-11-15T11:45:00Z",
+      "status": "completed"
+    },
+    {
+      "id": "tx-003",
+      "user_id": 3,
+      "amount": 200.00,
+      "currency": "EUR",
+      "timestamp": "2023-11-15T14:20:00Z",
+      "status": "pending"
+    }
+  ]
+}

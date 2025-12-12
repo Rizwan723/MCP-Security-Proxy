@@ -1,0 +1,856 @@
+{
+  "detector": "semantic",
+  "classification_type": "binary",
+  "method": "prototypical_learning",
+  "encoder": "distilbert-base-uncased",
+  "embedding_dim": "774",
+  "tools_trained": [
+    "check_file_exists",
+    "check_url",
+    "convert_time",
+    "create_entity",
+    "create_relation",
+    "delete_entity",
+    "describe_table",
+    "deserialize_data",
+    "execute_command",
+    "fetch_html",
+    "fetch_url",
+    "get_current_time",
+    "get_entity",
+    "get_file_info",
+    "get_relations",
+    "graphql_query",
+    "ldap_query",
+    "list_directory",
+    "list_entities",
+    "list_tables",
+    "parse_xml",
+    "read_file",
+    "read_query",
+    "redis_command",
+    "render_template",
+    "run_script",
+    "s3_operation",
+    "search_entities",
+    "send_webhook",
+    "verify_jwt",
+    "write_file",
+    "write_query"
+  ],
+  "test_samples": 304,
+  "metrics": {
+    "coverage": 1.0,
+    "accuracy": 0.7664473684210527,
+    "precision": 0.5182481751824818,
+    "recall": 0.9342105263157895,
+    "f1_score": 0.6666666666666666,
+    "roc_auc": 0.9106648199445984,
+    "average_precision": 0.8091568187513782
+  },
+  "prototype_info": [
+    {
+      "tool": "check_file_exists",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 16,
+      "mean_dist": 0.016225945204496384,
+      "std_dist": 0.006835201755166054,
+      "max_dist": 0.0289461612701416
+    },
+    {
+      "tool": "check_file_exists",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 16,
+      "mean_dist": 0.05661274120211601,
+      "std_dist": 0.04824886471033096,
+      "max_dist": 0.17933791875839233
+    },
+    {
+      "tool": "check_url",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 23,
+      "mean_dist": 0.022437676787376404,
+      "std_dist": 0.02644994854927063,
+      "max_dist": 0.10641515254974365
+    },
+    {
+      "tool": "check_url",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 23,
+      "mean_dist": 0.028794366866350174,
+      "std_dist": 0.012059963308274746,
+      "max_dist": 0.06807297468185425
+    },
+    {
+      "tool": "convert_time",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 21,
+      "mean_dist": 0.015235554426908493,
+      "std_dist": 0.016096649691462517,
+      "max_dist": 0.05036497116088867
+    },
+    {
+      "tool": "convert_time",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 21,
+      "mean_dist": 0.03964143246412277,
+      "std_dist": 0.01594000868499279,
+      "max_dist": 0.06908577680587769
+    },
+    {
+      "tool": "create_entity",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 21,
+      "mean_dist": 0.017143303528428078,
+      "std_dist": 0.005844888277351856,
+      "max_dist": 0.03357058763504028
+    },
+    {
+      "tool": "create_entity",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 21,
+      "mean_dist": 0.023383649066090584,
+      "std_dist": 0.00775592215359211,
+      "max_dist": 0.04226714372634888
+    },
+    {
+      "tool": "create_relation",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 9,
+      "mean_dist": 0.008999262005090714,
+      "std_dist": 0.00276125967502594,
+      "max_dist": 0.014064013957977295
+    },
+    {
+      "tool": "create_relation",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 9,
+      "mean_dist": 0.012282881885766983,
+      "std_dist": 0.007164682727307081,
+      "max_dist": 0.028877854347229004
+    },
+    {
+      "tool": "delete_entity",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 8,
+      "mean_dist": 0.027474835515022278,
+      "std_dist": 0.0037252113688737154,
+      "max_dist": 0.032602548599243164
+    },
+    {
+      "tool": "delete_entity",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 8,
+      "mean_dist": 0.032573357224464417,
+      "std_dist": 0.014813190326094627,
+      "max_dist": 0.06757187843322754
+    },
+    {
+      "tool": "describe_table",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 12,
+      "mean_dist": 0.10005077719688416,
+      "std_dist": 0.1704578697681427,
+      "max_dist": 0.48369425535202026
+    },
+    {
+      "tool": "describe_table",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 12,
+      "mean_dist": 0.019998794421553612,
+      "std_dist": 0.0090437401086092,
+      "max_dist": 0.0409315824508667
+    },
+    {
+      "tool": "deserialize_data",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 6,
+      "mean_dist": 0.004250198602676392,
+      "std_dist": 0.004845093470066786,
+      "max_dist": 0.013553440570831299
+    },
+    {
+      "tool": "deserialize_data",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 6,
+      "mean_dist": 0.05503879860043526,
+      "std_dist": 0.02171982079744339,
+      "max_dist": 0.08679342269897461
+    },
+    {
+      "tool": "execute_command",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 10,
+      "mean_dist": 0.014332050457596779,
+      "std_dist": 0.004972378723323345,
+      "max_dist": 0.025221705436706543
+    },
+    {
+      "tool": "execute_command",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 10,
+      "mean_dist": 0.03170473128557205,
+      "std_dist": 0.01633461005985737,
+      "max_dist": 0.06037914752960205
+    },
+    {
+      "tool": "fetch_html",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 23,
+      "mean_dist": 0.0475534051656723,
+      "std_dist": 0.015774279832839966,
+      "max_dist": 0.09829753637313843
+    },
+    {
+      "tool": "fetch_html",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 23,
+      "mean_dist": 0.03150765970349312,
+      "std_dist": 0.011572359129786491,
+      "max_dist": 0.058127760887145996
+    },
+    {
+      "tool": "fetch_url",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 43,
+      "mean_dist": 0.028553247451782227,
+      "std_dist": 0.018695177510380745,
+      "max_dist": 0.06734108924865723
+    },
+    {
+      "tool": "fetch_url",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 43,
+      "mean_dist": 0.0291624516248703,
+      "std_dist": 0.012314535677433014,
+      "max_dist": 0.07045328617095947
+    },
+    {
+      "tool": "get_current_time",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 24,
+      "mean_dist": 0.07876350730657578,
+      "std_dist": 0.11319123953580856,
+      "max_dist": 0.45583903789520264
+    },
+    {
+      "tool": "get_current_time",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 24,
+      "mean_dist": 0.04928779974579811,
+      "std_dist": 0.023659132421016693,
+      "max_dist": 0.11409503221511841
+    },
+    {
+      "tool": "get_entity",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 10,
+      "mean_dist": 0.02021188661456108,
+      "std_dist": 0.022793283686041832,
+      "max_dist": 0.07872217893600464
+    },
+    {
+      "tool": "get_entity",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 10,
+      "mean_dist": 0.039105385541915894,
+      "std_dist": 0.018677113577723503,
+      "max_dist": 0.07736694812774658
+    },
+    {
+      "tool": "get_file_info",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 17,
+      "mean_dist": 0.015829725190997124,
+      "std_dist": 0.008540729060769081,
+      "max_dist": 0.04676163196563721
+    },
+    {
+      "tool": "get_file_info",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 17,
+      "mean_dist": 0.06339897960424423,
+      "std_dist": 0.0370384082198143,
+      "max_dist": 0.17622989416122437
+    },
+    {
+      "tool": "get_relations",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.003211770672351122,
+      "std_dist": 0.0009444050956517458,
+      "max_dist": 0.004494667053222656
+    },
+    {
+      "tool": "get_relations",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.01746770367026329,
+      "std_dist": 0.0075380029156804085,
+      "max_dist": 0.032257258892059326
+    },
+    {
+      "tool": "graphql_query",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.008569343015551567,
+      "std_dist": 0.007454215548932552,
+      "max_dist": 0.022726476192474365
+    },
+    {
+      "tool": "graphql_query",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.019489500671625137,
+      "std_dist": 0.007105549331754446,
+      "max_dist": 0.028471648693084717
+    },
+    {
+      "tool": "ldap_query",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 8,
+      "mean_dist": 0.009908437728881836,
+      "std_dist": 0.006665715482085943,
+      "max_dist": 0.022554457187652588
+    },
+    {
+      "tool": "ldap_query",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 8,
+      "mean_dist": 0.011091575026512146,
+      "std_dist": 0.0022143498063087463,
+      "max_dist": 0.014932870864868164
+    },
+    {
+      "tool": "list_directory",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 34,
+      "mean_dist": 0.0704847052693367,
+      "std_dist": 0.11433371156454086,
+      "max_dist": 0.37335073947906494
+    },
+    {
+      "tool": "list_directory",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 34,
+      "mean_dist": 0.056379448622465134,
+      "std_dist": 0.04817431420087814,
+      "max_dist": 0.20462632179260254
+    },
+    {
+      "tool": "list_entities",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.029559152200818062,
+      "std_dist": 0.018725646659731865,
+      "max_dist": 0.0592920184135437
+    },
+    {
+      "tool": "list_entities",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.053619664162397385,
+      "std_dist": 0.039614319801330566,
+      "max_dist": 0.14336663484573364
+    },
+    {
+      "tool": "list_tables",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 14,
+      "mean_dist": 0.037655431777238846,
+      "std_dist": 0.055124979466199875,
+      "max_dist": 0.23255538940429688
+    },
+    {
+      "tool": "list_tables",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 14,
+      "mean_dist": 0.03295290470123291,
+      "std_dist": 0.01413640659302473,
+      "max_dist": 0.06129699945449829
+    },
+    {
+      "tool": "parse_xml",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.012263570912182331,
+      "std_dist": 0.004904135596007109,
+      "max_dist": 0.022925853729248047
+    },
+    {
+      "tool": "parse_xml",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.02166995033621788,
+      "std_dist": 0.011119025759398937,
+      "max_dist": 0.04035651683807373
+    },
+    {
+      "tool": "read_file",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 62,
+      "mean_dist": 0.040336813777685165,
+      "std_dist": 0.010492246598005295,
+      "max_dist": 0.08105182647705078
+    },
+    {
+      "tool": "read_file",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 62,
+      "mean_dist": 0.05119900405406952,
+      "std_dist": 0.04477742686867714,
+      "max_dist": 0.1983157992362976
+    },
+    {
+      "tool": "read_query",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 66,
+      "mean_dist": 0.02116469480097294,
+      "std_dist": 0.012716530822217464,
+      "max_dist": 0.06001240015029907
+    },
+    {
+      "tool": "read_query",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 66,
+      "mean_dist": 0.03909452259540558,
+      "std_dist": 0.017780913040041924,
+      "max_dist": 0.10441625118255615
+    },
+    {
+      "tool": "redis_command",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.008715331554412842,
+      "std_dist": 0.004950083792209625,
+      "max_dist": 0.01904308795928955
+    },
+    {
+      "tool": "redis_command",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.01922343485057354,
+      "std_dist": 0.006752447225153446,
+      "max_dist": 0.032905519008636475
+    },
+    {
+      "tool": "render_template",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.009095413610339165,
+      "std_dist": 0.00837488193064928,
+      "max_dist": 0.0259019136428833
+    },
+    {
+      "tool": "render_template",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.02020748145878315,
+      "std_dist": 0.008160071447491646,
+      "max_dist": 0.03446108102798462
+    },
+    {
+      "tool": "run_script",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.018160130828619003,
+      "std_dist": 0.01003359630703926,
+      "max_dist": 0.04010927677154541
+    },
+    {
+      "tool": "run_script",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.02431666851043701,
+      "std_dist": 0.005537399556487799,
+      "max_dist": 0.03353738784790039
+    },
+    {
+      "tool": "s3_operation",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.005842872895300388,
+      "std_dist": 0.0039773061871528625,
+      "max_dist": 0.013815760612487793
+    },
+    {
+      "tool": "s3_operation",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.025703327730298042,
+      "std_dist": 0.007789527531713247,
+      "max_dist": 0.0386049747467041
+    },
+    {
+      "tool": "search_entities",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 15,
+      "mean_dist": 0.02150210551917553,
+      "std_dist": 0.00464694993570447,
+      "max_dist": 0.03259134292602539
+    },
+    {
+      "tool": "search_entities",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 15,
+      "mean_dist": 0.03257296234369278,
+      "std_dist": 0.007255850825458765,
+      "max_dist": 0.05567806959152222
+    },
+    {
+      "tool": "send_webhook",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.005313464440405369,
+      "std_dist": 0.0028609398286789656,
+      "max_dist": 0.009349644184112549
+    },
+    {
+      "tool": "send_webhook",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 7,
+      "mean_dist": 0.01638157106935978,
+      "std_dist": 0.0040187109261751175,
+      "max_dist": 0.025097548961639404
+    },
+    {
+      "tool": "verify_jwt",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 6,
+      "mean_dist": 0.0033269524574279785,
+      "std_dist": 0.0016917039174586535,
+      "max_dist": 0.005948960781097412
+    },
+    {
+      "tool": "verify_jwt",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 6,
+      "mean_dist": 0.014996866695582867,
+      "std_dist": 0.005997813306748867,
+      "max_dist": 0.024276375770568848
+    },
+    {
+      "tool": "write_file",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 39,
+      "mean_dist": 0.0418061725795269,
+      "std_dist": 0.016250599175691605,
+      "max_dist": 0.07563948631286621
+    },
+    {
+      "tool": "write_file",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 39,
+      "mean_dist": 0.05040103942155838,
+      "std_dist": 0.036622144281864166,
+      "max_dist": 0.19001853466033936
+    },
+    {
+      "tool": "write_query",
+      "class": "benign",
+      "embedding_dim": 774,
+      "n_samples": 43,
+      "mean_dist": 0.01790209487080574,
+      "std_dist": 0.008072052150964737,
+      "max_dist": 0.041910409927368164
+    },
+    {
+      "tool": "write_query",
+      "class": "attack",
+      "embedding_dim": 774,
+      "n_samples": 43,
+      "mean_dist": 0.03574284166097641,
+      "std_dist": 0.012347985059022903,
+      "max_dist": 0.06591284275054932
+    }
+  ],
+  "inter_prototype_distances": [
+    {
+      "tool": "check_file_exists",
+      "cosine_similarity": 0.9856512546539307,
+      "cosine_distance": 0.014348745346069336
+    },
+    {
+      "tool": "check_url",
+      "cosine_similarity": 0.9766838550567627,
+      "cosine_distance": 0.023316144943237305
+    },
+    {
+      "tool": "convert_time",
+      "cosine_similarity": 0.9743633270263672,
+      "cosine_distance": 0.025636672973632812
+    },
+    {
+      "tool": "create_entity",
+      "cosine_similarity": 0.9877597689628601,
+      "cosine_distance": 0.012240231037139893
+    },
+    {
+      "tool": "create_relation",
+      "cosine_similarity": 0.9914008975028992,
+      "cosine_distance": 0.00859910249710083
+    },
+    {
+      "tool": "delete_entity",
+      "cosine_similarity": 0.9847046136856079,
+      "cosine_distance": 0.01529538631439209
+    },
+    {
+      "tool": "describe_table",
+      "cosine_similarity": 0.9733802676200867,
+      "cosine_distance": 0.02661973237991333
+    },
+    {
+      "tool": "deserialize_data",
+      "cosine_similarity": 0.964042603969574,
+      "cosine_distance": 0.035957396030426025
+    },
+    {
+      "tool": "execute_command",
+      "cosine_similarity": 0.9913288950920105,
+      "cosine_distance": 0.008671104907989502
+    },
+    {
+      "tool": "fetch_html",
+      "cosine_similarity": 0.923633873462677,
+      "cosine_distance": 0.076366126537323
+    },
+    {
+      "tool": "fetch_url",
+      "cosine_similarity": 0.966939389705658,
+      "cosine_distance": 0.03306061029434204
+    },
+    {
+      "tool": "get_current_time",
+      "cosine_similarity": 0.9129464030265808,
+      "cosine_distance": 0.08705359697341919
+    },
+    {
+      "tool": "get_entity",
+      "cosine_similarity": 0.9760956168174744,
+      "cosine_distance": 0.023904383182525635
+    },
+    {
+      "tool": "get_file_info",
+      "cosine_similarity": 0.9793172478675842,
+      "cosine_distance": 0.02068275213241577
+    },
+    {
+      "tool": "get_relations",
+      "cosine_similarity": 0.9727740287780762,
+      "cosine_distance": 0.027225971221923828
+    },
+    {
+      "tool": "graphql_query",
+      "cosine_similarity": 0.987399697303772,
+      "cosine_distance": 0.012600302696228027
+    },
+    {
+      "tool": "ldap_query",
+      "cosine_similarity": 0.9908778667449951,
+      "cosine_distance": 0.009122133255004883
+    },
+    {
+      "tool": "list_directory",
+      "cosine_similarity": 0.9832837581634521,
+      "cosine_distance": 0.01671624183654785
+    },
+    {
+      "tool": "list_entities",
+      "cosine_similarity": 0.9854460954666138,
+      "cosine_distance": 0.01455390453338623
+    },
+    {
+      "tool": "list_tables",
+      "cosine_similarity": 0.9892983436584473,
+      "cosine_distance": 0.010701656341552734
+    },
+    {
+      "tool": "parse_xml",
+      "cosine_similarity": 0.9764880537986755,
+      "cosine_distance": 0.023511946201324463
+    },
+    {
+      "tool": "read_file",
+      "cosine_similarity": 0.9659993648529053,
+      "cosine_distance": 0.03400063514709473
+    },
+    {
+      "tool": "read_query",
+      "cosine_similarity": 0.9881390333175659,
+      "cosine_distance": 0.011860966682434082
+    },
+    {
+      "tool": "redis_command",
+      "cosine_similarity": 0.9901976585388184,
+      "cosine_distance": 0.00980234146118164
+    },
+    {
+      "tool": "render_template",
+      "cosine_similarity": 0.988429069519043,
+      "cosine_distance": 0.011570930480957031
+    },
+    {
+      "tool": "run_script",
+      "cosine_similarity": 0.983293890953064,
+      "cosine_distance": 0.016706109046936035
+    },
+    {
+      "tool": "s3_operation",
+      "cosine_similarity": 0.9825576543807983,
+      "cosine_distance": 0.01744234561920166
+    },
+    {
+      "tool": "search_entities",
+      "cosine_similarity": 0.9856282472610474,
+      "cosine_distance": 0.014371752738952637
+    },
+    {
+      "tool": "send_webhook",
+      "cosine_similarity": 0.9917763471603394,
+      "cosine_distance": 0.008223652839660645
+    },
+    {
+      "tool": "verify_jwt",
+      "cosine_similarity": 0.9818446636199951,
+      "cosine_distance": 0.018155336380004883
+    },
+    {
+      "tool": "write_file",
+      "cosine_similarity": 0.9847998023033142,
+      "cosine_distance": 0.015200197696685791
+    },
+    {
+      "tool": "write_query",
+      "cosine_similarity": 0.9832900762557983,
+      "cosine_distance": 0.01670992374420166
+    }
+  ],
+  "per_tool_metrics": [
+    {
+      "tool": "graphql_query",
+      "samples": 40,
+      "coverage": 1.0,
+      "accuracy": 0.7,
+      "f1_score": 0.5714285714285714
+    },
+    {
+      "tool": "ldap_query",
+      "samples": 36,
+      "coverage": 1.0,
+      "accuracy": 0.8333333333333334,
+      "f1_score": 0.75
+    },
+    {
+      "tool": "parse_xml",
+      "samples": 32,
+      "coverage": 1.0,
+      "accuracy": 0.96875,
+      "f1_score": 0.9411764705882353
+    },
+    {
+      "tool": "redis_command",
+      "samples": 40,
+      "coverage": 1.0,
+      "accuracy": 0.825,
+      "f1_score": 0.72
+    },
+    {
+      "tool": "verify_jwt",
+      "samples": 28,
+      "coverage": 1.0,
+      "accuracy": 0.8571428571428571,
+      "f1_score": 0.7777777777777778
+    },
+    {
+      "tool": "s3_operation",
+      "samples": 32,
+      "coverage": 1.0,
+      "accuracy": 0.53125,
+      "f1_score": 0.5161290322580645
+    },
+    {
+      "tool": "send_webhook",
+      "samples": 32,
+      "coverage": 1.0,
+      "accuracy": 0.875,
+      "f1_score": 0.8
+    },
+    {
+      "tool": "render_template",
+      "samples": 32,
+      "coverage": 1.0,
+      "accuracy": 0.5,
+      "f1_score": 0.4666666666666667
+    },
+    {
+      "tool": "deserialize_data",
+      "samples": 32,
+      "coverage": 1.0,
+      "accuracy": 0.8125,
+      "f1_score": 0.7
+    }
+  ]
+}

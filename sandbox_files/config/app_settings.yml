@@ -1,0 +1,21 @@
+application:
+  name: "MCP Sandbox App"
+  version: "1.0.0"
+  environment: "production"
+
+database:
+  host: "localhost"
+  port: 5432
+  name: "sandbox_db"
+  # Credentials stored in secure vault
+
+features:
+  enable_logging: true
+  enable_metrics: true
+  max_file_size: 10485760  # 10MB
+  allowed_extensions:
+    - ".txt"
+    - ".csv"
+    - ".json"
+    - ".pdf"
+    - ".docx"

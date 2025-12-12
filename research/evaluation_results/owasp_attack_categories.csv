@@ -1,0 +1,12 @@
+,Training,Validation,Test,Total
+Other,276,85,120,481
+SQL Injection,94,29,29,152
+Command Injection,86,29,33,148
+SSRF,43,13,22,78
+Path Traversal,42,16,15,73
+SSTI,16,5,10,31
+XXE,16,3,6,25
+XSS,10,4,2,16
+Deserialization,4,2,2,8
+NoSQL Injection,4,1,0,5
+LDAP Injection,2,1,1,4

@@ -1,0 +1,113 @@
+{
+  "detector": "rule_based",
+  "classification_type": "binary",
+  "total_patterns": 62,
+  "pattern_categories": {
+    "path_traversal": 6,
+    "command_injection": 7,
+    "sql_injection": 12,
+    "system_files": 8,
+    "xxe_attacks": 5,
+    "ssrf_attacks": 8,
+    "xss_injection": 4,
+    "secrets_access": 5,
+    "destructive_operations": 5,
+    "bulk_data_exfiltration": 2
+  },
+  "test_samples": 304,
+  "metrics": {
+    "accuracy": 0.8026315789473685,
+    "precision": 0.6379310344827587,
+    "recall": 0.4868421052631579,
+    "f1_score": 0.5522388059701493,
+    "roc_auc": 0.6973684210526316,
+    "average_precision": 0.43886116152450094,
+    "attack_detection_rate": 0.4868421052631579,
+    "false_positive_rate": 0.09210526315789473,
+    "coverage": 0.19078947368421054
+  },
+  "confusion_matrix": [
+    [
+      207,
+      21
+    ],
+    [
+      39,
+      37
+    ]
+  ],
+  "per_tool_metrics": [
+    {
+      "tool": "graphql_query",
+      "total_samples": 40,
+      "attack_samples": 10,
+      "benign_samples": 30,
+      "attack_detection_rate": 0.4,
+      "false_positive_rate": 0.0
+    },
+    {
+      "tool": "ldap_query",
+      "total_samples": 36,
+      "attack_samples": 9,
+      "benign_samples": 27,
+      "attack_detection_rate": 0.1111111111111111,
+      "false_positive_rate": 0.0
+    },
+    {
+      "tool": "parse_xml",
+      "total_samples": 32,
+      "attack_samples": 8,
+      "benign_samples": 24,
+      "attack_detection_rate": 1.0,
+      "false_positive_rate": 0.0
+    },
+    {
+      "tool": "redis_command",
+      "total_samples": 40,
+      "attack_samples": 10,
+      "benign_samples": 30,
+      "attack_detection_rate": 0.0,
+      "false_positive_rate": 0.0
+    },
+    {
+      "tool": "verify_jwt",
+      "total_samples": 28,
+      "attack_samples": 7,
+      "benign_samples": 21,
+      "attack_detection_rate": 1.0,
+      "false_positive_rate": 1.0
+    },
+    {
+      "tool": "s3_operation",
+      "total_samples": 32,
+      "attack_samples": 8,
+      "benign_samples": 24,
+      "attack_detection_rate": 0.375,
+      "false_positive_rate": 0.0
+    },
+    {
+      "tool": "send_webhook",
+      "total_samples": 32,
+      "attack_samples": 8,
+      "benign_samples": 24,
+      "attack_detection_rate": 0.75,
+      "false_positive_rate": 0.0
+    },
+    {
+      "tool": "render_template",
+      "total_samples": 32,
+      "attack_samples": 8,
+      "benign_samples": 24,
+      "attack_detection_rate": 0.5,
+      "false_positive_rate": 0.0
+    },
+    {
+      "tool": "deserialize_data",
+      "total_samples": 32,
+      "attack_samples": 8,
+      "benign_samples": 24,
+      "attack_detection_rate": 0.5,
+      "false_positive_rate": 0.0
+    }
+  ]
+}

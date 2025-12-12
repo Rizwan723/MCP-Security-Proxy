@@ -1,0 +1,10 @@
+tool,total_samples,attack_samples,benign_samples,attack_detection_rate,false_positive_rate
+parse_xml,32,8,24,1.0,0.0
+verify_jwt,28,7,21,1.0,1.0
+send_webhook,32,8,24,0.75,0.0
+deserialize_data,32,8,24,0.5,0.0
+render_template,32,8,24,0.5,0.0
+graphql_query,40,10,30,0.4,0.0
+s3_operation,32,8,24,0.375,0.0
+ldap_query,36,9,27,0.1111111111111111,0.0
+redis_command,40,10,30,0.0,0.0

@@ -1,0 +1,8 @@
+2023-11-29 10:15:23 INFO User alice logged in from 192.168.1.10
+2023-11-29 10:16:45 INFO File accessed: /documents/report_Q4.docx by alice
+2023-11-29 10:18:12 INFO User bob logged in from 192.168.1.15
+2023-11-29 10:20:33 WARN Failed login attempt for user admin from 192.168.1.100
+2023-11-29 10:22:01 INFO User charlie logged in from 192.168.1.20
+2023-11-29 10:25:14 INFO Database query executed: SELECT * FROM users WHERE id = 1
+2023-11-29 10:30:45 INFO File accessed: /data/transactions.json by alice
+2023-11-29 10:35:22 ERROR Connection timeout to external service api.example.com

@@ -1,0 +1,169 @@
+{
+  "detector": "statistical",
+  "classification_type": "binary",
+  "method": "mahalanobis_distance",
+  "features": [
+    "Length",
+    "Entropy",
+    "Special Ratio",
+    "Digit Ratio",
+    "Suspicious Density",
+    "Alpha Ratio",
+    "Upper Ratio",
+    "Whitespace Ratio",
+    "Max Token Len",
+    "URL Pattern Count"
+  ],
+  "n_features": 10,
+  "tools_trained": [
+    "check_file_exists",
+    "check_url",
+    "convert_time",
+    "create_entity",
+    "create_relation",
+    "delete_entity",
+    "describe_table",
+    "deserialize_data",
+    "execute_command",
+    "fetch_html",
+    "fetch_url",
+    "get_current_time",
+    "get_entity",
+    "get_file_info",
+    "get_relations",
+    "graphql_query",
+    "ldap_query",
+    "list_directory",
+    "list_entities",
+    "list_tables",
+    "parse_xml",
+    "read_file",
+    "read_query",
+    "redis_command",
+    "render_template",
+    "run_script",
+    "s3_operation",
+    "search_entities",
+    "send_webhook",
+    "verify_jwt",
+    "write_file",
+    "write_query"
+  ],
+  "test_samples": 304,
+  "metrics": {
+    "coverage": 1.0,
+    "accuracy": 0.42105263157894735,
+    "precision": 0.30158730158730157,
+    "recall": 1.0,
+    "f1_score": 0.4634146341463415,
+    "roc_auc": 0.6140350877192983,
+    "average_precision": 0.30158730158730157
+  },
+  "feature_importance": [
+    {
+      "feature": "Special Ratio",
+      "separation": 0.008778919465839863
+    },
+    {
+      "feature": "URL Pattern Count",
+      "separation": 0.01416824758052826
+    },
+    {
+      "feature": "Whitespace Ratio",
+      "separation": 0.1408027857542038
+    },
+    {
+      "feature": "Alpha Ratio",
+      "separation": 0.1744939237833023
+    },
+    {
+      "feature": "Max Token Len",
+      "separation": 0.18399456143379211
+    },
+    {
+      "feature": "Digit Ratio",
+      "separation": 0.293387770652771
+    },
+    {
+      "feature": "Length",
+      "separation": 0.3710416853427887
+    },
+    {
+      "feature": "Upper Ratio",
+      "separation": 0.38775330781936646
+    },
+    {
+      "feature": "Entropy",
+      "separation": 0.4872089922428131
+    },
+    {
+      "feature": "Suspicious Density",
+      "separation": 1.1198692321777344
+    }
+  ],
+  "per_tool_metrics": [
+    {
+      "tool": "graphql_query",
+      "samples": 40,
+      "coverage": 1.0,
+      "accuracy": 0.35,
+      "f1_score": 0.43478260869565216
+    },
+    {
+      "tool": "ldap_query",
+      "samples": 36,
+      "coverage": 1.0,
+      "accuracy": 0.3611111111111111,
+      "f1_score": 0.43902439024390244
+    },
+    {
+      "tool": "parse_xml",
+      "samples": 32,
+      "coverage": 1.0,
+      "accuracy": 0.46875,
+      "f1_score": 0.48484848484848486
+    },
+    {
+      "tool": "redis_command",
+      "samples": 40,
+      "coverage": 1.0,
+      "accuracy": 0.375,
+      "f1_score": 0.4444444444444444
+    },
+    {
+      "tool": "verify_jwt",
+      "samples": 28,
+      "coverage": 1.0,
+      "accuracy": 0.35714285714285715,
+      "f1_score": 0.4375
+    },
+    {
+      "tool": "s3_operation",
+      "samples": 32,
+      "coverage": 1.0,
+      "accuracy": 0.375,
+      "f1_score": 0.4444444444444444
+    },
+    {
+      "tool": "send_webhook",
+      "samples": 32,
+      "coverage": 1.0,
+      "accuracy": 0.59375,
+      "f1_score": 0.5517241379310345
+    },
+    {
+      "tool": "render_template",
+      "samples": 32,
+      "coverage": 1.0,
+      "accuracy": 0.5,
+      "f1_score": 0.5
+    },
+    {
+      "tool": "deserialize_data",
+      "samples": 32,
+      "coverage": 1.0,
+      "accuracy": 0.4375,
+      "f1_score": 0.47058823529411764
+    }
+  ]
+}

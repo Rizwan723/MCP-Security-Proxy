@@ -1,0 +1,6 @@
+,Rule-Based,Statistical,Semantic,MAML,Ensemble
+Rule-Based,1.0,0.0,0.0,0.0,0.0
+Statistical,0.0,1.0,0.0,0.0,0.0
+Semantic,0.0,0.0,1.0,0.0,0.0
+MAML,0.0,0.0,0.0,1.0,0.0
+Ensemble,0.0,0.0,0.0,0.0,1.0

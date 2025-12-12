@@ -1,0 +1,9 @@
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+
+# Members of the admin group may gain root privileges
+%admin ALL=(ALL) ALL
+%sudo   ALL=(ALL:ALL) ALL
+
+# MCP user has limited privileges
+mcp_user ALL=(ALL) NOPASSWD: /usr/bin/systemctl status

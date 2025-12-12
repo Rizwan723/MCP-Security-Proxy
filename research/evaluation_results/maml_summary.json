@@ -1,0 +1,138 @@
+{
+  "detector": "maml",
+  "classification_type": "binary",
+  "method": "model_agnostic_meta_learning",
+  "encoder": "distilbert-base-uncased",
+  "config": {
+    "meta_lr": 0.001,
+    "inner_lr": 0.01,
+    "adaptation_steps": 5,
+    "first_order": true,
+    "shots": 5,
+    "hidden_dim": 256,
+    "confidence_threshold": 0.6
+  },
+  "adapted_tools": [
+    "check_file_exists",
+    "check_url",
+    "convert_time",
+    "create_entity",
+    "create_relation",
+    "delete_entity",
+    "describe_table",
+    "deserialize_data",
+    "execute_command",
+    "fetch_html",
+    "fetch_url",
+    "get_current_time",
+    "get_entity",
+    "get_file_info",
+    "get_relations",
+    "graphql_query",
+    "ldap_query",
+    "list_directory",
+    "list_entities",
+    "list_tables",
+    "parse_xml",
+    "read_file",
+    "read_query",
+    "redis_command",
+    "render_template",
+    "run_script",
+    "s3_operation",
+    "search_entities",
+    "send_webhook",
+    "verify_jwt",
+    "write_file",
+    "write_query"
+  ],
+  "test_samples": 304,
+  "metrics": {
+    "coverage": 1.0,
+    "accuracy": 0.26973684210526316,
+    "precision": 0.2533783783783784,
+    "recall": 0.9868421052631579,
+    "f1_score": 0.4032258064516129,
+    "roc_auc": 0.8289473684210525,
+    "average_precision": 0.7167647542712989
+  },
+  "training_history": {
+    "epochs": 40,
+    "final_loss": 0.5942964553833008,
+    "final_accuracy": 0.7
+  },
+  "per_tool_metrics": [
+    {
+      "tool": "graphql_query",
+      "samples": 40,
+      "coverage": 1.0,
+      "accuracy": 0.25,
+      "f1_score": 0.4,
+      "adapted": "True"
+    },
+    {
+      "tool": "ldap_query",
+      "samples": 36,
+      "coverage": 1.0,
+      "accuracy": 0.25,
+      "f1_score": 0.4,
+      "adapted": "True"
+    },
+    {
+      "tool": "parse_xml",
+      "samples": 32,
+      "coverage": 1.0,
+      "accuracy": 0.25,
+      "f1_score": 0.4,
+      "adapted": "True"
+    },
+    {
+      "tool": "redis_command",
+      "samples": 40,
+      "coverage": 1.0,
+      "accuracy": 0.25,
+      "f1_score": 0.4,
+      "adapted": "True"
+    },
+    {
+      "tool": "verify_jwt",
+      "samples": 28,
+      "coverage": 1.0,
+      "accuracy": 0.25,
+      "f1_score": 0.4,
+      "adapted": "True"
+    },
+    {
+      "tool": "s3_operation",
+      "samples": 32,
+      "coverage": 1.0,
+      "accuracy": 0.4375,
+      "f1_score": 0.47058823529411764,
+      "adapted": "True"
+    },
+    {
+      "tool": "send_webhook",
+      "samples": 32,
+      "coverage": 1.0,
+      "accuracy": 0.21875,
+      "f1_score": 0.358974358974359,
+      "adapted": "True"
+    },
+    {
+      "tool": "render_template",
+      "samples": 32,
+      "coverage": 1.0,
+      "accuracy": 0.25,
+      "f1_score": 0.4,
+      "adapted": "True"
+    },
+    {
+      "tool": "deserialize_data",
+      "samples": 32,
+      "coverage": 1.0,
+      "accuracy": 0.28125,
+      "f1_score": 0.41025641025641024,
+      "adapted": "True"
+    }
+  ]
+}

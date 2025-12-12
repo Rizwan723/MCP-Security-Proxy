@@ -1,0 +1,12 @@
+Metric,Value
+Training Samples,1186
+Validation Samples,376
+Test Samples,2328
+Training Ratio (B/A),50.0/50.0
+Validation Ratio (B/A),50.0/50.0
+Test Ratio (B/A),89.7/10.3
+Train-Val Overlaps,0
+Train-Test Overlaps,0
+Val-Test Overlaps,0
+Total Duplicates,79
+OWASP Compliant,Yes

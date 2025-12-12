@@ -1,0 +1,14 @@
+.venv
+models/
+_pycache_/
+__pycache__/
+docker-mcp-gateway-main/
+nul
+.claude
+.env
+
+#jupyter
+.ipynb_checkpoints
+.vscode/
+.DS_Store
+.jupyter/
