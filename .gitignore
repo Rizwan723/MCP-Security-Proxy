@@ -12,3 +12,4 @@ nul
 .vscode/
 .DS_Store
 .jupyter/
+*.zip
